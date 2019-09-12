@@ -1,8 +1,8 @@
-package mateacademy.internetshop.dao;
+package mateacademy.internetshop.service;
 
 import mateacademy.internetshop.model.Item;
 
-public interface ItemDao {
+public interface ItemService {
 
     Item create(Item item);
 

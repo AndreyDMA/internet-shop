@@ -1,9 +1,26 @@
 package mateacademy.internetshop.lib;
 
+import mateacademy.internetshop.service.serviceimpl.BucketServiceImpl;
+import mateacademy.internetshop.service.serviceimpl.ItemServiceImpl;
+import mateacademy.internetshop.service.serviceimpl.OrderServiceImpl;
+import mateacademy.internetshop.service.serviceimpl.UserServiceImpl;
+
+import java.lang.reflect.Field;
+
 public class Injector {
 
     public static void injectDependency() throws IllegalAccessException {
 
+        Field[] itemServiceFields = ItemServiceImpl.class.getDeclaredFields();
+        Field[] bucketServiceFields = BucketServiceImpl.class.getDeclaredFields();
+        Field[] orderServiceFields = OrderServiceImpl.class.getDeclaredFields();
+        Field[] userServiceFields = UserServiceImpl.class.getDeclaredFields();
+
+        for (Field field : itemServiceFields) {
+            if (field.getAnnotation(Inject.class) != null) {
+                field.
+            }
+        }
     }
 }
 
