@@ -12,7 +12,6 @@ public class OrderServiceImpl implements OrderService {
     @Inject
     private OrderDao orderDao;
 
-
     @Override
     public Order create(Order order) {
         return orderDao.create(order);
