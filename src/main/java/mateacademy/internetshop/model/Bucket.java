@@ -1,14 +1,13 @@
 package mateacademy.internetshop.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import mateacademy.internetshop.IdGenerator;
 
 public class Bucket {
     private final Long id;
-    private List<Item> items;
-
-
+    private List<Item> items = new ArrayList<>();
     private User user;
 
     public Bucket() {

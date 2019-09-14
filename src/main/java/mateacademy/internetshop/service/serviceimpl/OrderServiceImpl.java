@@ -1,5 +1,7 @@
 package mateacademy.internetshop.service.serviceimpl;
 
+import java.util.List;
+
 import mateacademy.internetshop.dao.OrderDao;
 import mateacademy.internetshop.dao.UserDao;
 import mateacademy.internetshop.lib.Inject;
@@ -7,8 +9,6 @@ import mateacademy.internetshop.lib.Service;
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Order;
 import mateacademy.internetshop.service.OrderService;
-
-import java.util.List;
 
 @Service
 public class OrderServiceImpl implements OrderService {

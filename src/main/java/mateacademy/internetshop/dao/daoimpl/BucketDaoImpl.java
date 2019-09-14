@@ -1,11 +1,11 @@
 package mateacademy.internetshop.dao.daoimpl;
 
+import java.util.NoSuchElementException;
+
 import mateacademy.internetshop.dao.BucketDao;
 import mateacademy.internetshop.db.Storage;
 import mateacademy.internetshop.lib.Dao;
 import mateacademy.internetshop.model.Bucket;
-
-import java.util.NoSuchElementException;
 
 @Dao
 public class BucketDaoImpl implements BucketDao {

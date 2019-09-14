@@ -1,15 +1,14 @@
 package mateacademy.internetshop.service.serviceimpl;
 
+import java.util.List;
+
 import mateacademy.internetshop.dao.BucketDao;
 import mateacademy.internetshop.dao.ItemDao;
-import mateacademy.internetshop.db.Storage;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.lib.Service;
 import mateacademy.internetshop.model.Bucket;
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.service.BucketService;
-
-import java.util.List;
 
 @Service
 public class BucketServiceImpl implements BucketService {

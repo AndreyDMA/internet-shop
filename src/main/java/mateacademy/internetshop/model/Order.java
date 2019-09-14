@@ -1,8 +1,8 @@
 package mateacademy.internetshop.model;
 
-import mateacademy.internetshop.IdGenerator;
-
 import java.util.List;
+
+import mateacademy.internetshop.IdGenerator;
 
 public class Order {
     private final Long id;
@@ -33,6 +33,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order id: " + id + "; User id: " +  userId + ";\n" + items;
+        return "Order id: " + id + "; User id: " + userId + ";\n" + items;
     }
 }

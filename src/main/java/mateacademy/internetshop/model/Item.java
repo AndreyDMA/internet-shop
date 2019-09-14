@@ -2,8 +2,6 @@ package mateacademy.internetshop.model;
 
 import mateacademy.internetshop.IdGenerator;
 
-import java.util.List;
-
 public class Item {
     private final Long id;
     private String name;
