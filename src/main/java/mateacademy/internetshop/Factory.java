@@ -18,23 +18,23 @@ import mateacademy.internetshop.service.serviceimpl.OrderServiceImpl;
 import mateacademy.internetshop.service.serviceimpl.UserServiceImpl;
 
 public class Factory {
-    private static ItemDao instanceItem;
+    private static ItemDao instanceItemDao;
     private static ItemService instanceItemService;
-    private static BucketDao instanceBucket;
+    private static BucketDao instanceBucketDao;
     private static BucketService instanceBucketService;
-    private static OrderDao instanceOrder;
+    private static OrderDao instanceOrderDao;
     private static OrderService instanceOrderService;
-    private static UserDao instanceUser;
+    private static UserDao instanceUserDao;
     private static UserService instanceUserService;
 
     private Factory() {
     }
 
     public static ItemDao getItemDao() {
-        if (instanceItem == null) {
-            instanceItem = new ItemDaoImpl();
+        if (instanceItemDao == null) {
+            instanceItemDao = new ItemDaoImpl();
         }
-        return instanceItem;
+        return instanceItemDao;
     }
 
     public static ItemService getItemService() {
@@ -45,10 +45,10 @@ public class Factory {
     }
 
     public static BucketDao getBucketDao() {
-        if (instanceBucket == null) {
-            instanceBucket = new BucketDaoImpl();
+        if (instanceBucketDao == null) {
+            instanceBucketDao = new BucketDaoImpl();
         }
-        return instanceBucket;
+        return instanceBucketDao;
     }
 
     public static BucketService getBucketService() {
@@ -59,10 +59,10 @@ public class Factory {
     }
 
     public static OrderDao getOrderDao() {
-        if (instanceOrder == null) {
-            instanceOrder = new OrderDaoImpl();
+        if (instanceOrderDao == null) {
+            instanceOrderDao = new OrderDaoImpl();
         }
-        return instanceOrder;
+        return instanceOrderDao;
     }
 
     public static OrderService getOrderService() {
@@ -73,10 +73,10 @@ public class Factory {
     }
 
     public static UserDao getUserDao() {
-        if (instanceUser == null) {
-            instanceUser = new UserDaoImpl();
+        if (instanceUserDao == null) {
+            instanceUserDao = new UserDaoImpl();
         }
-        return instanceUser;
+        return instanceUserDao;
     }
 
     public static UserService getUserService() {

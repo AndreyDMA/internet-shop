@@ -1,16 +1,29 @@
 package mateacademy.internetshop.service.serviceimpl;
 
 import mateacademy.internetshop.dao.OrderDao;
+import mateacademy.internetshop.dao.UserDao;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.lib.Service;
+import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Order;
 import mateacademy.internetshop.service.OrderService;
+
+import java.util.List;
 
 @Service
 public class OrderServiceImpl implements OrderService {
 
     @Inject
-    private OrderDao orderDao;
+    private static OrderDao orderDao;
+    @Inject
+    private static UserDao userDao;
+
+    @Override
+    public Order completeOrder(List<Item> items, Long userId) {
+        Order order = new Order(items, userId);
+        orderDao.create(order);
+        return order;
+    }
 
     @Override
     public Order create(Order order) {
@@ -28,12 +41,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order delete(Long id) {
-        return orderDao.delete(id);
-    }
-
-    @Override
-    public Order delete(Order order) {
-        return orderDao.delete(order);
+    public void delete(Long id) {
+        orderDao.delete(id);
     }
 }

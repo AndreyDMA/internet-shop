@@ -10,7 +10,7 @@ import mateacademy.internetshop.service.ItemService;
 public class ItemServiceImpl implements ItemService {
 
     @Inject
-    private ItemDao itemDao;
+    private static ItemDao itemDao;
 
     @Override
     public Item create(Item item) {
@@ -28,12 +28,12 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public Item delete(Long id) {
-        return itemDao.delete(id);
+    public void delete(Long id) {
+        itemDao.delete(id);
     }
 
     @Override
-    public Item delete(Item item) {
-        return itemDao.delete(item);
+    public void delete(Item item) {
+        itemDao.delete(item);
     }
 }

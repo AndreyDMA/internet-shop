@@ -9,6 +9,7 @@ import java.util.NoSuchElementException;
 
 @Dao
 public class BucketDaoImpl implements BucketDao {
+
     @Override
     public Bucket create(Bucket bucket) {
         Storage.buckets.add(bucket);
@@ -35,8 +36,7 @@ public class BucketDaoImpl implements BucketDao {
     }
 
     @Override
-    public Bucket delete(Long bucketId) {
+    public void delete(Long bucketId) {
         Storage.buckets.removeIf(b -> b.getId().equals(bucketId));
-        return get(bucketId);
     }
 }

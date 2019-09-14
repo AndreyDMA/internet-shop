@@ -1,77 +1,53 @@
 package mateacademy.internetshop.lib;
 
 import java.lang.reflect.Field;
+import java.util.*;
 
 import mateacademy.internetshop.Factory;
+import mateacademy.internetshop.Main;
+import mateacademy.internetshop.dao.daoimpl.BucketDaoImpl;
+import mateacademy.internetshop.dao.daoimpl.ItemDaoImpl;
+import mateacademy.internetshop.dao.daoimpl.OrderDaoImpl;
+import mateacademy.internetshop.dao.daoimpl.UserDaoImpl;
 import mateacademy.internetshop.service.serviceimpl.BucketServiceImpl;
 import mateacademy.internetshop.service.serviceimpl.ItemServiceImpl;
 import mateacademy.internetshop.service.serviceimpl.OrderServiceImpl;
 import mateacademy.internetshop.service.serviceimpl.UserServiceImpl;
 
 public class Injector {
+    private static Map<Class, Object> getInstances = new HashMap<Class, Object>();
+    private static List<Class> existingClasses = new ArrayList<>();
+
+    static {
+        getInstances.put(ItemServiceImpl.class, Factory.getItemService());
+        getInstances.put(BucketServiceImpl.class, Factory.getBucketService());
+        getInstances.put(OrderServiceImpl.class, Factory.getOrderService());
+        getInstances.put(UserServiceImpl.class, Factory.getUserService());
+        getInstances.put(ItemDaoImpl.class, Factory.getItemDao());
+        getInstances.put(BucketDaoImpl.class, Factory.getBucketDao());
+        getInstances.put(OrderDaoImpl.class, Factory.getOrderDao());
+        getInstances.put(UserDaoImpl.class, Factory.getUserDao());
+
+        existingClasses.add(ItemServiceImpl.class);
+        existingClasses.add(BucketServiceImpl.class);
+        existingClasses.add(OrderServiceImpl.class);
+        existingClasses.add(UserServiceImpl.class);
+        existingClasses.add(Main.class);
+    }
 
     public static void injectDependency() throws IllegalAccessException {
 
-        Field[] itemServiceFields = ItemServiceImpl.class.getDeclaredFields();
-        for (Field field : itemServiceFields) {
-            if (field.getAnnotation(Inject.class) != null) {
-                if (ItemServiceImpl.class.getDeclaredAnnotation(Dao.class) != null) {
+        for (Class clazz : existingClasses) {
+            for (Field field : clazz.getDeclaredFields()) {
+                if (field.getDeclaredAnnotation(Inject.class) != null
+                        && getInstances.containsKey(field.getType())
+                        && (getInstances.get(field.getType()).getClass().getDeclaredAnnotation(Service.class) != null
+                        || getInstances.get(field.getType()).getClass().getDeclaredAnnotation(Dao.class) != null)) {
                     field.setAccessible(true);
-                    field.set(null, Factory.getItemDao());
-                }
-            }
-        }
-
-        Field[] bucketServiceFields = BucketServiceImpl.class.getDeclaredFields();
-        for (Field field : bucketServiceFields) {
-            if (field.getAnnotation(Inject.class) != null) {
-                if (BucketServiceImpl.class.getDeclaredAnnotation(Dao.class) != null) {
-                    field.setAccessible(true);
-                    field.set(null, Factory.getBucketDao());
-                }
-            }
-        }
-
-        Field[] orderServiceFields = OrderServiceImpl.class.getDeclaredFields();
-        for (Field field : orderServiceFields) {
-            if (field.getAnnotation(Inject.class) != null) {
-                if (OrderServiceImpl.class.getDeclaredAnnotation(Dao.class) != null) {
-                    field.setAccessible(true);
-                    field.set(null, Factory.getOrderDao());
-                }
-            }
-        }
-
-        Field[] userServiceFields = UserServiceImpl.class.getDeclaredFields();
-        for (Field field : userServiceFields) {
-            if (field.getAnnotation(Inject.class) != null) {
-                if (UserServiceImpl.class.getDeclaredAnnotation(Dao.class) != null) {
-                    field.setAccessible(true);
-                    field.set(null, Factory.getUserDao());
+                    field.set(null, getInstances.get(field.getType()));
                 }
             }
         }
     }
 }
-
-//        Class<ConsoleHandler> consoleHandlerClass = ConsoleHandler.class;
-//        Class<UserEmailDaoImpl> userEmailDaoClass = UserEmailDaoImpl.class;
-//        Class<UserDaoImpl> userDaoClass = UserDaoImpl.class;
-//
-//        Field[] consoleHandlerFields = consoleHandlerClass.getDeclaredFields();
-//        for (Field field : consoleHandlerFields) {
-//            if (field.getDeclaredAnnotation(Inject.class) != null) {
-//                if (field.getType() == UserEmailDao.class
-//                        && UserEmailDaoImpl.class.getDeclaredAnnotation(Dao.class) != null) {
-//                    field.setAccessible(true);
-//                    field.set(null, UserEmailDaoFactory.getUserEmailDao());
-//                }
-//                if (field.getType() == UserDao.class
-//                        && UserDaoImpl.class.getDeclaredAnnotation(Dao.class) != null) {
-//                    field.setAccessible(true);
-//                    field.set(null, UserDaoFactory.getUserDao());
-//                }
-//            }
-//        }
-//    }
 

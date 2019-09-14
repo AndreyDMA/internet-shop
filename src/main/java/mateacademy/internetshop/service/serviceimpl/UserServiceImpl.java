@@ -10,7 +10,7 @@ import mateacademy.internetshop.service.UserService;
 public class UserServiceImpl implements UserService {
 
     @Inject
-    private UserDao userDao;
+    private static UserDao userDao;
 
     @Override
     public User create(User user) {
@@ -28,12 +28,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User delete(Long id) {
-        return userDao.delete(id);
-    }
-
-    @Override
-    public User delete(User user) {
-        return userDao.delete(user);
+    public void delete(Long id) {
+        userDao.delete(id);
     }
 }

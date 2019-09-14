@@ -2,6 +2,8 @@ package mateacademy.internetshop.model;
 
 import mateacademy.internetshop.IdGenerator;
 
+import java.util.List;
+
 public class Item {
     private final Long id;
     private String name;
@@ -31,5 +33,10 @@ public class Item {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Item id: " + id + "; name: " + name + "; price: " + price + ";\n";
     }
 }

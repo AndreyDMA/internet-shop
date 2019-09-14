@@ -7,10 +7,11 @@ import mateacademy.internetshop.IdGenerator;
 public class Bucket {
     private final Long id;
     private List<Item> items;
-    private final Long userId;
 
-    public Bucket(Long userId) {
-        this.userId = userId;
+
+    private User user;
+
+    public Bucket() {
         this.id = IdGenerator.getGeneratedId();
     }
 
@@ -26,7 +27,16 @@ public class Bucket {
         this.items = items;
     }
 
-    public Long getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Bucket id: " + id + "; User: " + user + ";\n";
     }
 }
