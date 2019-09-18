@@ -11,7 +11,6 @@
 <html>
 <head>
     <title>AllItems</title>
-
     <style>
         table {
             font-family: "Times New Roman", sans-serif;

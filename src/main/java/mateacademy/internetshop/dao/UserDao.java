@@ -1,5 +1,7 @@
 package mateacademy.internetshop.dao;
 
+import java.util.List;
+
 import mateacademy.internetshop.model.User;
 
 public interface UserDao {
@@ -8,9 +10,9 @@ public interface UserDao {
 
     User get(Long id);
 
-    Long getId(User user);
-
     User update(User user);
 
     User delete(Long id);
+
+    public List<User> getAll();
 }

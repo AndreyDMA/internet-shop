@@ -40,6 +40,7 @@
 <table border="1">
     <tr>
         <th>ID</th>
+        <th>User ID</th>
         <th>Items</th>
         <th>Delete</th>
     </tr>
@@ -47,6 +48,9 @@
         <tr>
             <td>
                 <c:out value="${order.id}" />
+            </td>
+            <td>
+                <c:out value="${order.userId}" />
             </td>
             <td>
                 <c:out value="${order.items}" />

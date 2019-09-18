@@ -1,5 +1,6 @@
 package mateacademy.internetshop.dao.daoimpl;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import mateacademy.internetshop.dao.UserDao;
@@ -36,8 +37,8 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Long getId(User user) {
-        return user.getId();
+    public List<User> getAll() {
+        return Storage.users;
     }
 
     @Override

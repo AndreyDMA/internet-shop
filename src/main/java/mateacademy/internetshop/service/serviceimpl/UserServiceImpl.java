@@ -3,7 +3,6 @@ package mateacademy.internetshop.service.serviceimpl;
 import java.util.List;
 
 import mateacademy.internetshop.dao.UserDao;
-import mateacademy.internetshop.db.Storage;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.lib.Service;
 import mateacademy.internetshop.model.Order;
@@ -27,11 +26,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Long getId(User user) {
-        return userDao.getId(user);
-    }
-
-    @Override
     public User update(User user) {
         return userDao.update(user);
     }
@@ -43,7 +37,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getAll() {
-        return Storage.users;
+        return userDao.getAll();
     }
 
     @Override
