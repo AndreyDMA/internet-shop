@@ -8,7 +8,9 @@ public interface UserDao {
 
     User get(Long id);
 
+    Long getId(User user);
+
     User update(User user);
 
-    void delete(Long id);
+    User delete(Long id);
 }

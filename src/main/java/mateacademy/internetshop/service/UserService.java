@@ -1,5 +1,7 @@
 package mateacademy.internetshop.service;
 
+import java.util.List;
+
 import mateacademy.internetshop.model.User;
 
 public interface UserService {
@@ -8,7 +10,13 @@ public interface UserService {
 
     User get(Long id);
 
+    Long getId(User user);
+
     User update(User user);
 
-    void delete(Long id);
+    User delete(Long id);
+
+    List<User> getAll();
+
+    List getOrders(Long userId);
 }

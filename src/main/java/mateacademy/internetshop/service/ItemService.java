@@ -1,8 +1,12 @@
 package mateacademy.internetshop.service;
 
+import java.util.List;
+
 import mateacademy.internetshop.model.Item;
 
 public interface ItemService {
+
+    List<Item> getAll();
 
     Item create(Item item);
 

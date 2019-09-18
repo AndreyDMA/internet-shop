@@ -1,55 +1,95 @@
 package mateacademy.internetshop.lib;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Enumeration;
 import java.util.List;
-import java.util.Map;
-
-import mateacademy.internetshop.Factory;
-import mateacademy.internetshop.Main;
-import mateacademy.internetshop.dao.BucketDao;
-import mateacademy.internetshop.dao.ItemDao;
-import mateacademy.internetshop.dao.OrderDao;
-import mateacademy.internetshop.dao.UserDao;
-import mateacademy.internetshop.service.BucketService;
-import mateacademy.internetshop.service.ItemService;
-import mateacademy.internetshop.service.OrderService;
-import mateacademy.internetshop.service.UserService;
-import mateacademy.internetshop.service.serviceimpl.BucketServiceImpl;
-import mateacademy.internetshop.service.serviceimpl.ItemServiceImpl;
-import mateacademy.internetshop.service.serviceimpl.OrderServiceImpl;
-import mateacademy.internetshop.service.serviceimpl.UserServiceImpl;
 
 public class Injector {
+    private static List<Class> classes = new ArrayList<>();
+    private static final String PROJECT_PACKAGE = "mateacademy.internetshop";
+
+    static {
+        try {
+            classes.addAll(getClasses(PROJECT_PACKAGE));
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void injectDependency() throws IllegalAccessException {
-
-        Map<Class, Object> getInstances = new HashMap<Class, Object>();
-        getInstances.put(ItemService.class, Factory.getItemService());
-        getInstances.put(BucketService.class, Factory.getBucketService());
-        getInstances.put(OrderService.class, Factory.getOrderService());
-        getInstances.put(UserService.class, Factory.getUserService());
-        getInstances.put(ItemDao.class, Factory.getItemDao());
-        getInstances.put(BucketDao.class, Factory.getBucketDao());
-        getInstances.put(OrderDao.class, Factory.getOrderDao());
-        getInstances.put(UserDao.class, Factory.getUserDao());
-
-        List<Class> existingClasses = new ArrayList<>();
-        existingClasses.add(ItemServiceImpl.class);
-        existingClasses.add(BucketServiceImpl.class);
-        existingClasses.add(OrderServiceImpl.class);
-        existingClasses.add(UserServiceImpl.class);
-        existingClasses.add(Main.class);
-
-        for (Class clazz : existingClasses) {
-            for (Field field : clazz.getDeclaredFields()) {
+        for (Class certainClass : classes) {
+            for (Field field : certainClass.getDeclaredFields()) {
                 if (field.getDeclaredAnnotation(Inject.class) != null) {
-                    field.setAccessible(true);
-                    field.set(null, getInstances.get(field.getType()));
+                    Object implementation = AnnotatedClassMap.getImplementation(field.getType());
+                    if (implementation.getClass().getDeclaredAnnotation(Service.class) != null
+                            || implementation.getClass().getDeclaredAnnotation(Dao.class) != null) {
+                        field.setAccessible(true);
+                        field.set(null, implementation);
+                    }
                 }
             }
         }
     }
-}
 
+    /**
+     * Scans all classes accessible from the context class loader which belong
+     * to the given package and subpackages.
+     * @param packageName The base package
+     * @return The classes
+     * @throws ClassNotFoundException
+     *
+     * @throws IOException
+     *
+     */
+    private static List<Class> getClasses(String packageName)
+            throws ClassNotFoundException, IOException {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        assert classLoader != null;
+        String path = packageName.replace('.', '/');
+        Enumeration<URL> resources = classLoader.getResources(path);
+        List<File> dirs = new ArrayList<File>();
+        while (resources.hasMoreElements()) {
+            URL resource = resources.nextElement();
+            dirs.add(new File(resource.getFile()));
+        }
+        ArrayList<Class> classes = new ArrayList<Class>();
+        for (File directory : dirs) {
+            classes.addAll(findClasses(directory, packageName));
+        }
+        return classes;
+    }
+
+    /**
+     * Recursive method used to find all classes in a given directory and subdirs.
+     * @param directory   The base directory
+     * @param packageName The package name for classes found inside the base directory
+     * @return The classes
+     * @throws ClassNotFoundException
+     *
+     * */
+
+    private static List<Class> findClasses(File directory, String packageName)
+            throws ClassNotFoundException {
+        List<Class> classes = new ArrayList<Class>();
+        if (!directory.exists()) {
+            return classes;
+        }
+        File[] files = directory.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    assert !file.getName().contains(".");
+                    classes.addAll(findClasses(file, packageName + "." + file.getName()));
+                } else if (file.getName().endsWith(".class")) {
+                    classes.add(Class.forName(packageName + '.'
+                            + file.getName().substring(0, file.getName().length() - 6)));
+                }
+            }
+        }
+        return classes;
+    }
+}

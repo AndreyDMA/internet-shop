@@ -1,5 +1,7 @@
 package mateacademy.internetshop.service.serviceimpl;
 
+import java.util.List;
+
 import mateacademy.internetshop.dao.ItemDao;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.lib.Service;
@@ -11,6 +13,11 @@ public class ItemServiceImpl implements ItemService {
 
     @Inject
     private static ItemDao itemDao;
+
+    @Override
+    public List<Item> getAll() {
+        return itemDao.getAll();
+    }
 
     @Override
     public Item create(Item item) {

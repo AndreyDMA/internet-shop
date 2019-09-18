@@ -3,19 +3,23 @@ package mateacademy.internetshop.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import mateacademy.internetshop.IdGenerator;
-
 public class Bucket {
-    private final Long id;
-    private List<Item> items = new ArrayList<>();
+    private final Long bucketId;
+    private List<Item> items;
     private User user;
 
     public Bucket() {
-        this.id = IdGenerator.getGeneratedId();
+        this.bucketId = 0L; //IdGenerator.getGeneratedId();
+        items = new ArrayList<>();
+    }
+
+    public Bucket(User user) {
+        this();
+        this.user = user;
     }
 
     public Long getId() {
-        return id;
+        return bucketId;
     }
 
     public List<Item> getItems() {
@@ -36,6 +40,6 @@ public class Bucket {
 
     @Override
     public String toString() {
-        return "Bucket id: " + id + "; User: " + user + ";\n";
+        return "Bucket id: " + bucketId + "; User: " + user + ";\n";
     }
 }

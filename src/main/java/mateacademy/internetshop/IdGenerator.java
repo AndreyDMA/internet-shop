@@ -1,7 +1,7 @@
 package mateacademy.internetshop;
 
 public class IdGenerator {
-    private static Long idGenerator = 2019L;
+    private static Long idGenerator = 201909L;
 
     private IdGenerator() {
     }
