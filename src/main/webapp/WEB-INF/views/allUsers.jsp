@@ -47,7 +47,7 @@
     <c:forEach var="user" items="${users}">
         <tr>
             <td>
-                <c:out value="${user.id}" />
+                <c:out value="${user.userId}" />
             </td>
             <td>
                 <c:out value="${user.name}" />
@@ -56,7 +56,7 @@
                 <c:out value="${user.surname}" />
             </td>
             <td>
-                <a href="/internet_shop_war_exploded/deleteUser?user_id=${user.id}">DELETE</a>
+                <a href="/internet_shop_war_exploded/deleteUser?user_id=${user.userId}">DELETE</a>
             </td>
         </tr>
     </c:forEach>

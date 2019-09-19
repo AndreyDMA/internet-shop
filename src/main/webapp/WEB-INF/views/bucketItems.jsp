@@ -47,7 +47,7 @@
     <c:forEach var="item" items="${items}">
         <tr>
             <td>
-                <c:out value="${item.id}" />
+                <c:out value="${item.itemId}" />
             </td>
             <td>
                 <c:out value="${item.name}" />
@@ -56,7 +56,7 @@
                 <c:out value="${item.price}" />
             </td>
             <td>
-                <a href="/internet_shop_war_exploded/deleteItemFromBucket?item_id=${item.id}">DELETE</a>
+                <a href="/internet_shop_war_exploded/deleteItemFromBucket?item_id=${item.itemId}">DELETE</a>
             </td>
         </tr>
     </c:forEach>

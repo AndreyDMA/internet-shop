@@ -41,22 +41,22 @@
     <tr>
         <th>ID</th>
         <th>User ID</th>
-        <th>Items</th>
+
         <th>Delete</th>
     </tr>
     <c:forEach var="order" items="${orders}">
         <tr>
             <td>
-                <c:out value="${order.id}" />
+                <c:out value="${order.orderId}" />
             </td>
             <td>
                 <c:out value="${order.userId}" />
             </td>
+<%--            <td>--%>
+<%--                <c:out value="${order.items}" />--%>
+<%--            </td>--%>
             <td>
-                <c:out value="${order.items}" />
-            </td>
-            <td>
-                <a href="/internet_shop_war_exploded/deleteOrder?order_id=${order.id}">DELETE</a>
+                <a href="/internet_shop_war_exploded/deleteOrder?order_id=${order.orderId}">DELETE</a>
             </td>
         </tr>
     </c:forEach>

@@ -22,7 +22,7 @@ public class BucketServiceImpl implements BucketService {
     public void deleteItem(Long bucketId, Long itemId) {
         Bucket bucket = bucketDao.get(bucketId);
         Item item = itemDao.get(itemId);
-        bucket.getItems().removeIf(i -> i.getId().equals(itemId));
+        bucket.getItems().removeIf(i -> i.getItemId().equals(itemId));
     }
 
     @Override

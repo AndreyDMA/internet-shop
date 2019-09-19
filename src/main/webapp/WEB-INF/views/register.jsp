@@ -13,7 +13,7 @@
 <body>
 <form action="/internet_shop_war_exploded/registration" method="post">
     <div class="container">
-        <h1>Register</h1>
+        <%--@declare id="user_name"--%><%--@declare id="user_surname"--%><%--@declare id="login"--%><%--@declare id="psw"--%><%--@declare id="psw-repeat"--%><h1>Register</h1>
         <p>Please fill in this form to create an account.</p>
         <hr>
 

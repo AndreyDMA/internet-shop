@@ -10,11 +10,11 @@ public interface ItemDao {
 
     Item create(Item item);
 
-    Item get(Long id);
+    Item get(Long itemId);
 
     Item update(Item item);
 
-    void delete(Long id);
+    void delete(Long itemId);
 
     void delete(Item item);
 }

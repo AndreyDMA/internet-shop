@@ -23,18 +23,18 @@ public class ItemDaoImpl implements ItemDao {
     }
 
     @Override
-    public Item get(Long id) {
+    public Item get(Long itemId) {
         return Storage.items.stream()
-                .filter(i -> i.getId().equals(id))
+                .filter(i -> i.getItemId().equals(itemId))
                 .findFirst()
                 .orElseThrow(() ->
-                        new NoSuchElementException("Can't find item with id " + id));
+                        new NoSuchElementException("Can't find item with id " + itemId));
     }
 
     @Override
     public Item update(Item item) {
         for (int i = 0; i < Storage.items.size(); i++) {
-            if (Storage.items.get(i).getId().equals(item.getId())) {
+            if (Storage.items.get(i).getItemId().equals(item.getItemId())) {
                 Storage.items.set(i, item);
             }
         }
@@ -42,8 +42,8 @@ public class ItemDaoImpl implements ItemDao {
     }
 
     @Override
-    public void delete(Long id) {
-        Storage.items.removeIf(i -> i.getId().equals(id));
+    public void delete(Long itemId) {
+        Storage.items.removeIf(i -> i.getItemId().equals(itemId));
     }
 
     @Override

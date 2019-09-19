@@ -13,7 +13,7 @@
 <body>
 <form action="/internet_shop_war_exploded/addItem">
     <div class="container">
-        <h1>Add item</h1>
+        <%--@declare id="item_name"--%><%--@declare id="item_price"--%><h1>Add item</h1>
 
         <label for="item_name"><b>Name</b></label>
         <input type="text" placeholder="Item name" name="item_name" required>

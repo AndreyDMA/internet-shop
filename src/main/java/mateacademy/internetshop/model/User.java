@@ -1,24 +1,32 @@
 package mateacademy.internetshop.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import mateacademy.internetshop.IdGenerator;
+
 public class User {
-    private final Long id;
-    private List<Order> orders;
+    private final Long userId;
     private Bucket bucket;
+    private List<Order> orders;
     private String name;
     private String surname;
     private String password;
     private String login;
 
     public User() {
-        this.id = 1L; //IdGenerator.getGeneratedId();
-        this.bucket = new Bucket();
+        this.userId = IdGenerator.getUserGeneratedId();
+        orders = new ArrayList<>();
+        bucket = new Bucket(userId);
     }
 
     public User(String name) {
         this();
         this.name = name;
+    }
+
+    public Bucket getBucket() {
+        return bucket;
     }
 
     public String getLogin() {
@@ -29,8 +37,8 @@ public class User {
         this.login = login;
     }
 
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
     public String getName() {
@@ -61,20 +69,4 @@ public class User {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
-
-    public Bucket getBucket() {
-        return bucket;
-    }
-
-    public void setBucket(Bucket bucket) {
-        this.bucket = bucket;
-    }
-
-    @Override
-    public String toString() {
-        return "User id: " + id + "; Orders : \n" + orders;
-    }
 }

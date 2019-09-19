@@ -22,6 +22,7 @@ public class OrderServiceImpl implements OrderService {
     public Order completeOrder(List<Item> items, Long userId) {
         Order order = new Order(items, userId);
         orderDao.create(order);
+        userDao.get(userId).getOrders().add(order);
         return order;
     }
 
@@ -31,8 +32,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order get(Long id) {
-        return orderDao.get(id);
+    public Order get(Long orderId) {
+        return orderDao.get(orderId);
     }
 
     @Override
@@ -41,7 +42,14 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void delete(Long id) {
-        orderDao.delete(id);
+    public void deleteUserOrder(Long userId, Long orderId) {
+        Order order = orderDao.get(orderId);
+        orderDao.delete(orderId);
+        userDao.getOrders(userId).remove(order);
+    }
+
+    @Override
+    public void delete(Long orderId) {
+        orderDao.delete(orderId);
     }
 }

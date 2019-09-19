@@ -5,18 +5,18 @@ import java.util.List;
 import mateacademy.internetshop.IdGenerator;
 
 public class Order {
-    private final Long id;
+    private final Long orderId;
     private Long userId;
     private List<Item> items;
 
     public Order(List<Item> items, Long userId) {
-        this.id = IdGenerator.getGeneratedId();
+        this.orderId = IdGenerator.getOrderGeneratedId();
         this.userId = userId;
         this.items = items;
     }
 
-    public Long getId() {
-        return id;
+    public Long getOrderId() {
+        return orderId;
     }
 
     public Long getUserId() {
@@ -29,10 +29,5 @@ public class Order {
 
     public void setItems(List<Item> items) {
         this.items = items;
-    }
-
-    @Override
-    public String toString() {
-        return "Order id: " + id + "; User id: " + userId + ";\n" + items;
     }
 }

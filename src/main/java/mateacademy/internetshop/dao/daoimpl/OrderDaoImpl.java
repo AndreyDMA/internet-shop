@@ -17,18 +17,18 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public Order get(Long id) {
+    public Order get(Long orderId) {
         return Storage.orders.stream()
-                .filter(o -> o.getId().equals(id))
+                .filter(o -> o.getOrderId().equals(orderId))
                 .findFirst()
                 .orElseThrow(() ->
-                        new NoSuchElementException("Can't find order with id " + id));
+                        new NoSuchElementException("Can't find order with id " + orderId));
     }
 
     @Override
     public Order update(Order order) {
         for (int i = 0; i < Storage.orders.size(); i++) {
-            if (Storage.orders.get(i).getId().equals(order.getId())) {
+            if (Storage.orders.get(i).getOrderId().equals(order.getOrderId())) {
                 Storage.orders.set(i, order);
             }
         }
@@ -36,7 +36,8 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public void delete(Long id) {
-        Storage.orders.removeIf(o -> o.getId().equals(id));
+    public void delete(Long orderId) {
+        Order order = get(orderId);
+        Storage.orders.removeIf(o -> o.getOrderId().equals(orderId));
     }
 }

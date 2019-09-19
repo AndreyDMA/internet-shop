@@ -6,10 +6,9 @@ public interface OrderDao {
 
     Order create(Order order);
 
-    Order get(Long id);
+    Order get(Long orderId);
 
     Order update(Order order);
 
-    void delete(Long id);
-
+    void delete(Long orderId);
 }

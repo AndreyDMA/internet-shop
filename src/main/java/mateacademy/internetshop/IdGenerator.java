@@ -1,14 +1,27 @@
 package mateacademy.internetshop;
 
 public class IdGenerator {
-    private static Long idGenerator;
-    private static final Long START_VALUE = 201909L;
+    private static Long bucketGeneratedId = 0L;
+    private static Long itemGeneratedId = 0L;
+    private static Long orderGeneratedId = 0L;
+    private static Long userGeneratedId = 0L;
 
     private IdGenerator() {
-        idGenerator = START_VALUE;
     }
 
-    public static Long getGeneratedId() {
-        return idGenerator++;
+    public static Long getBucketGeneratedId() {
+        return bucketGeneratedId++;
+    }
+
+    public static Long getItemGeneratedId() {
+        return itemGeneratedId++;
+    }
+
+    public static Long getOrderGeneratedId() {
+        return orderGeneratedId++;
+    }
+
+    public static Long getUserGeneratedId() {
+        return userGeneratedId++;
     }
 }
