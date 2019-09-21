@@ -1,7 +1,9 @@
 package mateacademy.internetshop.dao;
 
 import java.util.List;
+import java.util.Optional;
 
+import mateacademy.internetshop.exceptions.AuthenticationException;
 import mateacademy.internetshop.model.Order;
 import mateacademy.internetshop.model.User;
 
@@ -18,4 +20,10 @@ public interface UserDao {
     public List<User> getAll();
 
     public List<Order> getOrders(Long userId);
+
+    User login(String login, String password) throws AuthenticationException;
+
+    Optional<User> getByToken(String token);
+
+    String getToken();
 }

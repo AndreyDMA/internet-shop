@@ -56,17 +56,17 @@
                 <c:out value="${item.price}" />
             </td>
             <td>
-                <a href="/internet_shop_war_exploded/deleteItemFromBucket?item_id=${item.itemId}">DELETE</a>
+                <a href="/internet_shop_war_exploded/servlet/deleteItemFromBucket?item_id=${item.itemId}">DELETE</a>
             </td>
         </tr>
     </c:forEach>
 </table>
 
-<form action="/internet_shop_war_exploded/createOrder">
+<form action="/internet_shop_war_exploded/servlet/createOrder">
     <div class="container">
         <button type="submit" class="registerbtn">Confirm order</button>
     </div>
 </form>
-
+<p>You can continue <a href="/internet_shop_war_exploded/servlet/getAllItems">Shopping</a>.</p>
 </body>
 </html>

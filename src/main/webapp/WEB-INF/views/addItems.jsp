@@ -11,7 +11,7 @@
     <title>Add item</title>
 </head>
 <body>
-<form action="/internet_shop_war_exploded/addItem">
+<form action="/internet_shop_war_exploded/servlet/addItem">
     <div class="container">
         <%--@declare id="item_name"--%><%--@declare id="item_price"--%><h1>Add item</h1>
 
@@ -23,6 +23,9 @@
         <hr>
 
         <button type="submit" class="registerbtn">Add</button>
+
+            <p>If you finished adding items - go to <a href="/internet_shop_war_exploded/servlet/allItems">"All items"</a> page.</p>
+            <p>Or you can go to Internet Shop <a href="/internet_shop_war_exploded/index">start page</a>.</p>
     </div>
 </form>
 </body>

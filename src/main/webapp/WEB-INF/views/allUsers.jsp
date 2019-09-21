@@ -56,7 +56,7 @@
                 <c:out value="${user.surname}" />
             </td>
             <td>
-                <a href="/internet_shop_war_exploded/deleteUser?user_id=${user.userId}">DELETE</a>
+                <a href="/internet_shop_war_exploded/servlet/deleteUser?user_id=${user.userId}">DELETE</a>
             </td>
         </tr>
     </c:forEach>
@@ -67,6 +67,7 @@
         <button type="submit" class="registerbtn">Add new user</button>
     </div>
 </form>
+<p>Start <a href="/internet_shop_war_exploded/servlet/getAllItems">shopping</a>.</p>
 
 </body>
 </html>

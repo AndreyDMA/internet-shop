@@ -8,6 +8,7 @@ import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.lib.Service;
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Order;
+import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.service.OrderService;
 
 @Service
@@ -45,7 +46,8 @@ public class OrderServiceImpl implements OrderService {
     public void deleteUserOrder(Long userId, Long orderId) {
         Order order = orderDao.get(orderId);
         orderDao.delete(orderId);
-        userDao.getOrders(userId).remove(order);
+        User user = userDao.get(userId);
+        user.getOrders().remove(order);
     }
 
     @Override

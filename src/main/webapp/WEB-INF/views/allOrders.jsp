@@ -56,11 +56,12 @@
 <%--                <c:out value="${order.items}" />--%>
 <%--            </td>--%>
             <td>
-                <a href="/internet_shop_war_exploded/deleteOrder?order_id=${order.orderId}">DELETE</a>
+                <a href="/internet_shop_war_exploded/servlet/deleteOrder?order_id=${order.orderId}">DELETE</a>
             </td>
         </tr>
     </c:forEach>
 </table>
+<p>You can continue <a href="/internet_shop_war_exploded/servlet/getAllItems">Shopping</a>.</p>
 
 </body>
 </html>

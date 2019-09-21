@@ -12,6 +12,7 @@ public class User {
     private String name;
     private String surname;
     private String password;
+    private String token;
     private String login;
 
     public User() {
@@ -23,6 +24,14 @@ public class User {
     public User(String name) {
         this();
         this.name = name;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public Bucket getBucket() {

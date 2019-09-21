@@ -8,13 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mateacademy.internetshop.lib.Injector;
+import org.apache.log4j.Logger;
 
 public class IndexController extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(IndexController.class);
+
     static {
         try {
             Injector.injectDependency();
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            logger.error("Dependency injection failed...");
         }
     }
 

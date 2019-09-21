@@ -55,11 +55,11 @@
                 <c:out value="${item.price}" />
             </td>
             <td>
-                <a href="/internet_shop_war_exploded/addItemToBucket?item_id=${item.itemId}">BUY</a>
+                <a href="/internet_shop_war_exploded/servlet/addItemToBucket?item_id=${item.itemId}">BUY</a>
             </td>
         </tr>
     </c:forEach>
 </table>
-
+<p>You can check items in your <a href="/internet_shop_war_exploded/servlet/bucket">Bucket</a>.</p>
 </body>
 </html>

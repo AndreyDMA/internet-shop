@@ -1,8 +1,10 @@
 package mateacademy.internetshop.service.serviceimpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import mateacademy.internetshop.dao.UserDao;
+import mateacademy.internetshop.exceptions.AuthenticationException;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.lib.Service;
 import mateacademy.internetshop.model.Order;
@@ -14,6 +16,16 @@ public class UserServiceImpl implements UserService {
 
     @Inject
     private static UserDao userDao;
+
+    @Override
+    public Optional<User> getByToken(String token) {
+        return userDao.getByToken(token);
+    }
+
+    @Override
+    public String getToken() {
+        return userDao.getToken();
+    }
 
     @Override
     public User create(User user) {
@@ -43,5 +55,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<Order> getOrders(Long userId) {
         return userDao.get(userId).getOrders();
+    }
+
+    @Override
+    public User login(String login, String password) throws AuthenticationException {
+        return userDao.login(login, password);
     }
 }

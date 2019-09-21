@@ -1,7 +1,9 @@
 package mateacademy.internetshop.service;
 
 import java.util.List;
+import java.util.Optional;
 
+import mateacademy.internetshop.exceptions.AuthenticationException;
 import mateacademy.internetshop.model.User;
 
 public interface UserService {
@@ -17,4 +19,10 @@ public interface UserService {
     List<User> getAll();
 
     List getOrders(Long userId);
+
+    User login(String login, String password) throws AuthenticationException;
+
+    Optional<User> getByToken(String token);
+
+    String getToken();
 }

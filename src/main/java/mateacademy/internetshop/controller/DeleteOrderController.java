@@ -11,7 +11,6 @@ import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.service.OrderService;
 
 public class DeleteOrderController extends HttpServlet {
-    private static final Long TEMP_USER_ID = 0L;
     @Inject
     private static OrderService orderService;
 
@@ -21,6 +20,6 @@ public class DeleteOrderController extends HttpServlet {
         Long orderId = Long.valueOf(req.getParameter("order_id"));
         Long userId = orderService.get(orderId).getUserId();
         orderService.deleteUserOrder(userId, orderId);
-        resp.sendRedirect(req.getContextPath() + "/getAllOrders");
+        resp.sendRedirect(req.getContextPath() + "/servlet/getAllOrders");
     }
 }

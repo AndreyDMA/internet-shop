@@ -11,6 +11,12 @@ public class Item {
         this.itemId = IdGenerator.getItemGeneratedId();
     }
 
+    public Item(String name, Double price) {
+        this();
+        this.name = name;
+        this.price = price;
+    }
+
     public Long getItemId() {
         return itemId;
     }

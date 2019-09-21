@@ -10,13 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Bucket;
 import mateacademy.internetshop.model.Item;
+import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.service.BucketService;
 import mateacademy.internetshop.service.ItemService;
 import mateacademy.internetshop.service.UserService;
 
 public class AddItemToBucketController extends HttpServlet {
-    private static final Long TEMP_USER_ID = 0L;
-
     @Inject
     private static BucketService bucketService;
     @Inject
@@ -27,10 +26,12 @@ public class AddItemToBucketController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        Bucket bucket = userService.get(TEMP_USER_ID).getBucket();
+        Long userId = (Long) req.getSession(true).getAttribute("userId");
+        User user = userService.get(userId);
+        Bucket bucket = userService.get(userId).getBucket();
         bucketService.create(bucket);
         Item item = itemService.get(Long.valueOf(req.getParameter("item_id")));
         bucketService.addItem(bucket.getBucketId(), item.getItemId());
-        resp.sendRedirect(req.getContextPath() + "/getAllItems");
+        resp.sendRedirect(req.getContextPath() + "/servlet/getAllItems");
     }
 }

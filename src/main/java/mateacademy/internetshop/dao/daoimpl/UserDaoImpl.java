@@ -2,10 +2,13 @@ package mateacademy.internetshop.dao.daoimpl;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import mateacademy.internetshop.dao.UserDao;
 import mateacademy.internetshop.db.Storage;
+import mateacademy.internetshop.exceptions.AuthenticationException;
 import mateacademy.internetshop.lib.Dao;
 import mateacademy.internetshop.model.Order;
 import mateacademy.internetshop.model.User;
@@ -15,8 +18,14 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User create(User user) {
+        user.setToken(getToken());
         Storage.users.add(user);
-        return null;
+        return user;
+    }
+
+    @Override
+    public String getToken() {
+        return UUID.randomUUID().toString();
     }
 
     @Override
@@ -26,6 +35,24 @@ public class UserDaoImpl implements UserDao {
                 .findFirst()
                 .orElseThrow(() ->
                         new NoSuchElementException("Can't find user with id " + userId));
+    }
+
+    @Override
+    public Optional<User> getByToken(String token) {
+        return Storage.users.stream()
+                .filter(u -> u.getToken().equals(token))
+                .findFirst();
+    }
+
+    @Override
+    public User login(String login, String password) throws AuthenticationException {
+        Optional<User> user = Storage.users.stream()
+                .filter(u -> u.getLogin().equals(login))
+                .findFirst();
+        if (user.isEmpty() || !user.get().getPassword().equals(password)) {
+            throw new AuthenticationException("incorrect username or password");
+        }
+        return user.get();
     }
 
     @Override

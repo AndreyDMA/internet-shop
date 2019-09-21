@@ -1,1 +1,126 @@
 2019-09-19 18:32:37 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-19 20:18:48 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-19 21:19:19 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-19 21:23:44 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-19 21:25:57 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-19 21:30:03 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 15:41:47 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 15:42:57 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 15:43:13 INFO  AuthenticationFilter:51 - User was not authenticated
+2019-09-20 15:46:16 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 15:48:44 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 15:57:19 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 16:06:43 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 20:09:45 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 20:13:43 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 20:58:25 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 21:04:54 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 21:06:54 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 21:23:45 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 21:23:58 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:08 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:08 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:13 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:18 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:19 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:19 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:22 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:25 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:25 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:27 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:27 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:39 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:24:39 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:42:09 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-20 21:42:23 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:42:34 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:08 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:18 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:21 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:21 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:22 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:22 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:23 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:27 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:27 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:29 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:29 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-20 21:43:34 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:24:51 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-21 19:33:27 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-21 19:34:18 INFO  AuthenticationFilter:51 - User was not authenticated
+2019-09-21 19:34:36 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:34:45 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:39:10 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-21 19:42:11 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-21 19:49:26 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-21 19:49:39 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:49:52 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:50:07 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:17 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:31 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:35 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:35 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:36 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:36 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:40 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:44 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:44 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:47 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:50:47 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:08 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:12 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:12 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:13 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:13 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:14 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:14 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:15 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:18 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:18 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:51:24 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:53:38 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:53:56 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:53:56 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:54:30 INFO  AuthenticationFilter:45 - User log was authenticated
+2019-09-21 19:54:45 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:47 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:47 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:47 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:47 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:48 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:48 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:49 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:52 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 19:54:52 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:24:07 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-21 20:24:37 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:24:42 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:24:42 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:24:44 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:24:46 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:24:46 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:24:57 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:26:03 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:26:07 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:30:22 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:32:29 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-21 20:32:41 INFO  AuthenticationFilter:45 - User second was authenticated
+2019-09-21 20:33:15 INFO  AuthenticationFilter:45 - User second was authenticated
+2019-09-21 20:33:25 INFO  AuthenticationFilter:45 - User second was authenticated
+2019-09-21 20:33:39 INFO  AuthenticationFilter:45 - User second was authenticated
+2019-09-21 20:33:45 INFO  AuthenticationFilter:45 - User second was authenticated
+2019-09-21 20:34:09 INFO  AuthenticationFilter:45 - User second was authenticated
+2019-09-21 20:34:25 INFO  AuthenticationFilter:45 - User second was authenticated
+2019-09-21 20:41:37 INFO  InjectInitializer:16 - Dependency injection started...
+2019-09-21 20:41:49 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:52 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:52 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:52 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:52 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:53 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:55 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:55 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:57 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:41:57 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-09-21 20:42:03 INFO  AuthenticationFilter:45 - User first was authenticated

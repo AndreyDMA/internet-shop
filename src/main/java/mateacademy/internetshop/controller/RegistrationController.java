@@ -3,9 +3,11 @@ package mateacademy.internetshop.controller;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.User;
@@ -31,6 +33,11 @@ public class RegistrationController extends HttpServlet {
         newUser.setSurname(req.getParameter("user_surname"));
         userService.create(newUser);
 
-        resp.sendRedirect(req.getContextPath() + "/getAllUsers");
+        HttpSession session = req.getSession(true);
+        session.setAttribute("userId", newUser.getUserId());
+
+        Cookie cookie = new Cookie("MATE", newUser.getToken());
+        resp.addCookie(cookie);
+        resp.sendRedirect(req.getContextPath() + "/servlet/getAllItems");
     }
 }
