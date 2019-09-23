@@ -1,24 +1,26 @@
 package mateacademy.internetshop.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import mateacademy.internetshop.IdGenerator;
 
 public class User {
     private final Long userId;
-    private Bucket bucket;
+    private Long bucketId;
     private List<Order> orders;
     private String name;
     private String surname;
     private String password;
     private String token;
     private String login;
+    private Set<Role> roles = new HashSet<>();
 
     public User() {
         this.userId = IdGenerator.getUserGeneratedId();
         orders = new ArrayList<>();
-        bucket = new Bucket(userId);
     }
 
     public User(String name) {
@@ -26,16 +28,32 @@ public class User {
         this.name = name;
     }
 
+    public Long getBucketId() {
+        return bucketId;
+    }
+
+    public void setBucketId(Long bucketId) {
+        this.bucketId = bucketId;
+    }
+
     public String getToken() {
         return token;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public Bucket getBucket() {
-        return bucket;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    public void addRole(Role role) {
+        roles.add(role);
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public String getLogin() {

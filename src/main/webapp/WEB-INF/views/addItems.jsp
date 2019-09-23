@@ -13,7 +13,7 @@
 <body>
 <form action="/internet_shop_war_exploded/servlet/addItem">
     <div class="container">
-        <%--@declare id="item_name"--%><%--@declare id="item_price"--%><h1>Add item</h1>
+        <h1>Add item</h1><%--@declare id="item_name"--%><%--@declare id="item_price"--%>
 
         <label for="item_name"><b>Name</b></label>
         <input type="text" placeholder="Item name" name="item_name" required>
@@ -23,10 +23,17 @@
         <hr>
 
         <button type="submit" class="registerbtn">Add</button>
-
-            <p>If you finished adding items - go to <a href="/internet_shop_war_exploded/servlet/allItems">"All items"</a> page.</p>
-            <p>Or you can go to Internet Shop <a href="/internet_shop_war_exploded/index">start page</a>.</p>
     </div>
 </form>
+
+<p>Check result of adding items by pressing "Items list" button.</p>
+<form action="/internet_shop_war_exploded//servlet/adminItems">
+    <div class="container">
+        <button type="submit" class="registerbtn">Items list</button>
+    </div>
+</form>
+
+<p>Or you can go to Internet Shop <a href="/internet_shop_war_exploded/index">start page</a>.</p>
+
 </body>
 </html>

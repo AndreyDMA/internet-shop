@@ -1,17 +1,11 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<jsp:useBean id="users" scope="request" type="java.util.List<mateacademy.internetshop.model.User>"/>
-<%--
-  Created by IntelliJ IDEA.
-  User: andre
-  Date: 16-Sep-19
-  Time: 22:46
-  To change this template use File | Settings | File Templates.
---%>
+<jsp:useBean id="items" scope="request" type="java.util.List<mateacademy.internetshop.model.Item>"/>
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>AllUsers</title>
-
+    <title>AdminItems</title>
     <style>
         table {
             font-family: "Times New Roman", sans-serif;
@@ -35,43 +29,40 @@
 </head>
 <body>
 
-<h1>All Users</h1>
+<h1>You can make operations with items</h1>
 
 <table border="1">
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Surname</th>
+        <th>Price</th>
         <th>Update</th>
         <th>Delete</th>
     </tr>
-    <c:forEach var="user" items="${users}">
+    <c:forEach var="item" items="${items}">
         <tr>
             <td>
-                <c:out value="${user.userId}" />
+                <c:out value="${item.itemId}" />
             </td>
             <td>
-                <c:out value="${user.name}" />
+                <c:out value="${item.name}" />
             </td>
             <td>
-                <c:out value="${user.surname}" />
+                <c:out value="${item.price}" />
             </td>
             <td>
-                <a href="/internet_shop_war_exploded/servlet/updateUser?user_id=${user.userId}">Update</a>
+                <a href="/internet_shop_war_exploded/servlet/updateItem?item_id=${item.itemId}">Update</a>
             </td>
             <td>
-                <a href="/internet_shop_war_exploded/servlet/deleteUser?user_id=${user.userId}">Delete</a>
+                <a href="/internet_shop_war_exploded/servlet/deleteItem?item_id=${item.itemId}">Delete</a>
             </td>
         </tr>
     </c:forEach>
 </table>
-
-<form action="/internet_shop_war_exploded/registration">
+<form action="/internet_shop_war_exploded//servlet/addItem">
     <div class="container">
-        <button type="submit" class="registerbtn">Add new user</button>
+        <button type="submit" class="registerbtn">Add new item</button>
     </div>
 </form>
-<p>Start <a href="/internet_shop_war_exploded/servlet/getAllItems">shopping</a>.</p>
-
 </body>
 </html>

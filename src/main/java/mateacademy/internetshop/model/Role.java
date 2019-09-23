@@ -14,6 +14,11 @@ public class Role {
         this.roleId = IdGenerator.getRoleGeneratedId();
     }
 
+    public Role(RoleName roleName) {
+        this();
+        this.roleName = roleName;
+    }
+
     public Long getRoleId() {
         return roleId;
     }
@@ -24,5 +29,9 @@ public class Role {
 
     public void setRoleName(RoleName roleName) {
         this.roleName = roleName;
+    }
+
+    public static Role of(String roleName) {
+        return new Role(RoleName.valueOf(roleName));
     }
 }

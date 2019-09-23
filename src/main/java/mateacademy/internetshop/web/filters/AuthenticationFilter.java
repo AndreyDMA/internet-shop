@@ -30,10 +30,10 @@ public class AuthenticationFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest servReq, ServletResponse servResp, FilterChain filterChain)
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        HttpServletRequest req = (HttpServletRequest) servReq;
-        HttpServletResponse resp = (HttpServletResponse) servResp;
+        HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse resp = (HttpServletResponse) response;
         if (req.getCookies() == null) {
             processUnAuthenticated(req, resp);
             return;
@@ -43,7 +43,7 @@ public class AuthenticationFilter implements Filter {
                 Optional<User> user = userService.getByToken(cookie.getValue());
                 if (user.isPresent()) {
                     logger.info("User " + user.get().getLogin() + " was authenticated");
-                    filterChain.doFilter(servReq, servResp);
+                    chain.doFilter(request, response);
                     return;
                 }
             }
