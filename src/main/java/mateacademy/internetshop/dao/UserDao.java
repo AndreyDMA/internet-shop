@@ -17,9 +17,9 @@ public interface UserDao {
 
     User delete(Long userId);
 
-    public List<User> getAll();
+    List<User> getAll();
 
-    public List<Order> getOrders(Long userId);
+    List<Order> getOrders(Long userId);
 
     User login(String login, String password) throws AuthenticationException;
 

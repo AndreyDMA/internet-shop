@@ -52,9 +52,6 @@
             <td>
                 <c:out value="${order.userId}" />
             </td>
-<%--            <td>--%>
-<%--                <c:out value="${order.items}" />--%>
-<%--            </td>--%>
             <td>
                 <a href="/internet_shop_war_exploded/servlet/deleteOrder?order_id=${order.orderId}">DELETE</a>
             </td>
