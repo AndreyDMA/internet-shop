@@ -105,7 +105,7 @@
 
     <servlet>
         <servlet-name>adminItems</servlet-name>
-        <servlet-class>mateacademy.internetshop.controller.AdminItemsController</servlet-class>
+        <servlet-class>mateacademy.internetshop.controller.AdminGetAllItemsController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>adminItems</servlet-name>

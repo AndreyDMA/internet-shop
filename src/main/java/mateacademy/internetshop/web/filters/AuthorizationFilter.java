@@ -77,7 +77,7 @@ public class AuthorizationFilter implements Filter {
                     processAuthenticated(req, resp, chain);
                     return;
                 } else {
-                    prcessDenied(req, resp);
+                    processDenied(req, resp);
                     return;
                 }
             } else {
@@ -92,7 +92,7 @@ public class AuthorizationFilter implements Filter {
                 .anyMatch(r -> r.getRoleName().equals(roleName));
     }
 
-    private void prcessDenied(HttpServletRequest req, HttpServletResponse resp)
+    private void processDenied(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/views/accessDenied.jsp").forward(req, resp);
     }

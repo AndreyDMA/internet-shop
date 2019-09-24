@@ -12,7 +12,7 @@ import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.service.ItemService;
 
-public class AdminItemsController extends HttpServlet {
+public class AdminGetAllItemsController extends HttpServlet {
     @Inject
     private static ItemService itemService;
 
