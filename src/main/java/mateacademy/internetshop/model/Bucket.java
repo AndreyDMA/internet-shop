@@ -6,16 +6,18 @@ import java.util.List;
 import mateacademy.internetshop.IdGenerator;
 
 public class Bucket {
-    private final Long id;
-    private List<Item> items = new ArrayList<>();
-    private User user;
+    private final Long bucketId;
+    private List<Item> items;
+    private Long userId;
 
-    public Bucket() {
-        this.id = IdGenerator.getGeneratedId();
+    public Bucket(Long userId) {
+        this.bucketId = IdGenerator.getBucketGeneratedId();
+        items = new ArrayList<>();
+        this.userId = userId;
     }
 
-    public Long getId() {
-        return id;
+    public Long getBucketId() {
+        return bucketId;
     }
 
     public List<Item> getItems() {
@@ -26,16 +28,7 @@ public class Bucket {
         this.items = items;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    @Override
-    public String toString() {
-        return "Bucket id: " + id + "; User: " + user + ";\n";
+    public Long getUserId() {
+        return userId;
     }
 }

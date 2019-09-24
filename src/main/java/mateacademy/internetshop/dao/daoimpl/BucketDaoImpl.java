@@ -19,7 +19,7 @@ public class BucketDaoImpl implements BucketDao {
     @Override
     public Bucket get(Long bucketId) {
         return Storage.buckets.stream()
-                .filter(b -> b.getId().equals(bucketId))
+                .filter(b -> b.getBucketId().equals(bucketId))
                 .findFirst()
                 .orElseThrow(() ->
                         new NoSuchElementException("Can't find bucket with id " + bucketId));
@@ -28,7 +28,7 @@ public class BucketDaoImpl implements BucketDao {
     @Override
     public Bucket update(Bucket bucket) {
         for (int i = 0; i < Storage.buckets.size(); i++) {
-            if (Storage.buckets.get(i).getId().equals(bucket.getId())) {
+            if (Storage.buckets.get(i).getBucketId().equals(bucket.getBucketId())) {
                 Storage.buckets.set(i, bucket);
             }
         }
@@ -37,6 +37,6 @@ public class BucketDaoImpl implements BucketDao {
 
     @Override
     public void delete(Long bucketId) {
-        Storage.buckets.removeIf(b -> b.getId().equals(bucketId));
+        Storage.buckets.removeIf(b -> b.getBucketId().equals(bucketId));
     }
 }
