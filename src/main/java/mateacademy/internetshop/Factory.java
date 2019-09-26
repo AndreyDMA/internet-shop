@@ -23,6 +23,10 @@ import mateacademy.internetshop.service.serviceimpl.UserServiceImpl;
 import org.apache.log4j.Logger;
 
 public class Factory {
+    private static ItemDao instanceItemDao;
+    private static BucketDao instanceBucketDao;
+    private static OrderDao instanceOrderDao;
+    private static UserDao instanceUserDao;
     private static Connection connection;
     private static final Logger logger = Logger.getLogger(Factory.class);
 
@@ -40,31 +44,43 @@ public class Factory {
     }
 
     public static ItemDao getItemDao() {
-        return new ItemDaoJdbcImpl(connection);
+        if (instanceItemDao == null) {
+            instanceItemDao = new ItemDaoJdbcImpl(connection);
+        }
+        return instanceItemDao;
+    }
+
+    public static BucketDao getBucketDao() {
+        if (instanceBucketDao == null) {
+            instanceBucketDao = new BucketDaoImpl();
+        }
+        return instanceBucketDao;
+    }
+
+    public static OrderDao getOrderDao() {
+        if (instanceOrderDao == null) {
+            instanceOrderDao = new OrderDaoImpl();
+        }
+        return instanceOrderDao;
+    }
+
+    public static UserDao getUserDao() {
+        if (instanceUserDao == null) {
+            instanceUserDao = new UserDaoImpl();
+        }
+        return instanceUserDao;
     }
 
     public static ItemService getItemService() {
         return new ItemServiceImpl();
     }
 
-    public static BucketDao getBucketDao() {
-        return new BucketDaoImpl();
-    }
-
     public static BucketService getBucketService() {
         return new BucketServiceImpl();
     }
 
-    public static OrderDao getOrderDao() {
-        return new OrderDaoImpl();
-    }
-
     public static OrderService getOrderService() {
         return new OrderServiceImpl();
-    }
-
-    public static UserDao getUserDao() {
-        return new UserDaoImpl();
     }
 
     public static UserService getUserService() {
