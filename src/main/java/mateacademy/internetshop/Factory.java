@@ -1,13 +1,17 @@
 package mateacademy.internetshop;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 import mateacademy.internetshop.dao.BucketDao;
 import mateacademy.internetshop.dao.ItemDao;
 import mateacademy.internetshop.dao.OrderDao;
 import mateacademy.internetshop.dao.UserDao;
 import mateacademy.internetshop.dao.daoimpl.BucketDaoImpl;
-import mateacademy.internetshop.dao.daoimpl.ItemDaoImpl;
 import mateacademy.internetshop.dao.daoimpl.OrderDaoImpl;
 import mateacademy.internetshop.dao.daoimpl.UserDaoImpl;
+import mateacademy.internetshop.dao.jdbc.ItemDaoJdbcImpl;
 import mateacademy.internetshop.service.BucketService;
 import mateacademy.internetshop.service.ItemService;
 import mateacademy.internetshop.service.OrderService;
@@ -16,32 +20,34 @@ import mateacademy.internetshop.service.serviceimpl.BucketServiceImpl;
 import mateacademy.internetshop.service.serviceimpl.ItemServiceImpl;
 import mateacademy.internetshop.service.serviceimpl.OrderServiceImpl;
 import mateacademy.internetshop.service.serviceimpl.UserServiceImpl;
+import org.apache.log4j.Logger;
 
 public class Factory {
     private static ItemDao instanceItemDao;
-    private static ItemService instanceItemService;
     private static BucketDao instanceBucketDao;
-    private static BucketService instanceBucketService;
     private static OrderDao instanceOrderDao;
-    private static OrderService instanceOrderService;
     private static UserDao instanceUserDao;
-    private static UserService instanceUserService;
+    private static Connection connection;
+    private static final Logger logger = Logger.getLogger(Factory.class);
+
+    static {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection("jdbc:mysql:"
+                    + "//localhost:3306/test?user=tempUser&password=1234");
+        } catch (ClassNotFoundException | SQLException e) {
+            logger.error("Connection to our DB was not provided");
+        }
+    }
 
     private Factory() {
     }
 
     public static ItemDao getItemDao() {
         if (instanceItemDao == null) {
-            instanceItemDao = new ItemDaoImpl();
+            instanceItemDao = new ItemDaoJdbcImpl(connection);
         }
         return instanceItemDao;
-    }
-
-    public static ItemService getItemService() {
-        if (instanceItemService == null) {
-            instanceItemService = new ItemServiceImpl();
-        }
-        return new ItemServiceImpl();
     }
 
     public static BucketDao getBucketDao() {
@@ -51,25 +57,11 @@ public class Factory {
         return instanceBucketDao;
     }
 
-    public static BucketService getBucketService() {
-        if (instanceBucketService == null) {
-            instanceBucketService = new BucketServiceImpl();
-        }
-        return new BucketServiceImpl();
-    }
-
     public static OrderDao getOrderDao() {
         if (instanceOrderDao == null) {
             instanceOrderDao = new OrderDaoImpl();
         }
         return instanceOrderDao;
-    }
-
-    public static OrderService getOrderService() {
-        if (instanceOrderService == null) {
-            instanceOrderService = new OrderServiceImpl();
-        }
-        return new OrderServiceImpl();
     }
 
     public static UserDao getUserDao() {
@@ -79,10 +71,19 @@ public class Factory {
         return instanceUserDao;
     }
 
+    public static ItemService getItemService() {
+        return new ItemServiceImpl();
+    }
+
+    public static BucketService getBucketService() {
+        return new BucketServiceImpl();
+    }
+
+    public static OrderService getOrderService() {
+        return new OrderServiceImpl();
+    }
+
     public static UserService getUserService() {
-        if (instanceUserService == null) {
-            instanceUserService = new UserServiceImpl();
-        }
         return new UserServiceImpl();
     }
 }

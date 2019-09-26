@@ -15,6 +15,4 @@ public interface ItemService {
     Item update(Item item);
 
     void delete(Long itemId);
-
-    void delete(Item item);
 }
