@@ -1,22 +1,19 @@
 package mateacademy.internetshop.model;
 
-import mateacademy.internetshop.IdGenerator;
-
 public class Item {
-    private final Long itemId;
+    private Long itemId;
     private String name;
     private Double price;
 
     public Item() {
-        this.itemId = IdGenerator.getItemGeneratedId();
     }
 
     public Item(Long itemId) {
         this.itemId = itemId;
     }
 
-    public Item(String name, Double price) {
-        this();
+    public Item(Long itemId, String name, Double price) {
+        this.itemId = itemId;
         this.name = name;
         this.price = price;
     }

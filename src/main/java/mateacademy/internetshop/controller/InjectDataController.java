@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Bucket;
-import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Role;
 import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.service.BucketService;
@@ -27,7 +26,8 @@ public class InjectDataController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        User firstUser = new User("First");
+        User firstUser = new User();
+        firstUser.setName("First");
         firstUser.setSurname("User");
         firstUser.setLogin("first");
         firstUser.setPassword("1");
@@ -37,7 +37,8 @@ public class InjectDataController extends HttpServlet {
         bucketService.create(firstBucket);
         firstUser.setBucketId(firstBucket.getBucketId());
 
-        User secondUser = new User("Second");
+        User secondUser = new User();
+        secondUser.setName("Second");
         secondUser.setSurname("User");
         secondUser.setLogin("second");
         secondUser.setPassword("2");
@@ -47,19 +48,13 @@ public class InjectDataController extends HttpServlet {
         bucketService.create(secondBucket);
         secondUser.setBucketId(secondUser.getBucketId());
 
-        User admin = new User("Admin");
+        User admin = new User();
+        admin.setName("Admin");
         admin.setSurname("User");
         admin.setLogin("admin");
         admin.setPassword("111");
         admin.addRole(Role.of("ADMIN"));
         userService.create(admin);
-
-        Item phone = new Item("phone", 200D);
-        itemService.create(phone);
-        Item tv = new Item("tv", 500D);
-        itemService.create(tv);
-        Item pc = new Item("pc", 1000D);
-        itemService.create(pc);
 
         resp.sendRedirect(req.getContextPath() + "/index");
     }

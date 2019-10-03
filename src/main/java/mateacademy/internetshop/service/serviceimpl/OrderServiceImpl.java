@@ -8,7 +8,6 @@ import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.lib.Service;
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Order;
-import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.service.OrderService;
 
 @Service
@@ -21,10 +20,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order completeOrder(List<Item> items, Long userId) {
-        Order order = new Order(items, userId);
-        orderDao.create(order);
-        userDao.get(userId).getOrders().add(order);
-        return order;
+        return orderDao.completeOrder(items, userId);
     }
 
     @Override
@@ -44,10 +40,12 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void deleteUserOrder(Long userId, Long orderId) {
-        Order order = orderDao.get(orderId);
-        orderDao.delete(orderId);
-        User user = userDao.get(userId);
-        user.getOrders().remove(order);
+        orderDao.deleteUserOrder(userId, orderId);
+    }
+
+    @Override
+    public List<Order> getAllOrdersOfUser(Long userId) {
+        return orderDao.getAllOrdersOfUser(userId);
     }
 
     @Override

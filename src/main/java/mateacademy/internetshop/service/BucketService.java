@@ -15,7 +15,7 @@ public interface BucketService {
 
     Bucket create(Bucket bucket);
 
-    Bucket get(Long bucketId);
+    Bucket get(Long userId);
 
     Bucket update(Bucket bucket);
 

@@ -1,14 +1,47 @@
 package mateacademy.internetshop.dao.daoimpl;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import mateacademy.internetshop.dao.BucketDao;
+import mateacademy.internetshop.dao.ItemDao;
 import mateacademy.internetshop.db.Storage;
 import mateacademy.internetshop.lib.Dao;
+import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Bucket;
+import mateacademy.internetshop.model.Item;
 
 @Dao
 public class BucketDaoImpl implements BucketDao {
+    @Inject
+    private static ItemDao itemDao;
+
+    @Override
+    public Bucket addItem(Long bucketId, Long itemId) {
+        Bucket bucket = get(bucketId);
+        Item item = itemDao.get(itemId);
+        bucket.getItems().add(item);
+        return update(bucket);
+    }
+
+    @Override
+    public Bucket clear(Long bucketId) {
+        Bucket bucket = get(bucketId);
+        bucket.getItems().clear();
+        return bucket;
+    }
+
+    @Override
+    public List<Item> getAllItems(Long bucketId) {
+        Bucket bucket = get(bucketId);
+        return bucket.getItems();
+    }
+
+    @Override
+    public void deleteItem(Long bucketId, Long itemId) {
+        Bucket bucket = get(bucketId);
+        bucket.getItems().removeIf(i -> i.getItemId().equals(itemId));
+    }
 
     @Override
     public Bucket create(Bucket bucket) {
@@ -17,12 +50,12 @@ public class BucketDaoImpl implements BucketDao {
     }
 
     @Override
-    public Bucket get(Long bucketId) {
+    public Bucket get(Long userId) {
         return Storage.buckets.stream()
-                .filter(b -> b.getBucketId().equals(bucketId))
+                .filter(b -> b.getUserId().equals(userId))
                 .findFirst()
                 .orElseThrow(() ->
-                        new NoSuchElementException("Can't find bucket with id " + bucketId));
+                        new NoSuchElementException("Can't find bucket with id " + userId));
     }
 
     @Override

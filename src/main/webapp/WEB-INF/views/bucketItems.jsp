@@ -1,5 +1,5 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<jsp:useBean id="items" scope="request" type="java.util.List<mateacademy.internetshop.model.Item>"/>
+<%--<jsp:useBean id="items" scope="request" type="java.util.List<mateacademy.internetshop.model.Item>"/>
 <%--
   Created by IntelliJ IDEA.
   User: andre

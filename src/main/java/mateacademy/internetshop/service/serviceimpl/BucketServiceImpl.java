@@ -20,30 +20,22 @@ public class BucketServiceImpl implements BucketService {
 
     @Override
     public void deleteItem(Long bucketId, Long itemId) {
-        Bucket bucket = bucketDao.get(bucketId);
-        Item item = itemDao.get(itemId);
-        bucket.getItems().removeIf(i -> i.getItemId().equals(itemId));
+        bucketDao.deleteItem(bucketId, itemId);
     }
 
     @Override
     public Bucket addItem(Long bucketId, Long itemId) {
-        Bucket bucket = bucketDao.get(bucketId);
-        Item item = itemDao.get(itemId);
-        bucket.getItems().add(item);
-        return bucketDao.update(bucket);
+        return bucketDao.addItem(bucketId, itemId);
     }
 
     @Override
     public Bucket clear(Long bucketId) {
-        Bucket bucket = bucketDao.get(bucketId);
-        bucket.getItems().clear();
-        return bucket;
+        return bucketDao.clear(bucketId);
     }
 
     @Override
     public List<Item> getAllItems(Long bucketId) {
-        Bucket bucket = bucketDao.get(bucketId);
-        return bucket.getItems();
+        return bucketDao.getAllItems(bucketId);
     }
 
     @Override
@@ -52,8 +44,8 @@ public class BucketServiceImpl implements BucketService {
     }
 
     @Override
-    public Bucket get(Long bucketId) {
-        return bucketDao.get(bucketId);
+    public Bucket get(Long userId) {
+        return bucketDao.get(userId);
     }
 
     @Override
