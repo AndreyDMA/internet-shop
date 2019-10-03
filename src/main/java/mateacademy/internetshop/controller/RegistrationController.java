@@ -15,6 +15,7 @@ import mateacademy.internetshop.model.Role;
 import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.service.BucketService;
 import mateacademy.internetshop.service.UserService;
+import mateacademy.internetshop.util.HashUtil;
 
 public class RegistrationController extends HttpServlet {
     @Inject
@@ -33,11 +34,13 @@ public class RegistrationController extends HttpServlet {
             throws ServletException, IOException {
         User newUser = new User();
         newUser.setLogin(req.getParameter("login"));
-        newUser.setPassword(req.getParameter("psw"));
         newUser.setName(req.getParameter("user_name"));
         newUser.setSurname(req.getParameter("user_surname"));
         newUser.addRole(Role.of("USER"));
         newUser.setToken(userService.getToken());
+        newUser.setSalt(HashUtil.getSalt());
+        String hashPassword = HashUtil.hashPassword(req.getParameter("psw"), newUser.getSalt());
+        newUser.setPassword(hashPassword);
         userService.create(newUser);
 
         Bucket bucket = new Bucket(newUser.getUserId());
