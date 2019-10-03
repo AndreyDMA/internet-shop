@@ -1,5 +1,5 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<jsp:useBean id="items" scope="request" type="java.util.List<mateacademy.internetshop.model.Item>"/>
+<%--<jsp:useBean id="items" scope="request" type="java.util.List<mateacademy.internetshop.model.Item>"/>--%>
 
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -59,7 +59,7 @@
         </tr>
     </c:forEach>
 </table>
-<form action="/internet_shop_war_exploded//servlet/addItem">
+<form action="/internet_shop_war_exploded/servlet/addItem">
     <div class="container">
         <button type="submit" class="registerbtn">Add new item</button>
     </div>

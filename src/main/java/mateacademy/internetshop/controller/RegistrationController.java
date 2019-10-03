@@ -37,12 +37,12 @@ public class RegistrationController extends HttpServlet {
         newUser.setName(req.getParameter("user_name"));
         newUser.setSurname(req.getParameter("user_surname"));
         newUser.addRole(Role.of("USER"));
+        newUser.setToken(userService.getToken());
         userService.create(newUser);
 
         Bucket bucket = new Bucket(newUser.getUserId());
         bucketService.create(bucket);
-        Long bucketId = bucket.getBucketId();
-        newUser.setBucketId(bucketId);
+        newUser.setBucketId(bucket.getBucketId());
 
         HttpSession session = req.getSession(true);
         session.setAttribute("userId", newUser.getUserId());

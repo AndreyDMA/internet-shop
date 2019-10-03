@@ -2,15 +2,18 @@ package mateacademy.internetshop.model;
 
 import java.util.List;
 
-import mateacademy.internetshop.IdGenerator;
-
 public class Order {
-    private final Long orderId;
+    private Long orderId;
     private Long userId;
     private List<Item> items;
 
     public Order(List<Item> items, Long userId) {
-        this.orderId = IdGenerator.getOrderGeneratedId();
+        this.userId = userId;
+        this.items = items;
+    }
+
+    public Order(Long orderId, Long userId, List<Item> items) {
+        this.orderId = orderId;
         this.userId = userId;
         this.items = items;
     }

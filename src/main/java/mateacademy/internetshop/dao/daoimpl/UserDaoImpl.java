@@ -4,13 +4,11 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 import mateacademy.internetshop.dao.UserDao;
 import mateacademy.internetshop.db.Storage;
 import mateacademy.internetshop.exceptions.AuthenticationException;
 import mateacademy.internetshop.lib.Dao;
-import mateacademy.internetshop.model.Order;
 import mateacademy.internetshop.model.User;
 
 @Dao
@@ -55,12 +53,13 @@ public class UserDaoImpl implements UserDao {
         return user.get();
     }
 
+    /*
     @Override
     public List<Order> getOrders(Long userId) {
         return Storage.orders.stream()
                 .filter(o -> o.getUserId().equals(userId))
                 .collect(Collectors.toList());
-    }
+    }*/
 
     @Override
     public User update(User user) {
@@ -78,9 +77,8 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public User delete(Long userId) {
+    public void delete(Long userId) {
         User user = get(userId);
         Storage.users.remove(user);
-        return user;
     }
 }

@@ -28,8 +28,7 @@ public class CreateOrderController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         Long userId = (Long) req.getSession(true).getAttribute("userId");
-        Long bucketId = userService.get(userId).getBucketId();
-        Bucket bucket = bucketService.get(bucketId);
+        Bucket bucket = bucketService.get(userId);
         List<Item> orderedItems = bucketService.getAllItems(bucket.getBucketId());
         orderService.completeOrder(orderedItems, bucket.getUserId());
         bucketService.clear(bucket.getBucketId());
