@@ -13,6 +13,7 @@ import mateacademy.internetshop.exceptions.AuthenticationException;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.service.UserService;
+import mateacademy.internetshop.util.HashUtil;
 
 public class LoginController extends HttpServlet {
     @Inject
@@ -29,8 +30,10 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         String login = req.getParameter("login");
         String password = req.getParameter("psw");
+        byte[] salt = userService.getSaltByLogin(login);
+        String hashPassword = HashUtil.hashPassword(password, salt);
         try {
-            User user = userService.login(login, password);
+            User user = userService.login(login, hashPassword);
 
             HttpSession session = req.getSession(true);
             session.setAttribute("userId", user.getUserId());

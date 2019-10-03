@@ -216,4 +216,19 @@ public class UserDaoJdbcImpl extends AbstractDao<User> implements UserDao {
     public String getToken() {
         return UUID.randomUUID().toString();
     }
+
+    @Override
+    public byte[] getSaltByLogin(String login) {
+        String query = "SELECT users.salt FROM users WHERE users.login = ?;";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, login);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return resultSet.getBytes("salt");
+            }
+        } catch (SQLException e) {
+            logger.error("Can't get user from DB ", e);
+        }
+        return null;
+    }
 }

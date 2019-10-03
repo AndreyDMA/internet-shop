@@ -43,7 +43,8 @@ CREATE TABLE `test`.`users`
     `password` VARCHAR(250) NOT NULL,
     `token`    VARCHAR(45) NULL,
     `salt`     BLOB NULL,
-    PRIMARY KEY (`user_id`)
+    PRIMARY KEY (`user_id`),
+    UNIQUE KEY `login_UNIQUE` (`login`)
 );
 
 ALTER TABLE `test`.`orders`

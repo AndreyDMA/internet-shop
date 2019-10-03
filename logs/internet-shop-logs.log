@@ -7,3 +7,6 @@
 2019-10-03 21:24:05 INFO  AuthenticationFilter:45 - User null was authenticated
 2019-10-03 21:24:09 INFO  AuthenticationFilter:45 - User null was authenticated
 2019-10-03 21:24:09 INFO  AuthenticationFilter:45 - User null was authenticated
+2019-10-03 22:19:42 INFO  InjectInitializer:16 - Dependency injection started...
+2019-10-03 22:55:25 INFO  InjectInitializer:16 - Dependency injection started...
+2019-10-03 22:56:17 INFO  AuthenticationFilter:45 - User null was authenticated
