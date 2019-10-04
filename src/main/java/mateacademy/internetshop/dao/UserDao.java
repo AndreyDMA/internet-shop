@@ -18,7 +18,7 @@ public interface UserDao {
 
     List<User> getAll();
 
-    //List<Order> getOrders(Long userId);
+    byte[] getSaltByLogin(String login);
 
     User login(String login, String password) throws AuthenticationException;
 

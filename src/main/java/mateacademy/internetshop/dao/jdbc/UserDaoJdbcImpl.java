@@ -36,8 +36,8 @@ public class UserDaoJdbcImpl extends AbstractDao<User> implements UserDao {
 
     @Override
     public User create(User user) {
-        String query = "INSERT INTO users (name, surname, login, password, token) "
-                + "VALUES (?, ?, ?, ?, ?);";
+        String query = "INSERT INTO users (name, surname, login, password, token, salt) "
+                + "VALUES (?, ?, ?, ?, ?, ?);";
         try (PreparedStatement statement
                      = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getName());
@@ -45,6 +45,7 @@ public class UserDaoJdbcImpl extends AbstractDao<User> implements UserDao {
             statement.setString(3, user.getLogin());
             statement.setString(4, user.getPassword());
             statement.setString(5, user.getToken());
+            statement.setBytes(6, user.getSalt());
             statement.executeUpdate();
             ResultSet resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
@@ -139,12 +140,14 @@ public class UserDaoJdbcImpl extends AbstractDao<User> implements UserDao {
                 String name = resultSet.getString("name");
                 String surname = resultSet.getString("surname");
                 String token = resultSet.getString("token");
+                byte[] salt = resultSet.getBytes("salt");
                 user.setUserId(userId);
                 user.setName(name);
                 user.setSurname(surname);
                 user.setLogin(login);
                 user.setPassword(password);
                 user.setToken(token);
+                user.setSalt(salt);
                 Bucket bucket = bucketDao.get(userId);
                 user.setBucketId(bucket.getBucketId());
             } else {
@@ -212,5 +215,20 @@ public class UserDaoJdbcImpl extends AbstractDao<User> implements UserDao {
     @Override
     public String getToken() {
         return UUID.randomUUID().toString();
+    }
+
+    @Override
+    public byte[] getSaltByLogin(String login) {
+        String query = "SELECT users.salt FROM users WHERE users.login = ?;";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, login);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return resultSet.getBytes("salt");
+            }
+        } catch (SQLException e) {
+            logger.error("Can't get user from DB ", e);
+        }
+        return null;
     }
 }

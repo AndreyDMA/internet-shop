@@ -53,14 +53,6 @@ public class UserDaoImpl implements UserDao {
         return user.get();
     }
 
-    /*
-    @Override
-    public List<Order> getOrders(Long userId) {
-        return Storage.orders.stream()
-                .filter(o -> o.getUserId().equals(userId))
-                .collect(Collectors.toList());
-    }*/
-
     @Override
     public User update(User user) {
         for (int i = 0; i < Storage.users.size(); i++) {
@@ -74,6 +66,11 @@ public class UserDaoImpl implements UserDao {
     @Override
     public List<User> getAll() {
         return Storage.users;
+    }
+
+    @Override
+    public byte[] getSaltByLogin(String login) {
+        return new byte[0];
     }
 
     @Override

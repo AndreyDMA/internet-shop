@@ -52,6 +52,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public byte[] getSaltByLogin(String login) {
+        return userDao.getSaltByLogin(login);
+    }
+
+    @Override
     public User login(String login, String password) throws AuthenticationException {
         return userDao.login(login, password);
     }

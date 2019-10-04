@@ -40,9 +40,11 @@ CREATE TABLE `test`.`users`
     `name`     VARCHAR(45) NULL,
     `surname`  VARCHAR(45) NULL,
     `login`    VARCHAR(45) NOT NULL,
-    `password` VARCHAR(45) NOT NULL,
+    `password` VARCHAR(250) NOT NULL,
     `token`    VARCHAR(45) NULL,
-    PRIMARY KEY (`user_id`)
+    `salt`     BLOB NULL,
+    PRIMARY KEY (`user_id`),
+    UNIQUE KEY `login_UNIQUE` (`login`)
 );
 
 ALTER TABLE `test`.`orders`
@@ -52,7 +54,7 @@ ALTER TABLE `test`.`orders`
 ALTER TABLE `test`.`orders`
     ADD CONSTRAINT `orders_users_fk`
         FOREIGN KEY (`user_id`)
-            REFERENCES `test`.`users` (`users_id`)
+            REFERENCES `test`.`users` (`user_id`)
             ON DELETE NO ACTION
             ON UPDATE NO ACTION;
 
