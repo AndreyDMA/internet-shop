@@ -1,8 +1,21 @@
 package mateacademy.internetshop.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "items")
 public class Item {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "item_id", columnDefinition = "INT")
     private Long itemId;
     private String name;
+    @Column(name = "price", columnDefinition = "DECIMAL")
     private Double price;
 
     public Item() {
@@ -16,6 +29,10 @@ public class Item {
         this.itemId = itemId;
         this.name = name;
         this.price = price;
+    }
+
+    public void setItemId(Long itemId) {
+        this.itemId = itemId;
     }
 
     public Long getItemId() {
