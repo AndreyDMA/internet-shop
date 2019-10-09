@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import mateacademy.internetshop.dao.RoleDao;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Bucket;
 import mateacademy.internetshop.model.Role;
@@ -22,6 +23,8 @@ public class RegistrationController extends HttpServlet {
     private static UserService userService;
     @Inject
     private static BucketService bucketService;
+    @Inject
+    private static RoleDao roleDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -33,19 +36,19 @@ public class RegistrationController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         User newUser = new User();
+        Role userRole = roleDao.getRoleByName(Role.RoleName.valueOf("USER"));
+        Bucket bucket = new Bucket(newUser.getUserId());
+        newUser.addRole(userRole);
+        newUser.setBucket(bucket);
+        bucketService.create(bucket);
         newUser.setLogin(req.getParameter("login"));
         newUser.setName(req.getParameter("user_name"));
         newUser.setSurname(req.getParameter("user_surname"));
-        newUser.addRole(Role.of("USER"));
         newUser.setToken(userService.getToken());
         newUser.setSalt(HashUtil.getSalt());
         String hashPassword = HashUtil.hashPassword(req.getParameter("psw"), newUser.getSalt());
         newUser.setPassword(hashPassword);
         userService.create(newUser);
-
-        Bucket bucket = new Bucket(newUser.getUserId());
-        bucketService.create(bucket);
-        newUser.setBucketId(bucket.getBucketId());
 
         HttpSession session = req.getSession(true);
         session.setAttribute("userId", newUser.getUserId());

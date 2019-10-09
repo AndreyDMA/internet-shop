@@ -48,6 +48,27 @@ public class RoleDaoJdbcImpl extends AbstractDao<Role> implements RoleDao {
     }
 
     @Override
+    public Role getRoleByName(Role.RoleName roleName) {
+        String query = "SELECT * "
+                + "FROM roles "
+                + "WHERE role_name = ?;";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, roleName.toString());
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                Long roleId = resultSet.getLong("role_id");
+                String roleLabel = resultSet.getString("role_name");
+                Role role = Role.of(roleLabel);
+                role.setRoleId(roleId);
+                return role;
+            }
+        } catch (SQLException e) {
+            logger.error("Can't get role " + roleName.toString());
+        }
+        return null;
+    }
+
+    @Override
     public Set<Role> getAllRoles(User user) {
         String query = "SELECT roles.* "
                 + "FROM roles_users "
