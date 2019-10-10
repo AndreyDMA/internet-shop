@@ -9,6 +9,8 @@ public interface RoleDao {
 
     Role setRole(User user, Role.RoleName roleName);
 
+    Role getRoleByName(Role.RoleName roleName);
+
     Set<Role> getAllRoles(User user);
 }
 

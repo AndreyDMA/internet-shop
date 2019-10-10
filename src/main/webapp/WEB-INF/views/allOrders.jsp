@@ -50,7 +50,7 @@
                 <c:out value="${order.orderId}" />
             </td>
             <td>
-                <c:out value="${order.userId}" />
+                <c:out value="${order.user.userId}" />
             </td>
             <td>
                 <a href="/internet_shop_war_exploded/servlet/deleteOrder?order_id=${order.orderId}">DELETE</a>

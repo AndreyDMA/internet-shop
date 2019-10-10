@@ -4,10 +4,11 @@ import java.util.List;
 
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Order;
+import mateacademy.internetshop.model.User;
 
 public interface OrderService {
 
-    Order completeOrder(List<Item> items, Long userId);
+    Order completeOrder(List<Item> items, User user);
 
     Order create(Order order);
 
@@ -17,7 +18,7 @@ public interface OrderService {
 
     void delete(Long orderId);
 
-    void deleteUserOrder(Long userId, Long orderId);
+    void deleteUserOrder(User user, Long orderId);
 
-    List<Order> getAllOrdersOfUser(Long userId);
+    List<Order> getAllOrdersOfUser(User user);
 }

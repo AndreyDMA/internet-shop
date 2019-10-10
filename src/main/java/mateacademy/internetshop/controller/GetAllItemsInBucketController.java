@@ -24,8 +24,9 @@ public class GetAllItemsInBucketController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         Long userId = (Long) req.getSession(true).getAttribute("userId");
-        Bucket bucket = bucketService.get(userId);
-        List<Item> items = bucketService.getAllItems(bucket.getBucketId());
+        Long bucketId = userService.get(userId).getBucket().getBucketId();
+        Bucket bucket = bucketService.get(bucketId);
+        List<Item> items = bucketService.getAllItems(bucketId);
         req.setAttribute("items", items);
         req.getRequestDispatcher("/WEB-INF/views/bucketItems.jsp").forward(req, resp);
     }

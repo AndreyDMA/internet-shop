@@ -9,11 +9,11 @@ import mateacademy.internetshop.dao.ItemDao;
 import mateacademy.internetshop.dao.OrderDao;
 import mateacademy.internetshop.dao.RoleDao;
 import mateacademy.internetshop.dao.UserDao;
+import mateacademy.internetshop.dao.hibernate.BucketDaoHibernateImpl;
 import mateacademy.internetshop.dao.hibernate.ItemDaoHibernateImpl;
-import mateacademy.internetshop.dao.jdbc.BucketDaoJdbcImpl;
-import mateacademy.internetshop.dao.jdbc.OrderDaoJdbcImpl;
-import mateacademy.internetshop.dao.jdbc.RoleDaoJdbcImpl;
-import mateacademy.internetshop.dao.jdbc.UserDaoJdbcImpl;
+import mateacademy.internetshop.dao.hibernate.OrderDaoHibernateImpl;
+import mateacademy.internetshop.dao.hibernate.RoleDaoHibernateImpl;
+import mateacademy.internetshop.dao.hibernate.UserDaoHibernateImpl;
 import mateacademy.internetshop.service.BucketService;
 import mateacademy.internetshop.service.ItemService;
 import mateacademy.internetshop.service.OrderService;
@@ -57,28 +57,28 @@ public class Factory {
 
     public static BucketDao getBucketDao() {
         if (instanceBucketDao == null) {
-            instanceBucketDao = new BucketDaoJdbcImpl(connection);
+            instanceBucketDao = new BucketDaoHibernateImpl();
         }
         return instanceBucketDao;
     }
 
     public static OrderDao getOrderDao() {
         if (instanceOrderDao == null) {
-            instanceOrderDao = new OrderDaoJdbcImpl(connection);
+            instanceOrderDao = new OrderDaoHibernateImpl();
         }
         return instanceOrderDao;
     }
 
     public static UserDao getUserDao() {
         if (instanceUserDao == null) {
-            instanceUserDao = new UserDaoJdbcImpl(connection);
+            instanceUserDao = new UserDaoHibernateImpl();
         }
         return instanceUserDao;
     }
 
     public static RoleDao getRoleDao() {
         if (instanceRoleDao == null) {
-            instanceRoleDao = new RoleDaoJdbcImpl(connection);
+            instanceRoleDao = new RoleDaoHibernateImpl();
         }
         return instanceRoleDao;
     }
