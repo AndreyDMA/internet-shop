@@ -9,6 +9,7 @@ import mateacademy.internetshop.exceptions.AuthenticationException;
 import mateacademy.internetshop.lib.Dao;
 import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.util.HibernateUtil;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -41,7 +42,9 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public User get(Long userId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            return session.get(User.class, userId);
+            User user = session.get(User.class, userId);
+            Hibernate.initialize(user.getOrders());
+            return user;
         }
     }
 

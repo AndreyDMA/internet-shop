@@ -11,9 +11,9 @@ import mateacademy.internetshop.dao.RoleDao;
 import mateacademy.internetshop.dao.UserDao;
 import mateacademy.internetshop.dao.hibernate.BucketDaoHibernateImpl;
 import mateacademy.internetshop.dao.hibernate.ItemDaoHibernateImpl;
+import mateacademy.internetshop.dao.hibernate.OrderDaoHibernateImpl;
+import mateacademy.internetshop.dao.hibernate.RoleDaoHibernateImpl;
 import mateacademy.internetshop.dao.hibernate.UserDaoHibernateImpl;
-import mateacademy.internetshop.dao.jdbc.OrderDaoJdbcImpl;
-import mateacademy.internetshop.dao.jdbc.RoleDaoJdbcImpl;
 import mateacademy.internetshop.service.BucketService;
 import mateacademy.internetshop.service.ItemService;
 import mateacademy.internetshop.service.OrderService;
@@ -64,7 +64,7 @@ public class Factory {
 
     public static OrderDao getOrderDao() {
         if (instanceOrderDao == null) {
-            instanceOrderDao = new OrderDaoJdbcImpl(connection);
+            instanceOrderDao = new OrderDaoHibernateImpl();
         }
         return instanceOrderDao;
     }
@@ -78,7 +78,7 @@ public class Factory {
 
     public static RoleDao getRoleDao() {
         if (instanceRoleDao == null) {
-            instanceRoleDao = new RoleDaoJdbcImpl(connection);
+            instanceRoleDao = new RoleDaoHibernateImpl();
         }
         return instanceRoleDao;
     }

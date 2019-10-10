@@ -4,6 +4,7 @@ import java.util.List;
 
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Order;
+import mateacademy.internetshop.model.User;
 
 public interface OrderDao {
 
@@ -15,9 +16,9 @@ public interface OrderDao {
 
     void delete(Long orderId);
 
-    List<Order> getAllOrdersOfUser(Long userId);
+    List<Order> getAllOrdersOfUser(User user);
 
-    Order completeOrder(List<Item> items, Long userId);
+    Order completeOrder(List<Item> items, User user);
 
-    void deleteUserOrder(Long userId, Long orderId);
+    void deleteUserOrder(User user, Long orderId);
 }

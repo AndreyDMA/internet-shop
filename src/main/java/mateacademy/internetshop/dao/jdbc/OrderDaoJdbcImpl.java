@@ -9,15 +9,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mateacademy.internetshop.dao.OrderDao;
+import mateacademy.internetshop.dao.UserDao;
 import mateacademy.internetshop.lib.Dao;
+import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Order;
 
+import mateacademy.internetshop.model.User;
 import org.apache.log4j.Logger;
 
 @Dao
 public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
     private static Logger logger = Logger.getLogger(OrderDaoJdbcImpl.class);
+
+    @Inject
+    private static UserDao userDao;
 
     public OrderDaoJdbcImpl(Connection connection) {
         super(connection);
@@ -29,7 +35,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
         String addOrderQuery = "insert into orders (user_id) values (?);";
         try (PreparedStatement statement = connection.prepareStatement(addOrderQuery,
                 Statement.RETURN_GENERATED_KEYS)) {
-            statement.setLong(1, order.getUserId());
+            statement.setLong(1, order.getUser().getUserId());
             statement.executeUpdate();
             ResultSet resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
@@ -46,7 +52,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
                 statement.setLong(2, item.getItemId());
                 statement.execute();
             }
-            return new Order(orderId, order.getUserId(), order.getItems());
+            return new Order(orderId, order.getUser(), order.getItems());
         } catch (SQLException e) {
             logger.error("Can't create order " + orderId);
         }
@@ -54,7 +60,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
     }
 
     @Override
-    public List<Order> getAllOrdersOfUser(Long userId) {
+    public List<Order> getAllOrdersOfUser(User user) {
         String query = "SELECT orders.order_id, orders.user_id, "
                 + "items.item_id, items.name, items.price "
                 + "FROM orders "
@@ -64,7 +70,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
         List<Order> ordersList = new ArrayList<>();
         List<Item> itemsList = new ArrayList<>();
         try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setLong(1, userId);
+            statement.setLong(1, user.getUserId());
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 long orderId = resultSet.getLong("order_id");
@@ -73,29 +79,29 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
                 double price = resultSet.getDouble("price");
                 Item item = new Item(itemId, name, price);
                 itemsList.add(item);
-                Order order = new Order(orderId, userId, itemsList);
+                Order order = new Order(orderId, user, itemsList);
                 ordersList.add(order);
             }
             return ordersList;
         } catch (SQLException e) {
-            logger.error("Can't get list of orders for user with id " + userId, e);
+            logger.error("Can't get list of orders for user with id " + user.getUserId(), e);
         }
         return null;
     }
 
     @Override
-    public Order completeOrder(List<Item> items, Long userId) {
-        Order order = new Order(items, userId);
+    public Order completeOrder(List<Item> items, User user) {
+        Order order = new Order(items, user);
         Order newOrder = create(order);
-        getAllOrdersOfUser(userId).add(newOrder);
+        getAllOrdersOfUser(user).add(newOrder);
         return newOrder;
     }
 
     @Override
-    public void deleteUserOrder(Long userId, Long orderId) {
+    public void deleteUserOrder(User user, Long orderId) {
         Order order = get(orderId);
         delete(orderId);
-        getAllOrdersOfUser(userId).remove(order);
+        getAllOrdersOfUser(user).remove(order);
     }
 
     @Override
@@ -108,18 +114,20 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
                 + "WHERE orders.order_id = ?;";
         List<Item> itemsList = new ArrayList<>();
         long userId = 0L;
+        User user = new User();
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setLong(1, orderId);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 userId = resultSet.getLong("user_id");
+                user = userDao.get(userId);
                 long itemId = resultSet.getLong("item_id");
                 String name = resultSet.getString("name");
                 double price = resultSet.getDouble("price");
                 Item item = new Item(itemId, name, price);
                 itemsList.add(item);
             }
-            return new Order(orderId, userId, itemsList);
+            return new Order(orderId, user, itemsList);
         } catch (SQLException e) {
             logger.error("Can't get order by id " + orderId, e);
         }
@@ -130,7 +138,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
     public Order update(Order order) {
         String query = "UPDATE orders SET user_id = ? WHERE order_id = ?;";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setLong(1, order.getUserId());
+            statement.setLong(1, order.getUser().getUserId());
             statement.setLong(2, order.getOrderId());
             statement.executeUpdate();
             return order;
