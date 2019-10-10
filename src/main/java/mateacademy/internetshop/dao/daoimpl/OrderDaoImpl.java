@@ -9,6 +9,7 @@ import mateacademy.internetshop.db.Storage;
 import mateacademy.internetshop.lib.Dao;
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.model.Order;
+import mateacademy.internetshop.model.User;
 
 @Dao
 public class OrderDaoImpl implements OrderDao {
@@ -45,24 +46,24 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public List<Order> getAllOrdersOfUser(Long userId) {
+    public List<Order> getAllOrdersOfUser(User user) {
         return Storage.orders.stream()
-                .filter(o -> o.getUserId().equals(userId))
+                .filter(o -> o.getUser().getUserId().equals(user.getUserId()))
                 .collect(Collectors.toList());
     }
 
     @Override
-    public Order completeOrder(List<Item> items, Long userId) {
-        Order order = new Order(items, userId);
+    public Order completeOrder(List<Item> items, User user) {
+        Order order = new Order(items, user);
         create(order);
-        getAllOrdersOfUser(userId).add(order);
+        getAllOrdersOfUser(user).add(order);
         return order;
     }
 
     @Override
-    public void deleteUserOrder(Long userId, Long orderId) {
+    public void deleteUserOrder(User user, Long orderId) {
         Order order = get(orderId);
         delete(orderId);
-        getAllOrdersOfUser(userId).remove(order);
+        getAllOrdersOfUser(user).remove(order);
     }
 }

@@ -36,7 +36,6 @@ public class InjectDataController extends HttpServlet {
         Bucket firstBucket = new Bucket(firstUser.getUserId());
         firstUser.setBucket(firstBucket);
         bucketService.create(firstBucket);
-        //firstUser.setBucketId(firstBucket.getBucketId());
 
         User secondUser = new User();
         secondUser.setName("Second");
@@ -48,7 +47,6 @@ public class InjectDataController extends HttpServlet {
         Bucket secondBucket = new Bucket(secondUser.getUserId());
         secondUser.setBucket(secondBucket);
         bucketService.create(secondBucket);
-        //secondUser.setBucketId(secondUser.getBucketId());
 
         User admin = new User();
         admin.setName("Admin");

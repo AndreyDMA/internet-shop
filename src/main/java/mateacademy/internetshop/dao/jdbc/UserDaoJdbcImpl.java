@@ -149,7 +149,6 @@ public class UserDaoJdbcImpl extends AbstractDao<User> implements UserDao {
                 user.setToken(token);
                 user.setSalt(salt);
                 Bucket bucket = bucketDao.get(userId);
-                //user.setBucketId(bucket.getBucketId());
                 user.setBucket(bucket);
             } else {
                 throw new AuthenticationException("incorrect username or password");
@@ -188,7 +187,6 @@ public class UserDaoJdbcImpl extends AbstractDao<User> implements UserDao {
                 userId = resultSet.getLong("user_id");
                 user.setToken(token);
                 Bucket bucket = bucketDao.get(userId);
-                //user.setBucketId(bucket.getBucketId());
                 user.setBucket(bucket);
                 optionalUser = Optional.of(user);
 

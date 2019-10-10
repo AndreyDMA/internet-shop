@@ -19,13 +19,19 @@ public class UserDaoHibernateImpl implements UserDao {
     public User create(User user) {
         Long userId = null;
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             userId = (Long) session.save(user);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
         user.setUserId(userId);
@@ -35,21 +41,26 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public User get(Long userId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            User user = session.get(User.class, userId);
-            return user;
+            return session.get(User.class, userId);
         }
     }
 
     @Override
     public User update(User user) {
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             session.update(user);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
         return user;
@@ -58,13 +69,19 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void delete(Long userId) {
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             session.delete(get(userId));
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
     }

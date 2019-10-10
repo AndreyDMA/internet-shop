@@ -34,11 +34,24 @@ public class BucketDaoHibernateImpl implements BucketDao {
 
     @Override
     public Bucket clear(Long bucketId) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Transaction transaction = null;
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            transaction = session.beginTransaction();
             Query query = session.createQuery("DELETE FROM Bucket WHERE bucketId=:bucket_id");
             query.setParameter("bucket_id", bucketId);
-            return new Bucket(bucketId);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
         }
+        return new Bucket(bucketId);
     }
 
     @Override
@@ -67,13 +80,19 @@ public class BucketDaoHibernateImpl implements BucketDao {
     public Bucket create(Bucket bucket) {
         Long bucketId = null;
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             bucketId = (Long) session.save(bucket);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
         bucket.setBucketId(bucketId);
@@ -91,13 +110,19 @@ public class BucketDaoHibernateImpl implements BucketDao {
     @Override
     public Bucket update(Bucket bucket) {
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             session.update(bucket);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
         return bucket;
@@ -106,13 +131,19 @@ public class BucketDaoHibernateImpl implements BucketDao {
     @Override
     public void delete(Long bucketId) {
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             session.delete(get(bucketId));
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
     }

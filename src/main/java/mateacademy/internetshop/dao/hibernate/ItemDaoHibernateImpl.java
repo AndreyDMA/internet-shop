@@ -22,13 +22,19 @@ public class ItemDaoHibernateImpl implements ItemDao {
     public Item create(Item item) {
         Long itemId = null;
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             itemId = (Long) session.save(item);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
         item.setItemId(itemId);
@@ -38,21 +44,26 @@ public class ItemDaoHibernateImpl implements ItemDao {
     @Override
     public Item get(Long itemId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Item item = session.get(Item.class, itemId);
-            return item;
+            return session.get(Item.class, itemId);
         }
     }
 
     @Override
     public Item update(Item item) {
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             session.update(item);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
         return item;
@@ -61,13 +72,19 @@ public class ItemDaoHibernateImpl implements ItemDao {
     @Override
     public void delete(Long itemId) {
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             session.delete(get(itemId));
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
     }
