@@ -7,13 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mateacademy.internetshop.dao.RoleDao;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Bucket;
 import mateacademy.internetshop.model.Role;
 import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.service.BucketService;
 import mateacademy.internetshop.service.ItemService;
+import mateacademy.internetshop.service.RoleService;
 import mateacademy.internetshop.service.UserService;
+import mateacademy.internetshop.util.HashUtil;
 
 public class InjectDataController extends HttpServlet {
     @Inject
@@ -22,6 +25,8 @@ public class InjectDataController extends HttpServlet {
     private static ItemService itemService;
     @Inject
     private static BucketService bucketService;
+    @Inject
+    private static RoleService roleService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -30,30 +35,30 @@ public class InjectDataController extends HttpServlet {
         firstUser.setName("First");
         firstUser.setSurname("User");
         firstUser.setLogin("first");
-        firstUser.setPassword("1");
-        firstUser.addRole(Role.of("USER"));
-        userService.create(firstUser);
+        Role userRole = roleService.getRoleByName(Role.RoleName.valueOf("USER"));
+        firstUser.addRole(userRole);
         Bucket firstBucket = new Bucket(firstUser.getUserId());
         firstUser.setBucket(firstBucket);
         bucketService.create(firstBucket);
-
-        User secondUser = new User();
-        secondUser.setName("Second");
-        secondUser.setSurname("User");
-        secondUser.setLogin("second");
-        secondUser.setPassword("2");
-        secondUser.addRole(Role.of("USER"));
-        userService.create(secondUser);
-        Bucket secondBucket = new Bucket(secondUser.getUserId());
-        secondUser.setBucket(secondBucket);
-        bucketService.create(secondBucket);
+        firstUser.setToken(userService.getToken());
+        firstUser.setSalt(HashUtil.getSalt());
+        String firstUserPassword = HashUtil.hashPassword("1", firstUser.getSalt());
+        firstUser.setPassword(firstUserPassword);
+        userService.create(firstUser);
 
         User admin = new User();
         admin.setName("Admin");
         admin.setSurname("User");
         admin.setLogin("admin");
-        admin.setPassword("111");
-        admin.addRole(Role.of("ADMIN"));
+        Role adminRole = roleService.getRoleByName(Role.RoleName.valueOf("ADMIN"));
+        admin.addRole(adminRole);
+        Bucket adminBucket = new Bucket(admin.getUserId());
+        admin.setBucket(adminBucket);
+        bucketService.create(adminBucket);
+        admin.setToken(userService.getToken());
+        admin.setSalt(HashUtil.getSalt());
+        String adminPassword = HashUtil.hashPassword("111", admin.getSalt());
+        admin.setPassword(adminPassword);
         userService.create(admin);
 
         resp.sendRedirect(req.getContextPath() + "/index");
