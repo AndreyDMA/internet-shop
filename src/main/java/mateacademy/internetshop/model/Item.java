@@ -21,10 +21,6 @@ public class Item {
     public Item() {
     }
 
-    public Item(Long itemId) {
-        this.itemId = itemId;
-    }
-
     public Item(Long itemId, String name, Double price) {
         this.itemId = itemId;
         this.name = name;

@@ -42,7 +42,7 @@ public class RoleDaoJdbcImpl extends AbstractDao<Role> implements RoleDao {
             statement.setLong(2, user.getUserId());
             statement.executeUpdate();
         } catch (SQLException e) {
-            logger.error("Can't assign role to user " + user.getName());
+            logger.error("Can't assign role to user " + user.getName(), e);
         }
         return null;
     }
@@ -63,7 +63,7 @@ public class RoleDaoJdbcImpl extends AbstractDao<Role> implements RoleDao {
                 return role;
             }
         } catch (SQLException e) {
-            logger.error("Can't get role " + roleName.toString());
+            logger.error("Can't get role " + roleName.toString(), e);
         }
         return null;
     }
@@ -87,7 +87,7 @@ public class RoleDaoJdbcImpl extends AbstractDao<Role> implements RoleDao {
                 return rolesList;
             }
         } catch (SQLException e) {
-            logger.error("Can't get roles from user " + user.getName());
+            logger.error("Can't get roles from user " + user.getName(), e);
         }
         return null;
     }

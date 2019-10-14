@@ -27,9 +27,9 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                long itemId = resultSet.getLong("item_id");
+                Long itemId = resultSet.getLong("item_id");
                 String name = resultSet.getString("name");
-                double price = resultSet.getDouble("price");
+                Double price = resultSet.getDouble("price");
                 Item item = new Item(itemId, name, price);
                 itemsList.add(item);
             }
@@ -49,7 +49,7 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
             statement.executeUpdate();
             return item;
         } catch (SQLException e) {
-            logger.error("Can't create item " + item.getName());
+            logger.error("Can't create item " + item.getName(), e);
         }
         return null;
     }
@@ -62,11 +62,11 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
-                double price = resultSet.getDouble("price");
+                Double price = resultSet.getDouble("price");
                 return new Item(itemId, name, price);
             }
         } catch (SQLException e) {
-            logger.error("Can't get item by id " + itemId);
+            logger.error("Can't get item by id " + itemId, e);
         }
         return null;
     }
@@ -81,7 +81,7 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
             statement.executeUpdate();
             return item;
         } catch (SQLException e) {
-            logger.error("Can't update item " + item.getName());
+            logger.error("Can't update item " + item.getName(), e);
         }
         return null;
     }
@@ -93,7 +93,7 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
             statement.setLong(1, itemId);
             statement.executeUpdate();
         } catch (SQLException e) {
-            logger.error("Can't delete item by id" + itemId);
+            logger.error("Can't delete item by id" + itemId, e);
         }
     }
 }

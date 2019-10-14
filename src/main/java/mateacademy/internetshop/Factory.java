@@ -19,11 +19,11 @@ import mateacademy.internetshop.service.ItemService;
 import mateacademy.internetshop.service.OrderService;
 import mateacademy.internetshop.service.RoleService;
 import mateacademy.internetshop.service.UserService;
-import mateacademy.internetshop.service.serviceimpl.BucketServiceImpl;
-import mateacademy.internetshop.service.serviceimpl.ItemServiceImpl;
-import mateacademy.internetshop.service.serviceimpl.OrderServiceImpl;
-import mateacademy.internetshop.service.serviceimpl.RoleServiceImpl;
-import mateacademy.internetshop.service.serviceimpl.UserServiceImpl;
+import mateacademy.internetshop.service.impl.BucketServiceImpl;
+import mateacademy.internetshop.service.impl.ItemServiceImpl;
+import mateacademy.internetshop.service.impl.OrderServiceImpl;
+import mateacademy.internetshop.service.impl.RoleServiceImpl;
+import mateacademy.internetshop.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 
 public class Factory {
