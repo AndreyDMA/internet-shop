@@ -41,7 +41,7 @@ public class Factory {
             connection = DriverManager.getConnection("jdbc:mysql:"
                     + "//localhost:3306/test?user=tempUser&password=1234");
         } catch (ClassNotFoundException | SQLException e) {
-            logger.error("Connection to our DB was not provided");
+            logger.error("Connection to our DB was not provided", e);
         }
     }
 

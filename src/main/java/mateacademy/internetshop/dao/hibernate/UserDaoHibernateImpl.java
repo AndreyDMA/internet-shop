@@ -17,7 +17,7 @@ import org.hibernate.query.Query;
 
 @Dao
 public class UserDaoHibernateImpl implements UserDao {
-    Logger logger = Logger.getLogger(UserDaoHibernateImpl.class);
+    private static Logger logger = Logger.getLogger(UserDaoHibernateImpl.class);
 
     @Override
     public User create(User user) {
@@ -33,7 +33,7 @@ public class UserDaoHibernateImpl implements UserDao {
             if (transaction != null) {
                 transaction.rollback();
             }
-            logger.error("Can't create bucket ", e);
+            logger.error("Can't create user ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -65,7 +65,7 @@ public class UserDaoHibernateImpl implements UserDao {
             if (transaction != null) {
                 transaction.rollback();
             }
-            logger.error("Can't update bucket ", e);
+            logger.error("Can't update user ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -87,7 +87,7 @@ public class UserDaoHibernateImpl implements UserDao {
             if (transaction != null) {
                 transaction.rollback();
             }
-            logger.error("Can't delete bucket ", e);
+            logger.error("Can't delete user ", e);
         } finally {
             if (session != null) {
                 session.close();

@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import mateacademy.internetshop.dao.RoleDao;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Bucket;
 import mateacademy.internetshop.model.Role;

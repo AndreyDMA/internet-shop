@@ -12,7 +12,7 @@ import org.hibernate.Transaction;
 
 @Dao
 public class ItemDaoHibernateImpl implements ItemDao {
-    Logger logger = Logger.getLogger(ItemDaoHibernateImpl.class);
+    private static Logger logger = Logger.getLogger(ItemDaoHibernateImpl.class);
 
     @Override
     public List<Item> getAll() {
@@ -35,7 +35,7 @@ public class ItemDaoHibernateImpl implements ItemDao {
             if (transaction != null) {
                 transaction.rollback();
             }
-            logger.error("Can't create bucket ", e);
+            logger.error("Can't create item ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -65,7 +65,7 @@ public class ItemDaoHibernateImpl implements ItemDao {
             if (transaction != null) {
                 transaction.rollback();
             }
-            logger.error("Can't update bucket ", e);
+            logger.error("Can't update item ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -87,7 +87,7 @@ public class ItemDaoHibernateImpl implements ItemDao {
             if (transaction != null) {
                 transaction.rollback();
             }
-            logger.error("Can't delete bucket ", e);
+            logger.error("Can't delete item ", e);
         } finally {
             if (session != null) {
                 session.close();
