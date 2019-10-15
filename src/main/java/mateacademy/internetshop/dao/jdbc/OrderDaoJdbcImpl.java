@@ -77,8 +77,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Long orderId = resultSet.getLong("order_id");
-                Long itemId = resultSet.getLong("item_id");
-                Item item = itemDao.get(itemId);
+                Item item = itemDao.initItem(resultSet);
                 itemsList.add(item);
                 Order order = new Order(orderId, user, itemsList);
                 ordersList.add(order);
@@ -114,7 +113,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
                 + "INNER JOIN items ON orders_items.item_id = items.item_id "
                 + "WHERE orders.order_id = ?;";
         List<Item> itemsList = new ArrayList<>();
-        Long userId = 0L;
+        Long userId = null;
         User user = new User();
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setLong(1, orderId);
@@ -122,8 +121,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
             while (resultSet.next()) {
                 userId = resultSet.getLong("user_id");
                 user = userDao.get(userId);
-                Long itemId = resultSet.getLong("item_id");
-                Item item = itemDao.get(itemId);
+                Item item = itemDao.initItem(resultSet);
                 itemsList.add(item);
             }
             return new Order(orderId, user, itemsList);

@@ -62,4 +62,4 @@ and role ADMIN (login: admin, password: 111). To get them you just have to push
 <hr>
 
 # <a name="authors"></a>Authors
-* https://github.com/AndreyDMA
+* [Andrii Dmytriiev](https://github.com/AndreyDMA)
