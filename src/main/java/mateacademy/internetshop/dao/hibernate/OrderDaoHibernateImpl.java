@@ -14,7 +14,7 @@ import org.hibernate.Transaction;
 
 @Dao
 public class OrderDaoHibernateImpl implements OrderDao {
-    public static Logger logger = Logger.getLogger(OrderDaoHibernateImpl.class);
+    private static Logger logger = Logger.getLogger(OrderDaoHibernateImpl.class);
 
     @Override
     public Order create(Order order) {
@@ -30,6 +30,7 @@ public class OrderDaoHibernateImpl implements OrderDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't create order ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -59,6 +60,7 @@ public class OrderDaoHibernateImpl implements OrderDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't update order ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -80,6 +82,7 @@ public class OrderDaoHibernateImpl implements OrderDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't delete order ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -95,8 +98,7 @@ public class OrderDaoHibernateImpl implements OrderDao {
     @Override
     public Order completeOrder(List<Item> items, User user) {
         Order order = new Order(items, user);
-        create(order);
-        return order;
+        return create(order);
     }
 
     @Override

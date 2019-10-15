@@ -34,12 +34,12 @@
     </div>
   </form>
 
-  <%--<p>Press "Load" button to load test data.</p>
+  <p>Press "Load Test Users" button to load test users.</p>
   <form action="/internet_shop_war_exploded/inject">
     <div class="container">
-      <button type="submit" class="registerbtn">Load</button>
+      <button type="submit" class="registerbtn">Load Test Users</button>
     </div>
-  </form>--%>
+  </form>
 
   </body>
 </html>

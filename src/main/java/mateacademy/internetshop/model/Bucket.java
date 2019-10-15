@@ -33,11 +33,6 @@ public class Bucket {
     public Bucket() {
     }
 
-    public Bucket(Long bucketId, List<Item> items) {
-        this.bucketId = bucketId;
-        this.items = items;
-    }
-
     public Bucket(Long bucketId) {
         this.bucketId = bucketId;
         items = new ArrayList<>();

@@ -3,11 +3,11 @@ package mateacademy.internetshop.dao.hibernate;
 import java.util.List;
 
 import mateacademy.internetshop.dao.BucketDao;
+import mateacademy.internetshop.dao.ItemDao;
 import mateacademy.internetshop.lib.Dao;
 import mateacademy.internetshop.lib.Inject;
 import mateacademy.internetshop.model.Bucket;
 import mateacademy.internetshop.model.Item;
-import mateacademy.internetshop.service.ItemService;
 import mateacademy.internetshop.util.HibernateUtil;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
@@ -18,14 +18,14 @@ import org.hibernate.query.Query;
 public class BucketDaoHibernateImpl implements BucketDao {
     private static Logger logger = Logger.getLogger(BucketDaoHibernateImpl.class);
     @Inject
-    private static ItemService itemService;
+    private static ItemDao itemDao;
 
     @Override
     public Bucket addItem(Long bucketId, Long itemId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Bucket bucket = get(bucketId);
             List<Item> itemList = bucket.getItems();
-            Item item = itemService.get(itemId);
+            Item item = itemDao.get(itemId);
             itemList.add(item);
             update(bucket);
             return bucket;
@@ -46,6 +46,7 @@ public class BucketDaoHibernateImpl implements BucketDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't clear bucket ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -90,6 +91,7 @@ public class BucketDaoHibernateImpl implements BucketDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't create bucket ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -120,6 +122,7 @@ public class BucketDaoHibernateImpl implements BucketDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't update bucket ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -141,6 +144,7 @@ public class BucketDaoHibernateImpl implements BucketDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't delete bucket ", e);
         } finally {
             if (session != null) {
                 session.close();

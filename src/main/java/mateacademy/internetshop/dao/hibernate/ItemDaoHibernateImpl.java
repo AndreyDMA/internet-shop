@@ -6,11 +6,14 @@ import mateacademy.internetshop.dao.ItemDao;
 import mateacademy.internetshop.lib.Dao;
 import mateacademy.internetshop.model.Item;
 import mateacademy.internetshop.util.HibernateUtil;
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 @Dao
 public class ItemDaoHibernateImpl implements ItemDao {
+    private static Logger logger = Logger.getLogger(ItemDaoHibernateImpl.class);
+
     @Override
     public List<Item> getAll() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -32,6 +35,7 @@ public class ItemDaoHibernateImpl implements ItemDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't create item ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -61,6 +65,7 @@ public class ItemDaoHibernateImpl implements ItemDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't update item ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -82,6 +87,7 @@ public class ItemDaoHibernateImpl implements ItemDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't delete item ", e);
         } finally {
             if (session != null) {
                 session.close();

@@ -9,6 +9,7 @@ import mateacademy.internetshop.exceptions.AuthenticationException;
 import mateacademy.internetshop.lib.Dao;
 import mateacademy.internetshop.model.User;
 import mateacademy.internetshop.util.HibernateUtil;
+import org.apache.log4j.Logger;
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -16,6 +17,8 @@ import org.hibernate.query.Query;
 
 @Dao
 public class UserDaoHibernateImpl implements UserDao {
+    private static Logger logger = Logger.getLogger(UserDaoHibernateImpl.class);
+
     @Override
     public User create(User user) {
         Long userId = null;
@@ -30,6 +33,7 @@ public class UserDaoHibernateImpl implements UserDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't create user ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -61,6 +65,7 @@ public class UserDaoHibernateImpl implements UserDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't update user ", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -82,6 +87,7 @@ public class UserDaoHibernateImpl implements UserDao {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Can't delete user ", e);
         } finally {
             if (session != null) {
                 session.close();
