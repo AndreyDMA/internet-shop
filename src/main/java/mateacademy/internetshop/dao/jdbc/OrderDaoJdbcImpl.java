@@ -77,7 +77,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Long orderId = resultSet.getLong("order_id");
-                Item item = itemDao.initItem(resultSet);
+                Item item = initItem(resultSet);
                 itemsList.add(item);
                 Order order = new Order(orderId, user, itemsList);
                 ordersList.add(order);
@@ -121,7 +121,7 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
             while (resultSet.next()) {
                 userId = resultSet.getLong("user_id");
                 user = userDao.get(userId);
-                Item item = itemDao.initItem(resultSet);
+                Item item = initItem(resultSet);
                 itemsList.add(item);
             }
             return new Order(orderId, user, itemsList);
@@ -161,5 +161,12 @@ public class OrderDaoJdbcImpl extends AbstractDao<Order> implements OrderDao {
         } catch (SQLException e) {
             logger.error("Can't delete items from order " + orderId, e);
         }
+    }
+
+    private Item initItem(ResultSet resultSet) throws SQLException {
+        Long itemId = resultSet.getLong("item_id");
+        String name = resultSet.getString("name");
+        Double price = resultSet.getDouble("price");
+        return new Item(itemId, name, price);
     }
 }

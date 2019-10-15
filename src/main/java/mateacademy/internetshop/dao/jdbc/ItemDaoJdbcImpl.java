@@ -21,22 +21,17 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
     }
 
     @Override
-    public Item initItem(ResultSet resultSet) throws SQLException {
-        Long itemId = resultSet.getLong("item_id");
-        String name = resultSet.getString("name");
-        Double price = resultSet.getDouble("price");
-        Item item = new Item(itemId, name, price);
-        return item;
-    }
-
-    @Override
     public List<Item> getAll() {
         String query = "SELECT * FROM items;";
         List<Item> itemsList = new ArrayList<>();
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                itemsList.add(initItem(resultSet));
+                Long itemId = resultSet.getLong("item_id");
+                String name = resultSet.getString("name");
+                Double price = resultSet.getDouble("price");
+                Item item = new Item(itemId, name, price);
+                itemsList.add(item);
             }
             return itemsList;
         } catch (SQLException e) {

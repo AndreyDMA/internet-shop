@@ -10,8 +10,6 @@ public interface ItemDao {
 
     List<Item> getAll();
 
-    Item initItem(ResultSet resultSet) throws SQLException;
-
     Item create(Item item);
 
     Item get(Long itemId);

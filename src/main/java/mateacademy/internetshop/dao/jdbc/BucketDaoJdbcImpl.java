@@ -68,7 +68,10 @@ public class BucketDaoJdbcImpl extends AbstractDao<Bucket> implements BucketDao 
             statement.setLong(1, bucketId);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                Item item = itemDao.initItem(resultSet);
+                Long itemId = resultSet.getLong("item_id");
+                String name = resultSet.getString("name");
+                Double price = resultSet.getDouble("price");
+                Item item = new Item(itemId, name, price);
                 itemsList.add(item);
             }
             return itemsList;

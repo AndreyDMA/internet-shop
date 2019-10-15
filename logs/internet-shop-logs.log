@@ -12219,3 +12219,1493 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin' for k
 2019-10-14 22:41:59 DEBUG SessionFactoryRegistry:52 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@6e293b84
 2019-10-14 22:41:59 DEBUG SessionFactoryRegistry:74 - Registering SessionFactory: 29f0a762-7a5c-4900-85ec-07d2cc0b8076 (<unnamed>)
 2019-10-14 22:41:59 DEBUG SessionFactoryRegistry:81 - Not binding SessionFactory to JNDI, no JNDI name configured
+2019-10-15 15:15:02 INFO  InjectInitializer:16 - Dependency injection started...
+2019-10-15 15:15:02 DEBUG logging:28 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2019-10-15 15:15:02 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2019-10-15 15:15:02 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2019-10-15 15:15:02 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2019-10-15 15:15:02 INFO  Version:46 - HHH000412: Hibernate Core {5.4.5.Final}
+2019-10-15 15:15:02 DEBUG Environment:199 - HHH000206: hibernate.properties not found
+2019-10-15 15:15:03 DEBUG LocalXmlResourceResolver:57 - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+2019-10-15 15:15:03 DEBUG JaxbCfgProcessor:116 - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2019-10-15 15:15:03 DEBUG Configuration:722 - Building session factory using internal StandardServiceRegistryBuilder
+2019-10-15 15:15:03 DEBUG ServiceBinding:68 - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2019-10-15 15:15:03 DEBUG Configuration:652 - Building session factory using provided StandardServiceRegistry
+2019-10-15 15:15:03 DEBUG RegionFactoryInitiator:118 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2019-10-15 15:15:03 DEBUG RegionFactoryInitiator:49 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2019-10-15 15:15:03 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration boolean -> org.hibernate.type.BooleanType@4c7af717
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration boolean -> org.hibernate.type.BooleanType@4c7af717
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4c7af717
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@248c64b6
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@7f5d3299
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration yes_no -> org.hibernate.type.YesNoType@54032b17
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration byte -> org.hibernate.type.ByteType@4edfb827
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration byte -> org.hibernate.type.ByteType@4edfb827
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4edfb827
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration character -> org.hibernate.type.CharacterType@2c3e15d5
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration char -> org.hibernate.type.CharacterType@2c3e15d5
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@2c3e15d5
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration short -> org.hibernate.type.ShortType@610926ee
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration short -> org.hibernate.type.ShortType@610926ee
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@610926ee
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration integer -> org.hibernate.type.IntegerType@aa50030
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration int -> org.hibernate.type.IntegerType@aa50030
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@aa50030
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration long -> org.hibernate.type.LongType@fa383f5
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration long -> org.hibernate.type.LongType@fa383f5
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@fa383f5
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration float -> org.hibernate.type.FloatType@757fd3c9
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration float -> org.hibernate.type.FloatType@757fd3c9
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@757fd3c9
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration double -> org.hibernate.type.DoubleType@d8d72c8
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration double -> org.hibernate.type.DoubleType@d8d72c8
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@d8d72c8
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@271e76f2
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@271e76f2
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@292b71f2
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@292b71f2
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration string -> org.hibernate.type.StringType@5360a637
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.String -> org.hibernate.type.StringType@5360a637
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1f4b6bfa
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@2297fe3d
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration url -> org.hibernate.type.UrlType@cf37adc
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@cf37adc
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration Duration -> org.hibernate.type.DurationType@4675513d
+2019-10-15 15:15:03 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@4675513d
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration Instant -> org.hibernate.type.InstantType@21fd3c66
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@21fd3c66
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@27ae863f
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@27ae863f
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7e53ad4d
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7e53ad4d
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@6bd08b10
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@6bd08b10
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3f6f8cc7
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3f6f8cc7
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@333afd55
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@333afd55
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@70f96dd6
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@70f96dd6
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration date -> org.hibernate.type.DateType@462f24e4
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@462f24e4
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration time -> org.hibernate.type.TimeType@3eb5a8b3
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@3eb5a8b3
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration timestamp -> org.hibernate.type.TimestampType@123abef2
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@123abef2
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@123abef2
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@2cf9aaf1
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration calendar -> org.hibernate.type.CalendarType@7b614d05
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7b614d05
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7b614d05
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@41540d02
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration locale -> org.hibernate.type.LocaleType@33dd588b
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@33dd588b
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration currency -> org.hibernate.type.CurrencyType@33eedca1
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@33eedca1
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@5304e321
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@5304e321
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration class -> org.hibernate.type.ClassType@1e88795b
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@1e88795b
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5110741d
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5110741d
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@333b5c8
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration binary -> org.hibernate.type.BinaryType@481c3322
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration byte[] -> org.hibernate.type.BinaryType@481c3322
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration [B -> org.hibernate.type.BinaryType@481c3322
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@754bdeae
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@754bdeae
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@754bdeae
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration row_version -> org.hibernate.type.RowVersionType@7b39d925
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration image -> org.hibernate.type.ImageType@3bb5df9a
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration characters -> org.hibernate.type.CharArrayType@14f7b7c3
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration char[] -> org.hibernate.type.CharArrayType@14f7b7c3
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration [C -> org.hibernate.type.CharArrayType@14f7b7c3
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@ecd4e91
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@ecd4e91
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@ecd4e91
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration text -> org.hibernate.type.TextType@1b6fdabf
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration ntext -> org.hibernate.type.NTextType@4bbd91cc
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration blob -> org.hibernate.type.BlobType@1cddd7e5
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@1cddd7e5
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4556beec
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration clob -> org.hibernate.type.ClobType@68ad1f02
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@68ad1f02
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration nclob -> org.hibernate.type.NClobType@4a909460
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4a909460
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1ef24cff
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@40abb553
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration serializable -> org.hibernate.type.SerializableType@27a0d09c
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration object -> org.hibernate.type.ObjectType@2aea68b9
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@2aea68b9
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@4efb777
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@5492072c
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@cfd4c49
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3c4a3570
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@45e77981
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@108bd76
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6771261a
+2019-10-15 15:15:04 DEBUG BasicTypeRegistry:156 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@a7d6e31
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2019-10-15 15:15:04 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2019-10-15 15:15:04 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-10-15 15:15:04 INFO  pooling:115 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test?serverTimezone=UTC]
+2019-10-15 15:15:04 INFO  pooling:121 - HHH10001001: Connection properties: {password=1234, user=tempUser}
+2019-10-15 15:15:04 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2019-10-15 15:15:04 DEBUG DriverManagerConnectionProviderImpl:384 - Initializing Connection pool with 1 Connections
+2019-10-15 15:15:04 INFO  DriverManagerConnectionProviderImpl:239 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-10-15 15:15:04 DEBUG JdbcEnvironmentInitiator:72 - Database ->
+       name : MySQL
+    version : 8.0.17
+      major : 8
+      minor : 0
+2019-10-15 15:15:04 DEBUG JdbcEnvironmentInitiator:83 - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.17 (Revision: 16a712ddb3f826a1933ab42b0039f7fb9eebc6ec)
+      major : 8
+      minor : 0
+2019-10-15 15:15:04 DEBUG JdbcEnvironmentInitiator:389 - JDBC version : 4.2
+2019-10-15 15:15:04 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-15 15:15:04 DEBUG IdentifierHelperBuilder:113 - JDBC driver metadata reported database stores quoted identifiers in more than one case
+2019-10-15 15:15:04 DEBUG IdentifierHelperBuilder:187 - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+2019-10-15 15:15:04 DEBUG Namespace:51 - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2019-10-15 15:15:04 DEBUG TypeConfiguration$Scope:152 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@76ee1370] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@19e8bcde]
+2019-10-15 15:15:04 DEBUG AnnotationBinder:557 - Binding entity from annotated class: mateacademy.internetshop.model.Item
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-10-15 15:15:04 DEBUG EntityBinder:430 - Import with entity name Item
+2019-10-15 15:15:04 DEBUG EntityBinder:873 - Bind entity mateacademy.internetshop.model.Item on table items
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(items), mappingColumn=item_id, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property itemId with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.Item:itemId]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for itemId
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property itemId
+2019-10-15 15:15:04 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(item_id)]), itemId, identity, , ...)
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(items), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property name with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.Item:name]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for name
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property name
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(items), mappingColumn=price, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property price with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.Item:price]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for price
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property price
+2019-10-15 15:15:04 DEBUG AnnotationBinder:557 - Binding entity from annotated class: mateacademy.internetshop.model.Role
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-10-15 15:15:04 DEBUG EntityBinder:430 - Import with entity name Role
+2019-10-15 15:15:04 DEBUG EntityBinder:873 - Bind entity mateacademy.internetshop.model.Role on table roles
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(roles), mappingColumn=role_id, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property roleId with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.Role:roleId]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for roleId
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property roleId
+2019-10-15 15:15:04 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(role_id)]), roleId, identity, , ...)
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(roles), mappingColumn=role_name, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property roleName with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.Role:roleName]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for roleName
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property roleName
+2019-10-15 15:15:04 DEBUG AnnotationBinder:557 - Binding entity from annotated class: mateacademy.internetshop.model.User
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-10-15 15:15:04 DEBUG EntityBinder:430 - Import with entity name User
+2019-10-15 15:15:04 DEBUG EntityBinder:873 - Bind entity mateacademy.internetshop.model.User on table users
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=user_id, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property userId with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.User:userId]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for userId
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property userId
+2019-10-15 15:15:04 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(user_id)]), userId, identity, , ...)
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='bucket_id', referencedColumn='bucket_id', mappedBy=''}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=bucket, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property bucket
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=login, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property login with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.User:login]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for login
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property login
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property name with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.User:name]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for name
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property name
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=orders, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=orders_KEY, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='orders_KEY', referencedColumn='null', mappedBy='null'}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+2019-10-15 15:15:04 DEBUG CollectionBinder:450 - Collection role: mateacademy.internetshop.model.User.orders
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property orders
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=password, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property password with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.User:password]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for password
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property password
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=roles_KEY, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='roles_KEY', referencedColumn='null', mappedBy='null'}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='user_id', mappedBy=''}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='role_id', referencedColumn='role_id', mappedBy=''}
+2019-10-15 15:15:04 DEBUG CollectionBinder:450 - Collection role: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property roles
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=salt, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property salt with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.User:salt]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for salt
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property salt
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=surname, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property surname with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.User:surname]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for surname
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property surname
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=token, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property token with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.User:token]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for token
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property token
+2019-10-15 15:15:04 DEBUG AnnotationBinder:557 - Binding entity from annotated class: mateacademy.internetshop.model.Bucket
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-10-15 15:15:04 DEBUG EntityBinder:430 - Import with entity name Bucket
+2019-10-15 15:15:04 DEBUG EntityBinder:873 - Bind entity mateacademy.internetshop.model.Bucket on table buckets
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(buckets), mappingColumn=bucket_id, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property bucketId with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.Bucket:bucketId]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for bucketId
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property bucketId
+2019-10-15 15:15:04 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(bucket_id)]), bucketId, identity, , ...)
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(buckets), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(buckets), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(buckets), mappingColumn=items_KEY, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='items_KEY', referencedColumn='null', mappedBy='null'}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='bucket_id', referencedColumn='bucket_id', mappedBy=''}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='item_id', referencedColumn='item_id', mappedBy=''}
+2019-10-15 15:15:04 DEBUG CollectionBinder:450 - Collection role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property items
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='bucket'}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(buckets), mappingColumn=user, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG AnnotationBinder:557 - Binding entity from annotated class: mateacademy.internetshop.model.Order
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-10-15 15:15:04 DEBUG EntityBinder:430 - Import with entity name Order
+2019-10-15 15:15:04 DEBUG EntityBinder:873 - Bind entity mateacademy.internetshop.model.Order on table orders
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=order_id, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property orderId with lazy=false
+2019-10-15 15:15:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mateacademy.internetshop.model.Order:orderId]
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:411 - building SimpleValue for orderId
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property orderId
+2019-10-15 15:15:04 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(order_id)]), orderId, identity, , ...)
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=items_KEY, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='items_KEY', referencedColumn='null', mappedBy='null'}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='order_id', referencedColumn='order_id', mappedBy=''}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='item_id', referencedColumn='item_id', mappedBy=''}
+2019-10-15 15:15:04 DEBUG CollectionBinder:450 - Collection role: mateacademy.internetshop.model.Order.items
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property items
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='', mappedBy=''}
+2019-10-15 15:15:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(orders), mappingColumn=user, insertable=true, updatable=true, unique=false}
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property user
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for itemId
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for name
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for price
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for roleId
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for roleName
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for userId
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for login
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for name
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for password
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for salt
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for surname
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for token
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for bucketId
+2019-10-15 15:15:04 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for orderId
+2019-10-15 15:15:04 DEBUG PrimaryKey:35 - Forcing column [item_id] to be non-null as it is part of the primary key for table [items]
+2019-10-15 15:15:04 DEBUG PrimaryKey:35 - Forcing column [role_id] to be non-null as it is part of the primary key for table [roles]
+2019-10-15 15:15:04 DEBUG PrimaryKey:35 - Forcing column [user_id] to be non-null as it is part of the primary key for table [users]
+2019-10-15 15:15:04 DEBUG PrimaryKey:35 - Forcing column [bucket_id] to be non-null as it is part of the primary key for table [buckets]
+2019-10-15 15:15:04 DEBUG PrimaryKey:35 - Forcing column [order_id] to be non-null as it is part of the primary key for table [orders]
+2019-10-15 15:15:04 DEBUG CollectionSecondPass:50 - Second pass for collection: mateacademy.internetshop.model.Order.items
+2019-10-15 15:15:04 DEBUG CollectionBinder:1319 - Binding as ManyToMany: mateacademy.internetshop.model.Order.items
+2019-10-15 15:15:04 DEBUG CollectionSecondPass:67 - Mapped collection key: order_id, element: item_id
+2019-10-15 15:15:04 DEBUG CollectionSecondPass:50 - Second pass for collection: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:04 DEBUG CollectionBinder:1319 - Binding as ManyToMany: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:04 DEBUG CollectionSecondPass:67 - Mapped collection key: bucket_id, element: item_id
+2019-10-15 15:15:04 DEBUG CollectionSecondPass:50 - Second pass for collection: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:04 DEBUG CollectionBinder:1319 - Binding as ManyToMany: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:04 DEBUG PrimaryKey:35 - Forcing column [user_id] to be non-null as it is part of the primary key for table [roles_users]
+2019-10-15 15:15:04 DEBUG PrimaryKey:35 - Forcing column [role_id] to be non-null as it is part of the primary key for table [roles_users]
+2019-10-15 15:15:04 DEBUG CollectionSecondPass:67 - Mapped collection key: user_id, element: role_id
+2019-10-15 15:15:04 DEBUG CollectionSecondPass:50 - Second pass for collection: mateacademy.internetshop.model.User.orders
+2019-10-15 15:15:04 DEBUG CollectionBinder:899 - Binding a OneToMany: mateacademy.internetshop.model.User.orders through a foreign key
+2019-10-15 15:15:04 DEBUG CollectionBinder:937 - Mapping collection: mateacademy.internetshop.model.User.orders -> orders
+2019-10-15 15:15:04 DEBUG TableBinder:554 - Retrieving property mateacademy.internetshop.model.Order.user
+2019-10-15 15:15:04 DEBUG CollectionSecondPass:67 - Mapped collection key: user_id, one-to-many: mateacademy.internetshop.model.Order
+2019-10-15 15:15:04 DEBUG PropertyBinder:266 - Building property user
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1955 - Processing association property references
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Item
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Bucket
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.User
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Item
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Order
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Role
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.User
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Bucket
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1955 - Processing association property references
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Item
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Bucket
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.User
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Item
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Order
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Role
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.User
+2019-10-15 15:15:04 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mateacademy.internetshop.model.Bucket
+2019-10-15 15:15:04 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:04 DEBUG SessionFactoryImpl:207 - Building session factory
+2019-10-15 15:15:04 DEBUG Settings:68 - SessionFactory name : null
+2019-10-15 15:15:04 DEBUG Settings:69 - Automatic flush during beforeCompletion(): enabled
+2019-10-15 15:15:04 DEBUG Settings:70 - Automatic session close at end of transaction: disabled
+2019-10-15 15:15:04 DEBUG Settings:72 - Statistics: disabled
+2019-10-15 15:15:04 DEBUG Settings:74 - Deleted entity synthetic identifier rollback: disabled
+2019-10-15 15:15:04 DEBUG Settings:75 - Default entity-mode: pojo
+2019-10-15 15:15:04 DEBUG Settings:76 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2019-10-15 15:15:04 DEBUG Settings:77 - Allow initialization of lazy state outside session : disabled
+2019-10-15 15:15:04 DEBUG Settings:80 - Default batch fetch size: -1
+2019-10-15 15:15:04 DEBUG Settings:81 - Maximum outer join fetch depth: 2
+2019-10-15 15:15:04 DEBUG Settings:82 - Default null ordering: NONE
+2019-10-15 15:15:04 DEBUG Settings:83 - Order SQL updates by primary key: disabled
+2019-10-15 15:15:04 DEBUG Settings:84 - Order SQL inserts for batching: disabled
+2019-10-15 15:15:04 DEBUG Settings:86 - multi-tenancy strategy : NONE
+2019-10-15 15:15:04 DEBUG Settings:88 - JTA Track by Thread: enabled
+2019-10-15 15:15:04 DEBUG Settings:90 - Query language substitutions: {}
+2019-10-15 15:15:04 DEBUG Settings:91 - Named query checking : enabled
+2019-10-15 15:15:04 DEBUG Settings:93 - Second-level cache: disabled
+2019-10-15 15:15:04 DEBUG Settings:94 - Second-level query cache: disabled
+2019-10-15 15:15:04 DEBUG Settings:95 - Second-level query cache factory: null
+2019-10-15 15:15:04 DEBUG Settings:96 - Second-level cache region prefix: null
+2019-10-15 15:15:04 DEBUG Settings:97 - Optimize second-level cache for minimal puts: disabled
+2019-10-15 15:15:04 DEBUG Settings:98 - Structured second-level cache entries: disabled
+2019-10-15 15:15:04 DEBUG Settings:99 - Second-level cache direct-reference entries: disabled
+2019-10-15 15:15:04 DEBUG Settings:100 - Automatic eviction of collection cache: disabled
+2019-10-15 15:15:04 DEBUG Settings:102 - JDBC batch size: 15
+2019-10-15 15:15:04 DEBUG Settings:103 - JDBC batch updates for versioned data: enabled
+2019-10-15 15:15:04 DEBUG Settings:104 - Scrollable result sets: enabled
+2019-10-15 15:15:04 DEBUG Settings:105 - Wrap result sets: disabled
+2019-10-15 15:15:04 DEBUG Settings:106 - JDBC3 getGeneratedKeys(): enabled
+2019-10-15 15:15:04 DEBUG Settings:107 - JDBC result set fetch size: null
+2019-10-15 15:15:04 DEBUG Settings:108 - Connection release mode: AFTER_TRANSACTION
+2019-10-15 15:15:04 DEBUG Settings:109 - Generate SQL with comments: disabled
+2019-10-15 15:15:04 DEBUG Settings:111 - JPA compliance - query : 
+2019-10-15 15:15:04 DEBUG Settings:112 - JPA compliance - closed-handling : 
+2019-10-15 15:15:04 DEBUG Settings:113 - JPA compliance - lists : 
+2019-10-15 15:15:04 DEBUG Settings:114 - JPA compliance - transactions : 
+2019-10-15 15:15:04 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:05 DEBUG SessionFactoryImpl:262 - Session factory constructed with filter configurations : {}
+2019-10-15 15:15:05 DEBUG SessionFactoryImpl:263 - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, java.specification.version=11, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, java.class.path=C:\Program Files\Tomcat\apache-tomcat-8.5.45\bin\bootstrap.jar;C:\Program Files\Tomcat\apache-tomcat-8.5.45\bin\tomcat-juli.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, hbm2ddl.auto=validate, user.variant=, java.vendor.url=http://java.oracle.com/, catalina.useNaming=true, user.timezone=Europe/Helsinki, os.name=Windows 10, java.vm.specification.version=11, sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=C:\Program Files\Java\jdk-11.0.4\bin, com.sun.management.jmxremote.ssl=false, sun.java.command=org.apache.catalina.startup.Bootstrap start, com.sun.management.jmxremote=, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\andre, user.language=en, java.specification.vendor=Oracle Corporation, java.naming.factory.url.pkgs=org.apache.naming, java.version.date=2019-07-16, java.home=C:\Program Files\Java\jdk-11.0.4, ignore.endorsed.dirs=, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, com.sun.management.jmxremote.password.file=C:\Users\andre\.IntelliJIdea2019.2\system\tomcat\Unnamed_internetshop_13\jmxremote.password, package.access=sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat., package.definition=sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat., jdk.tls.ephemeralDHKeySize=2048, hibernate.hbm2ddl.auto=validate, user.script=, server.loader=, java.util.logging.config.file=C:\Users\andre\.IntelliJIdea2019.2\system\tomcat\Unnamed_internetshop_13\conf\logging.properties, java.protocol.handler.pkgs=org.apache.catalina.webresources, connection.password=1234, com.sun.management.jmxremote.access.file=C:\Users\andre\.IntelliJIdea2019.2\system\tomcat\Unnamed_internetshop_13\jmxremote.access, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.4+10-LTS, java.naming.factory.initial=org.apache.naming.java.javaURLContextFactory, user.name=andre, path.separator=;, common.loader="C:/Program Files/Tomcat/apache-tomcat-8.5.45/lib","C:/Program Files/Tomcat/apache-tomcat-8.5.45/lib/*.jar","C:\Program Files\Tomcat\apache-tomcat-8.5.45/lib","C:\Program Files\Tomcat\apache-tomcat-8.5.45/lib/*.jar", hibernate.connection.username=****, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/test?serverTimezone=UTC, file.encoding=Cp1252, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, java.vendor.version=18.9, show_sql=true, hibernate.connection.driver_class=com.mysql.jdbc.Driver, java.vendor.url.bug=http://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Program Files\Tomcat\apache-tomcat-8.5.45\temp, tomcat.util.scan.StandardJarScanFilter.jarsToScan=log4j-taglib*.jar,log4j-web*.jar,log4javascript*.jar,slf4j-taglib*.jar, catalina.home=C:\Program Files\Tomcat\apache-tomcat-8.5.45, java.version=11.0.4, com.sun.management.jmxremote.port=1099, tomcat.util.scan.StandardJarScanFilter.jarsToSkip=annotations-api.jar,ant-junit*.jar,ant-launcher.jar,ant.jar,asm-*.jar,aspectj*.jar,bootstrap.jar,catalina-ant.jar,catalina-ha.jar,catalina-jmx-remote.jar,catalina-storeconfig.jar,catalina-tribes.jar,catalina-ws.jar,catalina.jar,cglib-*.jar,cobertura-*.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-daemon.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,dom4j-*.jar,easymock-*.jar,ecj-*.jar,el-api.jar,geronimo-spec-jaxrpc*.jar,h2*.jar,hamcrest-*.jar,hibernate*.jar,httpclient*.jar,icu4j-*.jar,jasper-el.jar,jasper.jar,jaspic-api.jar,jaxb-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,jmx-tools.jar,jmx.jar,jsp-api.jar,jstl.jar,jta*.jar,junit-*.jar,junit.jar,log4j*.jar,mail*.jar,objenesis-*.jar,oraclepki.jar,oro-*.jar,servlet-api-*.jar,servlet-api.jar,slf4j*.jar,taglibs-standard-spec-*.jar,tagsoup-*.jar,tomcat-api.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-i18n-*.jar,tomcat-jdbc.jar,tomcat-jni.jar,tomcat-juli-adapters.jar,tomcat-juli.jar,tomcat-util-scan.jar,tomcat-util.jar,tomcat-websocket.jar,tools.jar,websocket-api.jar,wsdl4j*.jar,xercesImpl.jar,xml-apis.jar,xmlParserAPIs-*.jar,xmlParserAPIs.jar,xom-*.jar, user.dir=C:\Program Files\Tomcat\apache-tomcat-8.5.45\bin, os.arch=amd64, connection.username=tempUser, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, hibernate.connection.password=****, sun.os.patch.level=, catalina.base=C:\Users\andre\.IntelliJIdea2019.2\system\tomcat\Unnamed_internetshop_13, shared.loader=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@3df11d57, java.util.logging.manager=org.apache.juli.ClassLoaderLogManager, java.library.path=C:\Program Files\Java\jdk-11.0.4\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=11.0.4+10-LTS, hibernate.bytecode.use_reflection_optimizer=false, java.rmi.server.randomIDs=true, java.rmi.server.hostname=127.0.0.1, sun.io.unicode.encoding=UnicodeLittle, tomcat.util.buf.StringCache.byte.enabled=true, java.class.version=55.0}
+2019-10-15 15:15:05 DEBUG JaccIntegrator:80 - Skipping JACC integration as it was not enabled
+2019-10-15 15:15:05 DEBUG SessionFactoryImpl:302 - Instantiated session factory
+2019-10-15 15:15:05 DEBUG TypeConfiguration$Scope:157 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@76ee1370] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@4c834cec]
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.Role] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.Role
+2019-10-15 15:15:05 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:05 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.Role] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.Role
+2019-10-15 15:15:05 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:05 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.Bucket] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.Bucket
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.Bucket] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.Bucket
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.Order] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.Order
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.Order] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.Order
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.User] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.User
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.User] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.User
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.Item] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.Item
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mateacademy.internetshop.model.Item] is safe
+2019-10-15 15:15:05 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mateacademy.internetshop.model.Item
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:689 - Static SQL for collection: mateacademy.internetshop.model.Order.items
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:691 -  Row insert: insert into orders_items (order_id, item_id) values (?, ?)
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:694 -  Row update: update orders_items set item_id=? where order_id=? and item_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:697 -  Row delete: delete from orders_items where order_id=? and item_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:700 -  One-shot delete: delete from orders_items where order_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:689 - Static SQL for collection: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:691 -  Row insert: insert into buckets_items (bucket_id, item_id) values (?, ?)
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:694 -  Row update: update buckets_items set item_id=? where bucket_id=? and item_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:697 -  Row delete: delete from buckets_items where bucket_id=? and item_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:700 -  One-shot delete: delete from buckets_items where bucket_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:689 - Static SQL for collection: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:691 -  Row insert: insert into roles_users (user_id, role_id) values (?, ?)
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:694 -  Row update: update roles_users set role_id=? where user_id=? and role_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:697 -  Row delete: delete from roles_users where user_id=? and role_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:700 -  One-shot delete: delete from roles_users where user_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:689 - Static SQL for collection: mateacademy.internetshop.model.User.orders
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:691 -  Row insert: update orders set user_id=? where order_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:694 -  Row update: update orders set  where order_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:697 -  Row delete: update orders set user_id=null where user_id=? and order_id=?
+2019-10-15 15:15:05 DEBUG AbstractCollectionPersister:700 -  One-shot delete: update orders set user_id=null where user_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3818 - Static SQL for entity: mateacademy.internetshop.model.Role
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3823 -  Version select: select role_id from roles where role_id =?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3826 -  Snapshot select: select role_.role_id, role_.role_name as role_nam2_5_ from roles role_ where role_.role_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into roles (role_name, role_id) values (?, ?)
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Update 0: update roles set role_name=? where role_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from roles where role_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3834 -  Identity insert: insert into roles (role_name) values (?)
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@17d7cccb]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roleName
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.Role, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {role_id1_5_0_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.Role [NONE]: select role0_.role_id as role_id1_5_0_, role0_.role_name as role_nam2_5_0_ from roles role0_ where role0_.role_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7e04bc1a]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roleName
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.Role, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {role_id1_5_0_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.Role [READ]: select role0_.role_id as role_id1_5_0_, role0_.role_name as role_nam2_5_0_ from roles role0_ where role0_.role_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity mateacademy.internetshop.model.Role: select role0_.role_id as role_id1_5_0_, role0_.role_name as role_nam2_5_0_ from roles role0_ where role0_.role_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity mateacademy.internetshop.model.Role: select role0_.role_id as role_id1_5_0_, role0_.role_name as role_nam2_5_0_ from roles role0_ where role0_.role_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3818 - Static SQL for entity: mateacademy.internetshop.model.Bucket
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3823 -  Version select: select bucket_id from buckets where bucket_id =?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3826 -  Snapshot select: select bucket_.bucket_id from buckets bucket_ where bucket_.bucket_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into buckets (bucket_id) values (?)
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Update 0: null
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from buckets where bucket_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3834 -  Identity insert: insert into buckets values ( )
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@31ef6515]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2e92a02]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1a8e6b52]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items.name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items.price
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@353468c7]
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.Bucket)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.Bucket, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.Bucket)
+          - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Bucket.items, querySpaceUid=<gen:1>, path=mateacademy.internetshop.model.Bucket.items)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:2>, path=mateacademy.internetshop.model.Bucket.items.<elements>)
+          - EntityAttributeFetchImpl(entity=mateacademy.internetshop.model.User, querySpaceUid=<gen:3>, path=mateacademy.internetshop.model.Bucket.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.Bucket)
+          - SQL table alias mapping - bucket0_
+          - alias suffix - 0_
+          - suffixed key columns - {bucket_i1_0_0_}
+          - JOIN (JoinDefinedByMetadata(items)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=mateacademy.internetshop.model.Bucket.items)
+                - SQL table alias mapping - items1_
+                - alias suffix - 1_
+                - suffixed key columns - {bucket_i1_1_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - item_id1_2_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=mateacademy.internetshop.model.Item)
+                      - SQL table alias mapping - item2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {item_id1_2_2_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.Bucket [NONE]: select bucket0_.bucket_id as bucket_i1_0_0_, items1_.bucket_id as bucket_i1_1_1_, item2_.item_id as item_id2_1_1_, item2_.item_id as item_id1_2_2_, item2_.name as name2_2_2_, item2_.price as price3_2_2_ from buckets bucket0_ left outer join buckets_items items1_ on bucket0_.bucket_id=items1_.bucket_id left outer join items item2_ on items1_.item_id=item2_.item_id where bucket0_.bucket_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@36afcec]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@74cbaaf7]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1ebb95c]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items.name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items.price
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@558c5455]
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.Bucket)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.Bucket, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.Bucket)
+          - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Bucket.items, querySpaceUid=<gen:1>, path=mateacademy.internetshop.model.Bucket.items)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:2>, path=mateacademy.internetshop.model.Bucket.items.<elements>)
+          - EntityAttributeFetchImpl(entity=mateacademy.internetshop.model.User, querySpaceUid=<gen:3>, path=mateacademy.internetshop.model.Bucket.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.Bucket)
+          - SQL table alias mapping - bucket0_
+          - alias suffix - 0_
+          - suffixed key columns - {bucket_i1_0_0_}
+          - JOIN (JoinDefinedByMetadata(items)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=mateacademy.internetshop.model.Bucket.items)
+                - SQL table alias mapping - items1_
+                - alias suffix - 1_
+                - suffixed key columns - {bucket_i1_1_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - item_id1_2_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=mateacademy.internetshop.model.Item)
+                      - SQL table alias mapping - item2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {item_id1_2_2_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.Bucket [READ]: select bucket0_.bucket_id as bucket_i1_0_0_, items1_.bucket_id as bucket_i1_1_1_, item2_.item_id as item_id2_1_1_, item2_.item_id as item_id1_2_2_, item2_.name as name2_2_2_, item2_.price as price3_2_2_ from buckets bucket0_ left outer join buckets_items items1_ on bucket0_.bucket_id=items1_.bucket_id left outer join items item2_ on items1_.item_id=item2_.item_id where bucket0_.bucket_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity mateacademy.internetshop.model.Bucket: select bucket0_.bucket_id as bucket_i1_0_1_, items1_.bucket_id as bucket_i1_1_3_, item2_.item_id as item_id2_1_3_, item2_.item_id as item_id1_2_0_, item2_.name as name2_2_0_, item2_.price as price3_2_0_ from buckets bucket0_ left outer join buckets_items items1_ on bucket0_.bucket_id=items1_.bucket_id left outer join items item2_ on items1_.item_id=item2_.item_id where bucket0_.bucket_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity mateacademy.internetshop.model.Bucket: select bucket0_.bucket_id as bucket_i1_0_1_, items1_.bucket_id as bucket_i1_1_3_, item2_.item_id as item_id2_1_3_, item2_.item_id as item_id1_2_0_, item2_.name as name2_2_0_, item2_.price as price3_2_0_ from buckets bucket0_ left outer join buckets_items items1_ on bucket0_.bucket_id=items1_.bucket_id left outer join items item2_ on items1_.item_id=item2_.item_id where bucket0_.bucket_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3818 - Static SQL for entity: mateacademy.internetshop.model.Order
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3823 -  Version select: select order_id from orders where order_id =?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3826 -  Snapshot select: select order_.order_id, order_.user_id as user_id2_3_ from orders order_ where order_.order_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into orders (user_id, order_id) values (?, ?)
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Update 0: update orders set user_id=? where order_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from orders where order_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3834 -  Identity insert: insert into orders (user_id) values (?)
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4cf8cc49]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1e005d75]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6d9ed248]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items.name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items.price
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4296fb67]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.bucket
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@48978088]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.bucket.items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6cee2209]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3e52c46e]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.bucket.user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : user.bucket.user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.login
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.orders
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : user.orders
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.password
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.roles
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@35dd2ed2]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:8> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4a345ab7]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.roles.roleName
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.salt
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.surname
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.token
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.Order)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.Order, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.Order)
+          - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Order.items, querySpaceUid=<gen:1>, path=mateacademy.internetshop.model.Order.items)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:2>, path=mateacademy.internetshop.model.Order.items.<elements>)
+          - EntityAttributeFetchImpl(entity=mateacademy.internetshop.model.User, querySpaceUid=<gen:3>, path=mateacademy.internetshop.model.Order.user)
+             - EntityAttributeFetchImpl(entity=mateacademy.internetshop.model.Bucket, querySpaceUid=<gen:4>, path=mateacademy.internetshop.model.Order.user.bucket)
+                - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Bucket.items, querySpaceUid=<gen:5>, path=mateacademy.internetshop.model.Order.user.bucket.items)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:6>, path=mateacademy.internetshop.model.Order.user.bucket.items.<elements>)
+             - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.User.roles, querySpaceUid=<gen:7>, path=mateacademy.internetshop.model.Order.user.roles)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Role, querySpaceUid=<gen:8>, path=mateacademy.internetshop.model.Order.user.roles.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.Order)
+          - SQL table alias mapping - order0_
+          - alias suffix - 0_
+          - suffixed key columns - {order_id1_3_0_}
+          - JOIN (JoinDefinedByMetadata(items)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=mateacademy.internetshop.model.Order.items)
+                - SQL table alias mapping - items1_
+                - alias suffix - 1_
+                - suffixed key columns - {order_id1_4_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - item_id1_2_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=mateacademy.internetshop.model.Item)
+                      - SQL table alias mapping - item2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {item_id1_2_2_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=mateacademy.internetshop.model.User)
+                - SQL table alias mapping - user3_
+                - alias suffix - 3_
+                - suffixed key columns - {user_id1_7_3_}
+                - JOIN (JoinDefinedByMetadata(bucket)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=mateacademy.internetshop.model.Bucket)
+                      - SQL table alias mapping - bucket4_
+                      - alias suffix - 4_
+                      - suffixed key columns - {bucket_i1_0_4_}
+                - JOIN (JoinDefinedByMetadata(roles)) : <gen:3> -> <gen:7>
+                   - CollectionQuerySpaceImpl(uid=<gen:7>, collection=mateacademy.internetshop.model.User.roles)
+                      - SQL table alias mapping - roles5_
+                      - alias suffix - 5_
+                      - suffixed key columns - {user_id1_6_5_}
+                      - entity-element alias suffix - 6_
+                      - 6_entity-element suffixed key columns - role_id1_5_6_
+                      - JOIN (JoinDefinedByMetadata(elements)) : <gen:7> -> <gen:8>
+                         - EntityQuerySpaceImpl(uid=<gen:8>, entity=mateacademy.internetshop.model.Role)
+                            - SQL table alias mapping - role6_
+                            - alias suffix - 6_
+                            - suffixed key columns - {role_id1_5_6_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.Order [NONE]: select order0_.order_id as order_id1_3_0_, order0_.user_id as user_id2_3_0_, items1_.order_id as order_id1_4_1_, item2_.item_id as item_id2_4_1_, item2_.item_id as item_id1_2_2_, item2_.name as name2_2_2_, item2_.price as price3_2_2_, user3_.user_id as user_id1_7_3_, user3_.bucket_id as bucket_i8_7_3_, user3_.login as login2_7_3_, user3_.name as name3_7_3_, user3_.password as password4_7_3_, user3_.salt as salt5_7_3_, user3_.surname as surname6_7_3_, user3_.token as token7_7_3_, bucket4_.bucket_id as bucket_i1_0_4_, roles5_.user_id as user_id1_6_5_, role6_.role_id as role_id2_6_5_, role6_.role_id as role_id1_5_6_, role6_.role_name as role_nam2_5_6_ from orders order0_ left outer join orders_items items1_ on order0_.order_id=items1_.order_id left outer join items item2_ on items1_.item_id=item2_.item_id left outer join users user3_ on order0_.user_id=user3_.user_id left outer join buckets bucket4_ on user3_.bucket_id=bucket4_.bucket_id left outer join roles_users roles5_ on user3_.user_id=roles5_.user_id left outer join roles role6_ on roles5_.role_id=role6_.role_id where order0_.order_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@70a98363]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7d86a9fa]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@259c576d]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items.name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items.price
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4dde0e89]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.bucket
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@f7874b]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.bucket.items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@45b26819]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3f0dbac0]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.bucket.user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : user.bucket.user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.login
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.orders
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : user.orders
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.password
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.roles
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@37cbfb5]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:8> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@57534f03]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.roles.roleName
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.salt
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.surname
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user.token
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.Order)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.Order, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.Order)
+          - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Order.items, querySpaceUid=<gen:1>, path=mateacademy.internetshop.model.Order.items)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:2>, path=mateacademy.internetshop.model.Order.items.<elements>)
+          - EntityAttributeFetchImpl(entity=mateacademy.internetshop.model.User, querySpaceUid=<gen:3>, path=mateacademy.internetshop.model.Order.user)
+             - EntityAttributeFetchImpl(entity=mateacademy.internetshop.model.Bucket, querySpaceUid=<gen:4>, path=mateacademy.internetshop.model.Order.user.bucket)
+                - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Bucket.items, querySpaceUid=<gen:5>, path=mateacademy.internetshop.model.Order.user.bucket.items)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:6>, path=mateacademy.internetshop.model.Order.user.bucket.items.<elements>)
+             - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.User.roles, querySpaceUid=<gen:7>, path=mateacademy.internetshop.model.Order.user.roles)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Role, querySpaceUid=<gen:8>, path=mateacademy.internetshop.model.Order.user.roles.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.Order)
+          - SQL table alias mapping - order0_
+          - alias suffix - 0_
+          - suffixed key columns - {order_id1_3_0_}
+          - JOIN (JoinDefinedByMetadata(items)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=mateacademy.internetshop.model.Order.items)
+                - SQL table alias mapping - items1_
+                - alias suffix - 1_
+                - suffixed key columns - {order_id1_4_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - item_id1_2_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=mateacademy.internetshop.model.Item)
+                      - SQL table alias mapping - item2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {item_id1_2_2_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=mateacademy.internetshop.model.User)
+                - SQL table alias mapping - user3_
+                - alias suffix - 3_
+                - suffixed key columns - {user_id1_7_3_}
+                - JOIN (JoinDefinedByMetadata(bucket)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=mateacademy.internetshop.model.Bucket)
+                      - SQL table alias mapping - bucket4_
+                      - alias suffix - 4_
+                      - suffixed key columns - {bucket_i1_0_4_}
+                - JOIN (JoinDefinedByMetadata(roles)) : <gen:3> -> <gen:7>
+                   - CollectionQuerySpaceImpl(uid=<gen:7>, collection=mateacademy.internetshop.model.User.roles)
+                      - SQL table alias mapping - roles5_
+                      - alias suffix - 5_
+                      - suffixed key columns - {user_id1_6_5_}
+                      - entity-element alias suffix - 6_
+                      - 6_entity-element suffixed key columns - role_id1_5_6_
+                      - JOIN (JoinDefinedByMetadata(elements)) : <gen:7> -> <gen:8>
+                         - EntityQuerySpaceImpl(uid=<gen:8>, entity=mateacademy.internetshop.model.Role)
+                            - SQL table alias mapping - role6_
+                            - alias suffix - 6_
+                            - suffixed key columns - {role_id1_5_6_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.Order [READ]: select order0_.order_id as order_id1_3_0_, order0_.user_id as user_id2_3_0_, items1_.order_id as order_id1_4_1_, item2_.item_id as item_id2_4_1_, item2_.item_id as item_id1_2_2_, item2_.name as name2_2_2_, item2_.price as price3_2_2_, user3_.user_id as user_id1_7_3_, user3_.bucket_id as bucket_i8_7_3_, user3_.login as login2_7_3_, user3_.name as name3_7_3_, user3_.password as password4_7_3_, user3_.salt as salt5_7_3_, user3_.surname as surname6_7_3_, user3_.token as token7_7_3_, bucket4_.bucket_id as bucket_i1_0_4_, roles5_.user_id as user_id1_6_5_, role6_.role_id as role_id2_6_5_, role6_.role_id as role_id1_5_6_, role6_.role_name as role_nam2_5_6_ from orders order0_ left outer join orders_items items1_ on order0_.order_id=items1_.order_id left outer join items item2_ on items1_.item_id=item2_.item_id left outer join users user3_ on order0_.user_id=user3_.user_id left outer join buckets bucket4_ on user3_.bucket_id=bucket4_.bucket_id left outer join roles_users roles5_ on user3_.user_id=roles5_.user_id left outer join roles role6_ on roles5_.role_id=role6_.role_id where order0_.order_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity mateacademy.internetshop.model.Order: select order0_.order_id as order_id1_3_1_, order0_.user_id as user_id2_3_1_, items1_.order_id as order_id1_4_3_, item2_.item_id as item_id2_4_3_, item2_.item_id as item_id1_2_0_, item2_.name as name2_2_0_, item2_.price as price3_2_0_ from orders order0_ left outer join orders_items items1_ on order0_.order_id=items1_.order_id left outer join items item2_ on items1_.item_id=item2_.item_id where order0_.order_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity mateacademy.internetshop.model.Order: select order0_.order_id as order_id1_3_1_, order0_.user_id as user_id2_3_1_, items1_.order_id as order_id1_4_3_, item2_.item_id as item_id2_4_3_, item2_.item_id as item_id1_2_0_, item2_.name as name2_2_0_, item2_.price as price3_2_0_ from orders order0_ left outer join orders_items items1_ on order0_.order_id=items1_.order_id left outer join items item2_ on items1_.item_id=item2_.item_id where order0_.order_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3818 - Static SQL for entity: mateacademy.internetshop.model.User
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3823 -  Version select: select user_id from users where user_id =?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3826 -  Snapshot select: select user_.user_id, user_.bucket_id as bucket_i8_7_, user_.login as login2_7_, user_.name as name3_7_, user_.password as password4_7_, user_.salt as salt5_7_, user_.surname as surname6_7_, user_.token as token7_7_ from users user_ where user_.user_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into users (bucket_id, login, name, password, salt, surname, token, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Update 0: update users set bucket_id=?, login=?, name=?, password=?, salt=?, surname=?, token=? where user_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from users where user_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3834 -  Identity insert: insert into users (bucket_id, login, name, password, salt, surname, token) values (?, ?, ?, ?, ?, ?, ?)
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3599eac9]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@410bd5e6]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket.items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1b503452]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1faa39e6]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket.items.name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket.items.price
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket.user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : bucket.user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : login
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : orders
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@51ff14fe]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1fd4722e]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : password
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roles
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1496c33f]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@65ab065c]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roles.roleName
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : salt
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : surname
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : token
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.User)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.User, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.User)
+          - EntityAttributeFetchImpl(entity=mateacademy.internetshop.model.Bucket, querySpaceUid=<gen:1>, path=mateacademy.internetshop.model.User.bucket)
+             - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Bucket.items, querySpaceUid=<gen:2>, path=mateacademy.internetshop.model.User.bucket.items)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:3>, path=mateacademy.internetshop.model.User.bucket.items.<elements>)
+          - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.User.orders, querySpaceUid=<gen:4>, path=mateacademy.internetshop.model.User.orders)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Order, querySpaceUid=<gen:5>, path=mateacademy.internetshop.model.User.orders.<elements>)
+          - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.User.roles, querySpaceUid=<gen:6>, path=mateacademy.internetshop.model.User.roles)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Role, querySpaceUid=<gen:7>, path=mateacademy.internetshop.model.User.roles.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id1_7_0_}
+          - JOIN (JoinDefinedByMetadata(bucket)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=mateacademy.internetshop.model.Bucket)
+                - SQL table alias mapping - bucket1_
+                - alias suffix - 1_
+                - suffixed key columns - {bucket_i1_0_1_}
+                - JOIN (JoinDefinedByMetadata(items)) : <gen:1> -> <gen:2>
+                   - CollectionQuerySpaceImpl(uid=<gen:2>, collection=mateacademy.internetshop.model.Bucket.items)
+                      - SQL table alias mapping - items2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {bucket_i1_1_2_}
+                      - entity-element alias suffix - 3_
+                      - 3_entity-element suffixed key columns - item_id1_2_3_
+                      - JOIN (JoinDefinedByMetadata(elements)) : <gen:2> -> <gen:3>
+                         - EntityQuerySpaceImpl(uid=<gen:3>, entity=mateacademy.internetshop.model.Item)
+                            - SQL table alias mapping - item3_
+                            - alias suffix - 3_
+                            - suffixed key columns - {item_id1_2_3_}
+          - JOIN (JoinDefinedByMetadata(roles)) : <gen:0> -> <gen:6>
+             - CollectionQuerySpaceImpl(uid=<gen:6>, collection=mateacademy.internetshop.model.User.roles)
+                - SQL table alias mapping - roles4_
+                - alias suffix - 4_
+                - suffixed key columns - {user_id1_6_4_}
+                - entity-element alias suffix - 5_
+                - 5_entity-element suffixed key columns - role_id1_5_5_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:6> -> <gen:7>
+                   - EntityQuerySpaceImpl(uid=<gen:7>, entity=mateacademy.internetshop.model.Role)
+                      - SQL table alias mapping - role5_
+                      - alias suffix - 5_
+                      - suffixed key columns - {role_id1_5_5_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.User [NONE]: select user0_.user_id as user_id1_7_0_, user0_.bucket_id as bucket_i8_7_0_, user0_.login as login2_7_0_, user0_.name as name3_7_0_, user0_.password as password4_7_0_, user0_.salt as salt5_7_0_, user0_.surname as surname6_7_0_, user0_.token as token7_7_0_, bucket1_.bucket_id as bucket_i1_0_1_, items2_.bucket_id as bucket_i1_1_2_, item3_.item_id as item_id2_1_2_, item3_.item_id as item_id1_2_3_, item3_.name as name2_2_3_, item3_.price as price3_2_3_, roles4_.user_id as user_id1_6_4_, role5_.role_id as role_id2_6_4_, role5_.role_id as role_id1_5_5_, role5_.role_name as role_nam2_5_5_ from users user0_ left outer join buckets bucket1_ on user0_.bucket_id=bucket1_.bucket_id left outer join buckets_items items2_ on bucket1_.bucket_id=items2_.bucket_id left outer join items item3_ on items2_.item_id=item3_.item_id left outer join roles_users roles4_ on user0_.user_id=roles4_.user_id left outer join roles role5_ on roles4_.role_id=role5_.role_id where user0_.user_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@528e5244]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@76dee997]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket.items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@39ec234c]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7c5fc91]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket.items.name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket.items.price
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : bucket.user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : bucket.user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : login
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : orders
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4541e559]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6dc8a814]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : password
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roles
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5ad4d955]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3dc339ff]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roles.roleName
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : salt
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : surname
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : token
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.User)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.User, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.User)
+          - EntityAttributeFetchImpl(entity=mateacademy.internetshop.model.Bucket, querySpaceUid=<gen:1>, path=mateacademy.internetshop.model.User.bucket)
+             - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Bucket.items, querySpaceUid=<gen:2>, path=mateacademy.internetshop.model.User.bucket.items)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:3>, path=mateacademy.internetshop.model.User.bucket.items.<elements>)
+          - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.User.orders, querySpaceUid=<gen:4>, path=mateacademy.internetshop.model.User.orders)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Order, querySpaceUid=<gen:5>, path=mateacademy.internetshop.model.User.orders.<elements>)
+          - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.User.roles, querySpaceUid=<gen:6>, path=mateacademy.internetshop.model.User.roles)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Role, querySpaceUid=<gen:7>, path=mateacademy.internetshop.model.User.roles.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id1_7_0_}
+          - JOIN (JoinDefinedByMetadata(bucket)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=mateacademy.internetshop.model.Bucket)
+                - SQL table alias mapping - bucket1_
+                - alias suffix - 1_
+                - suffixed key columns - {bucket_i1_0_1_}
+                - JOIN (JoinDefinedByMetadata(items)) : <gen:1> -> <gen:2>
+                   - CollectionQuerySpaceImpl(uid=<gen:2>, collection=mateacademy.internetshop.model.Bucket.items)
+                      - SQL table alias mapping - items2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {bucket_i1_1_2_}
+                      - entity-element alias suffix - 3_
+                      - 3_entity-element suffixed key columns - item_id1_2_3_
+                      - JOIN (JoinDefinedByMetadata(elements)) : <gen:2> -> <gen:3>
+                         - EntityQuerySpaceImpl(uid=<gen:3>, entity=mateacademy.internetshop.model.Item)
+                            - SQL table alias mapping - item3_
+                            - alias suffix - 3_
+                            - suffixed key columns - {item_id1_2_3_}
+          - JOIN (JoinDefinedByMetadata(roles)) : <gen:0> -> <gen:6>
+             - CollectionQuerySpaceImpl(uid=<gen:6>, collection=mateacademy.internetshop.model.User.roles)
+                - SQL table alias mapping - roles4_
+                - alias suffix - 4_
+                - suffixed key columns - {user_id1_6_4_}
+                - entity-element alias suffix - 5_
+                - 5_entity-element suffixed key columns - role_id1_5_5_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:6> -> <gen:7>
+                   - EntityQuerySpaceImpl(uid=<gen:7>, entity=mateacademy.internetshop.model.Role)
+                      - SQL table alias mapping - role5_
+                      - alias suffix - 5_
+                      - suffixed key columns - {role_id1_5_5_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.User [READ]: select user0_.user_id as user_id1_7_0_, user0_.bucket_id as bucket_i8_7_0_, user0_.login as login2_7_0_, user0_.name as name3_7_0_, user0_.password as password4_7_0_, user0_.salt as salt5_7_0_, user0_.surname as surname6_7_0_, user0_.token as token7_7_0_, bucket1_.bucket_id as bucket_i1_0_1_, items2_.bucket_id as bucket_i1_1_2_, item3_.item_id as item_id2_1_2_, item3_.item_id as item_id1_2_3_, item3_.name as name2_2_3_, item3_.price as price3_2_3_, roles4_.user_id as user_id1_6_4_, role5_.role_id as role_id2_6_4_, role5_.role_id as role_id1_5_5_, role5_.role_name as role_nam2_5_5_ from users user0_ left outer join buckets bucket1_ on user0_.bucket_id=bucket1_.bucket_id left outer join buckets_items items2_ on bucket1_.bucket_id=items2_.bucket_id left outer join items item3_ on items2_.item_id=item3_.item_id left outer join roles_users roles4_ on user0_.user_id=roles4_.user_id left outer join roles role5_ on roles4_.role_id=role5_.role_id where user0_.user_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity mateacademy.internetshop.model.User: select user0_.user_id as user_id1_7_2_, user0_.bucket_id as bucket_i8_7_2_, user0_.login as login2_7_2_, user0_.name as name3_7_2_, user0_.password as password4_7_2_, user0_.salt as salt5_7_2_, user0_.surname as surname6_7_2_, user0_.token as token7_7_2_, bucket1_.bucket_id as bucket_i1_0_0_, items2_.bucket_id as bucket_i1_1_4_, item3_.item_id as item_id2_1_4_, item3_.item_id as item_id1_2_1_, item3_.name as name2_2_1_, item3_.price as price3_2_1_ from users user0_ left outer join buckets bucket1_ on user0_.bucket_id=bucket1_.bucket_id left outer join buckets_items items2_ on bucket1_.bucket_id=items2_.bucket_id left outer join items item3_ on items2_.item_id=item3_.item_id where user0_.user_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity mateacademy.internetshop.model.User: select user0_.user_id as user_id1_7_2_, user0_.bucket_id as bucket_i8_7_2_, user0_.login as login2_7_2_, user0_.name as name3_7_2_, user0_.password as password4_7_2_, user0_.salt as salt5_7_2_, user0_.surname as surname6_7_2_, user0_.token as token7_7_2_, bucket1_.bucket_id as bucket_i1_0_0_, items2_.bucket_id as bucket_i1_1_4_, item3_.item_id as item_id2_1_4_, item3_.item_id as item_id1_2_1_, item3_.name as name2_2_1_, item3_.price as price3_2_1_ from users user0_ left outer join buckets bucket1_ on user0_.bucket_id=bucket1_.bucket_id left outer join buckets_items items2_ on bucket1_.bucket_id=items2_.bucket_id left outer join items item3_ on items2_.item_id=item3_.item_id where user0_.user_id=?
+2019-10-15 15:15:05 DEBUG Loader:106 - Static select for entity mateacademy.internetshop.model.User [NONE]: select user0_.user_id as user_id1_7_3_, user0_.bucket_id as bucket_i8_7_3_, user0_.login as login2_7_3_, user0_.name as name3_7_3_, user0_.password as password4_7_3_, user0_.salt as salt5_7_3_, user0_.surname as surname6_7_3_, user0_.token as token7_7_3_, bucket1_.bucket_id as bucket_i1_0_0_, items2_.bucket_id as bucket_i1_1_5_, item3_.item_id as item_id2_1_5_, item3_.item_id as item_id1_2_1_, item3_.name as name2_2_1_, item3_.price as price3_2_1_, roles4_.user_id as user_id1_6_6_, role5_.role_id as role_id2_6_6_, role5_.role_id as role_id1_5_2_, role5_.role_name as role_nam2_5_2_ from users user0_ left outer join buckets bucket1_ on user0_.bucket_id=bucket1_.bucket_id left outer join buckets_items items2_ on bucket1_.bucket_id=items2_.bucket_id left outer join items item3_ on items2_.item_id=item3_.item_id left outer join roles_users roles4_ on user0_.user_id=roles4_.user_id left outer join roles role5_ on roles4_.role_id=role5_.role_id where user0_.bucket_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3818 - Static SQL for entity: mateacademy.internetshop.model.Item
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3823 -  Version select: select item_id from items where item_id =?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3826 -  Snapshot select: select item_.item_id, item_.name as name2_2_, item_.price as price3_2_ from items item_ where item_.item_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into items (name, price, item_id) values (?, ?, ?)
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Update 0: update items set name=?, price=? where item_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from items where item_id=?
+2019-10-15 15:15:05 DEBUG AbstractEntityPersister:3834 -  Identity insert: insert into items (name, price) values (?, ?)
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1dbbbd80]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : price
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.Item)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.Item)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.Item)
+          - SQL table alias mapping - item0_
+          - alias suffix - 0_
+          - suffixed key columns - {item_id1_2_0_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.Item [NONE]: select item0_.item_id as item_id1_2_0_, item0_.name as name2_2_0_, item0_.price as price3_2_0_ from items item0_ where item0_.item_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@26623ad]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : price
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mateacademy.internetshop.model.Item)
+    - Returns
+       - EntityReturnImpl(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:0>, path=mateacademy.internetshop.model.Item)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mateacademy.internetshop.model.Item)
+          - SQL table alias mapping - item0_
+          - alias suffix - 0_
+          - suffixed key columns - {item_id1_2_0_}
+
+2019-10-15 15:15:05 DEBUG EntityLoader:137 - Static select for entity mateacademy.internetshop.model.Item [READ]: select item0_.item_id as item_id1_2_0_, item0_.name as name2_2_0_, item0_.price as price3_2_0_ from items item0_ where item0_.item_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity mateacademy.internetshop.model.Item: select item0_.item_id as item_id1_2_0_, item0_.name as name2_2_0_, item0_.price as price3_2_0_ from items item0_ where item0_.item_id=?
+2019-10-15 15:15:05 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity mateacademy.internetshop.model.Item: select item0_.item_id as item_id1_2_0_, item0_.name as name2_2_0_, item0_.price as price3_2_0_ from items item0_ where item0_.item_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3b9ef05]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5597d1a3]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : price
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=mateacademy.internetshop.model.Order.items)
+    - Returns
+       - CollectionReturnImpl(collection=mateacademy.internetshop.model.Order.items, querySpaceUid=<gen:0>, path=[mateacademy.internetshop.model.Order.items])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:1>, path=[mateacademy.internetshop.model.Order.items].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=mateacademy.internetshop.model.Order.items)
+          - SQL table alias mapping - items0_
+          - alias suffix - 0_
+          - suffixed key columns - {order_id1_4_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - item_id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=mateacademy.internetshop.model.Item)
+                - SQL table alias mapping - item1_
+                - alias suffix - 1_
+                - suffixed key columns - {item_id1_2_1_}
+
+2019-10-15 15:15:05 DEBUG CollectionLoader:83 - Static select for collection mateacademy.internetshop.model.Order.items: select items0_.order_id as order_id1_4_0_, items0_.item_id as item_id2_4_0_, item1_.item_id as item_id1_2_1_, item1_.name as name2_2_1_, item1_.price as price3_2_1_ from orders_items items0_ inner join items item1_ on items0_.item_id=item1_.item_id where items0_.order_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@435c014f]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f9f70ae]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : price
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=mateacademy.internetshop.model.Bucket.items)
+    - Returns
+       - CollectionReturnImpl(collection=mateacademy.internetshop.model.Bucket.items, querySpaceUid=<gen:0>, path=[mateacademy.internetshop.model.Bucket.items])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:1>, path=[mateacademy.internetshop.model.Bucket.items].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=mateacademy.internetshop.model.Bucket.items)
+          - SQL table alias mapping - items0_
+          - alias suffix - 0_
+          - suffixed key columns - {bucket_i1_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - item_id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=mateacademy.internetshop.model.Item)
+                - SQL table alias mapping - item1_
+                - alias suffix - 1_
+                - suffixed key columns - {item_id1_2_1_}
+
+2019-10-15 15:15:05 DEBUG CollectionLoader:83 - Static select for collection mateacademy.internetshop.model.Bucket.items: select items0_.bucket_id as bucket_i1_1_0_, items0_.item_id as item_id2_1_0_, item1_.item_id as item_id1_2_1_, item1_.name as name2_2_1_, item1_.price as price3_2_1_ from buckets_items items0_ inner join items item1_ on items0_.item_id=item1_.item_id where items0_.bucket_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4134e4c]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@20ad4460]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roleName
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=mateacademy.internetshop.model.User.roles)
+    - Returns
+       - CollectionReturnImpl(collection=mateacademy.internetshop.model.User.roles, querySpaceUid=<gen:0>, path=[mateacademy.internetshop.model.User.roles])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Role, querySpaceUid=<gen:1>, path=[mateacademy.internetshop.model.User.roles].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=mateacademy.internetshop.model.User.roles)
+          - SQL table alias mapping - roles0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id1_6_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - role_id1_5_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=mateacademy.internetshop.model.Role)
+                - SQL table alias mapping - role1_
+                - alias suffix - 1_
+                - suffixed key columns - {role_id1_5_1_}
+
+2019-10-15 15:15:05 DEBUG CollectionLoader:83 - Static select for collection mateacademy.internetshop.model.User.roles: select roles0_.user_id as user_id1_6_0_, roles0_.role_id as role_id2_6_0_, role1_.role_id as role_id1_5_1_, role1_.role_name as role_nam2_5_1_ from roles_users roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@164b3d90]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5c8ff57d]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : items
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@73bb2103]
+2019-10-15 15:15:05 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@50bc0614]
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user
+2019-10-15 15:15:05 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : user
+2019-10-15 15:15:05 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-15 15:15:05 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-15 15:15:05 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=mateacademy.internetshop.model.User.orders)
+    - Returns
+       - CollectionReturnImpl(collection=mateacademy.internetshop.model.User.orders, querySpaceUid=<gen:0>, path=[mateacademy.internetshop.model.User.orders])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Order, querySpaceUid=<gen:1>, path=[mateacademy.internetshop.model.User.orders].<elements>)
+             - CollectionAttributeFetchImpl(collection=mateacademy.internetshop.model.Order.items, querySpaceUid=<gen:2>, path=[mateacademy.internetshop.model.User.orders].<elements>.items)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=mateacademy.internetshop.model.Item, querySpaceUid=<gen:3>, path=[mateacademy.internetshop.model.User.orders].<elements>.items.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=mateacademy.internetshop.model.User.orders)
+          - SQL table alias mapping - orders0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id2_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - order_id1_3_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=mateacademy.internetshop.model.Order)
+                - SQL table alias mapping - orders0_
+                - alias suffix - 1_
+                - suffixed key columns - {order_id1_3_1_}
+
+2019-10-15 15:15:05 DEBUG CollectionLoader:83 - Static select for collection mateacademy.internetshop.model.User.orders: select orders0_.user_id as user_id2_3_0_, orders0_.order_id as order_id1_3_0_, orders0_.order_id as order_id1_3_1_, orders0_.user_id as user_id2_3_1_ from orders orders0_ where orders0_.user_id=?
+2019-10-15 15:15:05 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:05 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:05 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4d5daeea] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-10-15 15:15:06 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mateacademy.internetshop.model.Role$RoleName
+2019-10-15 15:15:06 DEBUG JtaPlatformInitiator:43 - No JtaPlatform was specified, checking resolver
+2019-10-15 15:15:06 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2019-10-15 15:15:06 DEBUG StandardJtaPlatformResolver:137 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-15 15:15:06 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-15 15:15:06 DEBUG NamedQueryRepository:151 - Checking 0 named HQL queries
+2019-10-15 15:15:06 DEBUG NamedQueryRepository:167 - Checking 0 named SQL queries
+2019-10-15 15:15:06 DEBUG SessionFactoryRegistry:52 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@7a2e0620
+2019-10-15 15:15:06 DEBUG SessionFactoryRegistry:74 - Registering SessionFactory: 12632a1a-2444-45cc-acf4-6d1e14233791 (<unnamed>)
+2019-10-15 15:15:06 DEBUG SessionFactoryRegistry:81 - Not binding SessionFactory to JNDI, no JNDI name configured
+2019-10-15 15:15:19 DEBUG StatisticsInitiator:101 - Statistics initialized [enabled=false]
+2019-10-15 15:15:19 DEBUG QueryTranslatorFactoryInitiator:45 - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@1dd5aa4c
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:288 - parse() - HQL: SELECT salt FROM mateacademy.internetshop.model.User WHERE login=:login
+2019-10-15 15:15:19 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:309 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'FROM'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     \-[DOT] Node: '.'
+    |  |        +-[DOT] Node: '.'
+    |  |        |  +-[DOT] Node: '.'
+    |  |        |  |  +-[IDENT] Node: 'mateacademy'
+    |  |        |  |  \-[IDENT] Node: 'internetshop'
+    |  |        |  \-[IDENT] Node: 'model'
+    |  |        \-[IDENT] Node: 'User'
+    |  \-[SELECT] Node: 'SELECT'
+    |     \-[IDENT] Node: 'salt'
+    \-[WHERE] Node: 'WHERE'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'login'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'login'
+
+2019-10-15 15:15:19 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2019-10-15 15:15:19 DEBUG FromElement:147 - FromClause{level=1} : mateacademy.internetshop.model.User (<no alias>) -> user0_
+2019-10-15 15:15:19 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias} -> {synthetic-alias}
+2019-10-15 15:15:19 DEBUG DotNode:698 - getDataType() : salt -> org.hibernate.type.BinaryType@481c3322
+2019-10-15 15:15:19 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias}.salt -> user0_.salt
+2019-10-15 15:15:19 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias} -> {synthetic-alias}
+2019-10-15 15:15:19 DEBUG DotNode:698 - getDataType() : login -> org.hibernate.type.StringType@5360a637
+2019-10-15 15:15:19 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias}.login -> user0_.login
+2019-10-15 15:15:19 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2019-10-15 15:15:19 DEBUG HqlSqlWalker:752 - processQuery() :  ( SELECT ( {select clause} ( user0_.salt {synthetic-alias} salt ) ) ( FromClause{level=1} users user0_ ) ( WHERE ( = ( user0_.login {synthetic-alias} login ) ? ) ) )
+2019-10-15 15:15:19 DEBUG JoinProcessor:144 - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    |  +-DotNode
+    |  | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+    |  | referencedTables: [users]
+    |  | path: {synthetic-alias}.salt
+    |  | originalPropertyName: salt
+    |  |  +-IdentNode
+    |  |  | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+    |  |  | referencedTables: null
+    |  |  | originalText: {synthetic-alias}
+    |  |  \-IdentNode
+    |  |    persister: null
+    |  |    referencedTables: null
+    |  |    originalText: salt
+    |  \-SqlNode
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+          | referencedTables: [users]
+          | path: {synthetic-alias}.login
+          | originalPropertyName: login
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+          |  | referencedTables: null
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    referencedTables: null
+          |    originalText: login
+          \-ParameterNode
+
+2019-10-15 15:15:19 DEBUG JoinProcessor:279 - Using FROM fragment [users user0_]
+2019-10-15 15:15:19 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:275 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (users)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[DOT] DotNode: 'user0_.salt' {propertyName=salt,dereferenceType=PRIMITIVE,getPropertyPath=salt,path={synthetic-alias}.salt,tableAlias=user0_,className=mateacademy.internetshop.model.User,classAlias=null}
+    |  |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+    |  |  \-[IDENT] IdentNode: 'salt' {originalText=salt}
+    |  \-[SELECT_COLUMNS] SqlNode: ' as col_0_0_'
+    +-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'users user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mateacademy.internetshop.model.User}}
+    \-[WHERE] SqlNode: 'WHERE'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'user0_.login' {propertyName=login,dereferenceType=PRIMITIVE,getPropertyPath=login,path={synthetic-alias}.login,tableAlias=user0_,className=mateacademy.internetshop.model.User,classAlias=null}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'login' {originalText=login}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=login, expectedType=org.hibernate.type.StringType@5360a637}
+
+2019-10-15 15:15:19 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:254 - HQL: SELECT salt FROM mateacademy.internetshop.model.User WHERE login=:login
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:255 - SQL: select user0_.salt as col_0_0_ from users user0_ where user0_.login=?
+2019-10-15 15:15:19 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:19 DEBUG SQL:127 - select user0_.salt as col_0_0_ from users user0_ where user0_.login=?
+2019-10-15 15:15:19 DEBUG Loader:384 - Result set row: 0
+2019-10-15 15:15:19 DEBUG Loader:1586 - Result row: 
+2019-10-15 15:15:19 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:288 - parse() - HQL: FROM mateacademy.internetshop.model.User WHERE login=:login
+2019-10-15 15:15:19 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:309 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'FROM'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[IDENT] Node: 'mateacademy'
+    |           |  |  \-[IDENT] Node: 'internetshop'
+    |           |  \-[IDENT] Node: 'model'
+    |           \-[IDENT] Node: 'User'
+    \-[WHERE] Node: 'WHERE'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'login'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'login'
+
+2019-10-15 15:15:19 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2019-10-15 15:15:19 DEBUG FromElement:147 - FromClause{level=1} : mateacademy.internetshop.model.User (<no alias>) -> user0_
+2019-10-15 15:15:19 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias} -> {synthetic-alias}
+2019-10-15 15:15:19 DEBUG DotNode:698 - getDataType() : login -> org.hibernate.type.StringType@5360a637
+2019-10-15 15:15:19 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias}.login -> user0_.login
+2019-10-15 15:15:19 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2019-10-15 15:15:19 DEBUG HqlSqlWalker:752 - processQuery() :  ( SELECT ( FromClause{level=1} users user0_ ) ( WHERE ( = ( user0_.login {synthetic-alias} login ) ? ) ) )
+2019-10-15 15:15:19 DEBUG HqlSqlWalker:1028 - Derived SELECT clause created.
+2019-10-15 15:15:19 DEBUG JoinProcessor:144 - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity User): [users]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+    |  | referencedTables: null
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+          | referencedTables: [users]
+          | path: {synthetic-alias}.login
+          | originalPropertyName: login
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+          |  | referencedTables: null
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    referencedTables: null
+          |    originalText: login
+          \-ParameterNode
+
+2019-10-15 15:15:19 DEBUG JoinProcessor:279 - Using FROM fragment [users user0_]
+2019-10-15 15:15:19 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:275 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (users)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'user0_.user_id as user_id1_7_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mateacademy.internetshop.model.User}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.bucket_id as bucket_i8_7_, user0_.login as login2_7_, user0_.name as name3_7_, user0_.password as password4_7_, user0_.salt as salt5_7_, user0_.surname as surname6_7_, user0_.token as token7_7_'
+    +-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'users user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mateacademy.internetshop.model.User}}
+    \-[WHERE] SqlNode: 'WHERE'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'user0_.login' {propertyName=login,dereferenceType=PRIMITIVE,getPropertyPath=login,path={synthetic-alias}.login,tableAlias=user0_,className=mateacademy.internetshop.model.User,classAlias=null}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'login' {originalText=login}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=login, expectedType=org.hibernate.type.StringType@5360a637}
+
+2019-10-15 15:15:19 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:254 - HQL: FROM mateacademy.internetshop.model.User WHERE login=:login
+2019-10-15 15:15:19 DEBUG QueryTranslatorImpl:255 - SQL: select user0_.user_id as user_id1_7_, user0_.bucket_id as bucket_i8_7_, user0_.login as login2_7_, user0_.name as name3_7_, user0_.password as password4_7_, user0_.salt as salt5_7_, user0_.surname as surname6_7_, user0_.token as token7_7_ from users user0_ where user0_.login=?
+2019-10-15 15:15:19 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:19 DEBUG SQL:127 - select user0_.user_id as user_id1_7_, user0_.bucket_id as bucket_i8_7_, user0_.login as login2_7_, user0_.name as name3_7_, user0_.password as password4_7_, user0_.salt as salt5_7_, user0_.surname as surname6_7_, user0_.token as token7_7_ from users user0_ where user0_.login=?
+2019-10-15 15:15:19 DEBUG Loader:384 - Result set row: 0
+2019-10-15 15:15:19 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:19 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:19 DEBUG TwoPhaseLoad:190 - Processing attribute `bucket` : value = 22
+2019-10-15 15:15:19 DEBUG TwoPhaseLoad:221 - Attribute (`bucket`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:19 DEBUG SQL:127 - select bucket0_.bucket_id as bucket_i1_0_0_, items1_.bucket_id as bucket_i1_1_1_, item2_.item_id as item_id2_1_1_, item2_.item_id as item_id1_2_2_, item2_.name as name2_2_2_, item2_.price as price3_2_2_ from buckets bucket0_ left outer join buckets_items items1_ on bucket0_.bucket_id=items1_.bucket_id left outer join items item2_ on items1_.item_id=item2_.item_id where bucket0_.bucket_id=?
+2019-10-15 15:15:19 DEBUG EntityReferenceInitializerImpl:131 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2019-10-15 15:15:19 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:19 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Bucket#22]
+2019-10-15 15:15:19 DEBUG TwoPhaseLoad:190 - Processing attribute `items` : value = NOT NULL COLLECTION
+2019-10-15 15:15:19 DEBUG TwoPhaseLoad:221 - Attribute (`items`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:19 DEBUG TwoPhaseLoad:190 - Processing attribute `user` : value = 22
+2019-10-15 15:15:19 DEBUG TwoPhaseLoad:221 - Attribute (`user`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:19 DEBUG Loader:2389 - Loading entity: [mateacademy.internetshop.model.User#22]
+2019-10-15 15:15:19 DEBUG SQL:127 - select user0_.user_id as user_id1_7_3_, user0_.bucket_id as bucket_i8_7_3_, user0_.login as login2_7_3_, user0_.name as name3_7_3_, user0_.password as password4_7_3_, user0_.salt as salt5_7_3_, user0_.surname as surname6_7_3_, user0_.token as token7_7_3_, bucket1_.bucket_id as bucket_i1_0_0_, items2_.bucket_id as bucket_i1_1_5_, item3_.item_id as item_id2_1_5_, item3_.item_id as item_id1_2_1_, item3_.name as name2_2_1_, item3_.price as price3_2_1_, roles4_.user_id as user_id1_6_6_, role5_.role_id as role_id2_6_6_, role5_.role_id as role_id1_5_2_, role5_.role_name as role_nam2_5_2_ from users user0_ left outer join buckets bucket1_ on user0_.bucket_id=bucket1_.bucket_id left outer join buckets_items items2_ on bucket1_.bucket_id=items2_.bucket_id left outer join items item3_ on items2_.item_id=item3_.item_id left outer join roles_users roles4_ on user0_.user_id=roles4_.user_id left outer join roles role5_ on roles4_.role_id=role5_.role_id where user0_.bucket_id=?
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 0
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.Bucket#22], EntityKey[mateacademy.internetshop.model.Item#4], EntityKey[mateacademy.internetshop.model.Role#1], EntityKey[mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG Loader:1399 - Found row of collection: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:20 DEBUG Loader:1399 - Found row of collection: [mateacademy.internetshop.model.User.roles#33]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Role#1]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = USER
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Role#1]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:213 - No collections were found in result set for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mateacademy.internetshop.model.User.roles#33]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:20 DEBUG Loader:2418 - Done entity load
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Bucket#22]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = tv
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 500.0
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG AbstractLoadPlanBasedEntityLoader:219 - Done entity load : mateacademy.internetshop.model.Bucket#22
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = first
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = First
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `orders` : value = NOT NULL COLLECTION
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`orders`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = f0fe50b79c31c1bfd9110ef25319ea14ba41d4ab0b72cc88958419862483b3954c4b4d9d81a812366cb5457aea0a93b95a1ee6f8682fcf1665fc2fbc1a8c4991
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@7f4a0f11
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `surname` : value = User
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`surname`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = b89200eb-eab8-4f41-b067-99edbcde0f69
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-15 15:15:20 DEBUG QueryTranslatorImpl:288 - parse() - HQL: FROM mateacademy.internetshop.model.User WHERE token=:token
+2019-10-15 15:15:20 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:20 DEBUG QueryTranslatorImpl:309 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'FROM'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[IDENT] Node: 'mateacademy'
+    |           |  |  \-[IDENT] Node: 'internetshop'
+    |           |  \-[IDENT] Node: 'model'
+    |           \-[IDENT] Node: 'User'
+    \-[WHERE] Node: 'WHERE'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'token'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'token'
+
+2019-10-15 15:15:20 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2019-10-15 15:15:20 DEBUG FromElement:147 - FromClause{level=1} : mateacademy.internetshop.model.User (<no alias>) -> user0_
+2019-10-15 15:15:20 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias} -> {synthetic-alias}
+2019-10-15 15:15:20 DEBUG DotNode:698 - getDataType() : token -> org.hibernate.type.StringType@5360a637
+2019-10-15 15:15:20 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias}.token -> user0_.token
+2019-10-15 15:15:20 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2019-10-15 15:15:20 DEBUG HqlSqlWalker:752 - processQuery() :  ( SELECT ( FromClause{level=1} users user0_ ) ( WHERE ( = ( user0_.token {synthetic-alias} token ) ? ) ) )
+2019-10-15 15:15:20 DEBUG HqlSqlWalker:1028 - Derived SELECT clause created.
+2019-10-15 15:15:20 DEBUG JoinProcessor:144 - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity User): [users]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+    |  | referencedTables: null
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+          | referencedTables: [users]
+          | path: {synthetic-alias}.token
+          | originalPropertyName: token
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(mateacademy.internetshop.model.User)
+          |  | referencedTables: null
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    referencedTables: null
+          |    originalText: token
+          \-ParameterNode
+
+2019-10-15 15:15:20 DEBUG JoinProcessor:279 - Using FROM fragment [users user0_]
+2019-10-15 15:15:20 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2019-10-15 15:15:20 DEBUG QueryTranslatorImpl:275 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (users)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'user0_.user_id as user_id1_7_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mateacademy.internetshop.model.User}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.bucket_id as bucket_i8_7_, user0_.login as login2_7_, user0_.name as name3_7_, user0_.password as password4_7_, user0_.salt as salt5_7_, user0_.surname as surname6_7_, user0_.token as token7_7_'
+    +-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'users user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mateacademy.internetshop.model.User}}
+    \-[WHERE] SqlNode: 'WHERE'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'user0_.token' {propertyName=token,dereferenceType=PRIMITIVE,getPropertyPath=token,path={synthetic-alias}.token,tableAlias=user0_,className=mateacademy.internetshop.model.User,classAlias=null}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'token' {originalText=token}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=token, expectedType=org.hibernate.type.StringType@5360a637}
+
+2019-10-15 15:15:20 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:20 DEBUG QueryTranslatorImpl:254 - HQL: FROM mateacademy.internetshop.model.User WHERE token=:token
+2019-10-15 15:15:20 DEBUG QueryTranslatorImpl:255 - SQL: select user0_.user_id as user_id1_7_, user0_.bucket_id as bucket_i8_7_, user0_.login as login2_7_, user0_.name as name3_7_, user0_.password as password4_7_, user0_.salt as salt5_7_, user0_.surname as surname6_7_, user0_.token as token7_7_ from users user0_ where user0_.token=?
+2019-10-15 15:15:20 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-15 15:15:20 DEBUG SQL:127 - select user0_.user_id as user_id1_7_, user0_.bucket_id as bucket_i8_7_, user0_.login as login2_7_, user0_.name as name3_7_, user0_.password as password4_7_, user0_.salt as salt5_7_, user0_.surname as surname6_7_, user0_.token as token7_7_ from users user0_ where user0_.token=?
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 0
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `bucket` : value = 22
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`bucket`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG SQL:127 - select bucket0_.bucket_id as bucket_i1_0_0_, items1_.bucket_id as bucket_i1_1_1_, item2_.item_id as item_id2_1_1_, item2_.item_id as item_id1_2_2_, item2_.name as name2_2_2_, item2_.price as price3_2_2_ from buckets bucket0_ left outer join buckets_items items1_ on bucket0_.bucket_id=items1_.bucket_id left outer join items item2_ on items1_.item_id=item2_.item_id where bucket0_.bucket_id=?
+2019-10-15 15:15:20 DEBUG EntityReferenceInitializerImpl:131 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2019-10-15 15:15:20 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Bucket#22]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `items` : value = NOT NULL COLLECTION
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`items`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `user` : value = 22
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`user`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG Loader:2389 - Loading entity: [mateacademy.internetshop.model.User#22]
+2019-10-15 15:15:20 DEBUG SQL:127 - select user0_.user_id as user_id1_7_3_, user0_.bucket_id as bucket_i8_7_3_, user0_.login as login2_7_3_, user0_.name as name3_7_3_, user0_.password as password4_7_3_, user0_.salt as salt5_7_3_, user0_.surname as surname6_7_3_, user0_.token as token7_7_3_, bucket1_.bucket_id as bucket_i1_0_0_, items2_.bucket_id as bucket_i1_1_5_, item3_.item_id as item_id2_1_5_, item3_.item_id as item_id1_2_1_, item3_.name as name2_2_1_, item3_.price as price3_2_1_, roles4_.user_id as user_id1_6_6_, role5_.role_id as role_id2_6_6_, role5_.role_id as role_id1_5_2_, role5_.role_name as role_nam2_5_2_ from users user0_ left outer join buckets bucket1_ on user0_.bucket_id=bucket1_.bucket_id left outer join buckets_items items2_ on bucket1_.bucket_id=items2_.bucket_id left outer join items item3_ on items2_.item_id=item3_.item_id left outer join roles_users roles4_ on user0_.user_id=roles4_.user_id left outer join roles role5_ on roles4_.role_id=role5_.role_id where user0_.bucket_id=?
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 0
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.Bucket#22], EntityKey[mateacademy.internetshop.model.Item#4], EntityKey[mateacademy.internetshop.model.Role#1], EntityKey[mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG Loader:1399 - Found row of collection: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:20 DEBUG Loader:1399 - Found row of collection: [mateacademy.internetshop.model.User.roles#33]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Role#1]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = USER
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Role#1]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:213 - No collections were found in result set for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mateacademy.internetshop.model.User.roles#33]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:20 DEBUG Loader:2418 - Done entity load
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Bucket#22]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = tv
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 500.0
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG AbstractLoadPlanBasedEntityLoader:219 - Done entity load : mateacademy.internetshop.model.Bucket#22
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = first
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = First
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `orders` : value = NOT NULL COLLECTION
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`orders`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = f0fe50b79c31c1bfd9110ef25319ea14ba41d4ab0b72cc88958419862483b3954c4b4d9d81a812366cb5457aea0a93b95a1ee6f8682fcf1665fc2fbc1a8c4991
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@5e52b119
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `surname` : value = User
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`surname`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = b89200eb-eab8-4f41-b067-99edbcde0f69
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-15 15:15:20 INFO  AuthenticationFilter:45 - User first was authenticated
+2019-10-15 15:15:20 DEBUG SQL:127 - SELECT * FROM items
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 0
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.Item#3]
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 1
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 2
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.Item#5]
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 3
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.Item#34]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Item#3]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = phone
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 200.0
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Item#3]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = tv
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 500.0
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Item#5]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = pc
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 1000.0
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Item#5]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Item#34]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = bike
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 2000.0
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Item#34]
+2019-10-15 15:15:20 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-15 15:15:20 DEBUG SQL:127 - select user0_.user_id as user_id1_7_, user0_.bucket_id as bucket_i8_7_, user0_.login as login2_7_, user0_.name as name3_7_, user0_.password as password4_7_, user0_.salt as salt5_7_, user0_.surname as surname6_7_, user0_.token as token7_7_ from users user0_ where user0_.token=?
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 0
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `bucket` : value = 22
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`bucket`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG SQL:127 - select bucket0_.bucket_id as bucket_i1_0_0_, items1_.bucket_id as bucket_i1_1_1_, item2_.item_id as item_id2_1_1_, item2_.item_id as item_id1_2_2_, item2_.name as name2_2_2_, item2_.price as price3_2_2_ from buckets bucket0_ left outer join buckets_items items1_ on bucket0_.bucket_id=items1_.bucket_id left outer join items item2_ on items1_.item_id=item2_.item_id where bucket0_.bucket_id=?
+2019-10-15 15:15:20 DEBUG EntityReferenceInitializerImpl:131 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2019-10-15 15:15:20 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Bucket#22]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `items` : value = NOT NULL COLLECTION
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`items`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `user` : value = 22
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`user`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG Loader:2389 - Loading entity: [mateacademy.internetshop.model.User#22]
+2019-10-15 15:15:20 DEBUG SQL:127 - select user0_.user_id as user_id1_7_3_, user0_.bucket_id as bucket_i8_7_3_, user0_.login as login2_7_3_, user0_.name as name3_7_3_, user0_.password as password4_7_3_, user0_.salt as salt5_7_3_, user0_.surname as surname6_7_3_, user0_.token as token7_7_3_, bucket1_.bucket_id as bucket_i1_0_0_, items2_.bucket_id as bucket_i1_1_5_, item3_.item_id as item_id2_1_5_, item3_.item_id as item_id1_2_1_, item3_.name as name2_2_1_, item3_.price as price3_2_1_, roles4_.user_id as user_id1_6_6_, role5_.role_id as role_id2_6_6_, role5_.role_id as role_id1_5_2_, role5_.role_name as role_nam2_5_2_ from users user0_ left outer join buckets bucket1_ on user0_.bucket_id=bucket1_.bucket_id left outer join buckets_items items2_ on bucket1_.bucket_id=items2_.bucket_id left outer join items item3_ on items2_.item_id=item3_.item_id left outer join roles_users roles4_ on user0_.user_id=roles4_.user_id left outer join roles role5_ on roles4_.role_id=role5_.role_id where user0_.bucket_id=?
+2019-10-15 15:15:20 DEBUG Loader:384 - Result set row: 0
+2019-10-15 15:15:20 DEBUG Loader:1586 - Result row: EntityKey[mateacademy.internetshop.model.Bucket#22], EntityKey[mateacademy.internetshop.model.Item#4], EntityKey[mateacademy.internetshop.model.Role#1], EntityKey[mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG Loader:1399 - Found row of collection: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:20 DEBUG Loader:1399 - Found row of collection: [mateacademy.internetshop.model.User.roles#33]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Role#1]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = USER
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Role#1]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:213 - No collections were found in result set for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mateacademy.internetshop.model.User.roles#33]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mateacademy.internetshop.model.User.roles
+2019-10-15 15:15:20 DEBUG Loader:2418 - Done entity load
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Bucket#22]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = tv
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 500.0
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.Item#4]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mateacademy.internetshop.model.Bucket.items#22]
+2019-10-15 15:15:20 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mateacademy.internetshop.model.Bucket.items
+2019-10-15 15:15:20 DEBUG AbstractLoadPlanBasedEntityLoader:219 - Done entity load : mateacademy.internetshop.model.Bucket#22
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = first
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = First
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `orders` : value = NOT NULL COLLECTION
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`orders`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = f0fe50b79c31c1bfd9110ef25319ea14ba41d4ab0b72cc88958419862483b3954c4b4d9d81a812366cb5457aea0a93b95a1ee6f8682fcf1665fc2fbc1a8c4991
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@5bbdb633
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `surname` : value = User
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`surname`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = b89200eb-eab8-4f41-b067-99edbcde0f69
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-15 15:15:20 DEBUG TwoPhaseLoad:342 - Done materializing entity [mateacademy.internetshop.model.User#33]
+2019-10-15 15:15:20 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
