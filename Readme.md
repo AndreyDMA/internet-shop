@@ -6,7 +6,7 @@
 * [Project structure](#structure)
 * [For user, how to start?](#user-start)
 * [For developer](#developer-start)
-* [Authors](#authors)
+* [Author](#author)
 
 # <a name="description"></a>Project description
 Internet Shop is a simplified example of real internet shop.
@@ -61,5 +61,5 @@ and role ADMIN (login: admin, password: 111). To get them you just have to push
 * Change path for your .log file in **_\src\main\resources\log4j.properties_**.
 <hr>
 
-# <a name="authors"></a>Authors
-* https://github.com/AndreyDMA
+# <a name="author"></a>Author
+* [Andrii Dmytriiev](https://github.com/AndreyDMA)

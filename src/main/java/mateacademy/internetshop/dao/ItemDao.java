@@ -1,5 +1,7 @@
 package mateacademy.internetshop.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 import mateacademy.internetshop.model.Item;
