@@ -53,8 +53,10 @@ you have to make according changes.
 * Make same changes in **_\src\main\resources\hibernate.cfg.xml_** file.
  
 * Use _**src\main\resources\init_db.sql**_ file to generate necessary Data Base. 
-By default you have two users: with role USER (login: first, password: 1) 
-and role ADMIN (login: admin, password: 111).
+
+* By default you can get two users: with role USER (login: first, password: 1) 
+and role ADMIN (login: admin, password: 111). To get them you just have to push 
+"Load Test Users" button on the main page.
 
 * Change path for your .log file in **_\src\main\resources\log4j.properties_**.
 <hr>
